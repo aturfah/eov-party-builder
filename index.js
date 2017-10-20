@@ -40,12 +40,16 @@ function loadSpecs(item_id, className) {
 
 function updateClass(item_id) {
     var className = $('#' + item_id + '_class_dropdown').val();
+    if (className === "none") {
+        $('#'+item_id+'_base_skills').html("Base Skillz go here");    
+    } else {
+        loadSkills(item_id, className, 'Base');    
+    }
     loadSpecs(item_id, className);
-    loadSkills(item_id, className, 'Base');
     updateImg(item_id, className);
     updateTitle(item_id, className, 'None');
     active_skills[item_id].clear();
-    $('#'+item_id+'_spec_skills').html("Subclass Skillz go here");
+    $('#'+item_id+'_spec_skills').html("Second Name Skillz go here");
 }
 
 function updateTitle(item_id, className, specName) {
@@ -87,7 +91,7 @@ function displaySkillData(item_id, className, tree, skill_name) {
 }
 
 function activateRequirements(item_id, className, tree, skill_name) {
-    console.log(className, tree, skill_name);
+    //console.log(className, tree, skill_name);
     skill_reqs = Object.keys(skill_data[className][tree][skill_name]['requirements']);
     skill_reqs.forEach(function (req_skill) {
         //console.log(req_skill);
@@ -111,7 +115,6 @@ function activateRequirements(item_id, className, tree, skill_name) {
 }
 
 function selectSkill(item_id, className, tree, skill_name) {
-    console.log()
     id_name = formatID("#" + item_id + '_' + skill_name);
     $(id_name).toggleClass('skillbox_unselected skillbox_selected');
     if (active_skills[item_id].has(skill_name)) {
@@ -128,7 +131,6 @@ function loadSkills(item_id, className, specName){
     html_str = ''
     Object.keys(skills).forEach(function (skill_name) {
         id_name = formatID(item_id + '_' + skill_name);
-        console.log(id_name);
         html_str += '<div id="' + id_name + '" class="skillbox skillbox_unselected"\
          onmouseover="displaySkillData(\''+ item_id + '\',\'' + className + '\', \''+specName+'\', \'' + skill_name + '\');"\
           onclick="selectSkill(\''+ item_id + '\',\'' + className + '\',  \''+specName+'\', \'' + skill_name + '\')">';
@@ -158,7 +160,7 @@ function updateSpec(item_id) {
     console.log(sel_skills);
 
     if(specName === 'Base'){
-        $('#' + item_id + '_spec_skills').html("Subclass Skillz go here");
+        $('#' + item_id + '_spec_skills').html("Second Name Skillz go here");
     } else {
         loadSkills(item_id, className, specName);
     }
