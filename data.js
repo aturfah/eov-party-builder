@@ -34,7 +34,7 @@ skill_data = {
                     'Chain Flame': 2,
                     'Chain Freeze': 2,
                     'Chain Shock': 2
-                } ,
+                },
                 'description': 'When an enemy is killed by a Chain skill, the caster will attack another enemy with an attack of the same element as the Chain skill.'
             },
             'Predict': {
@@ -113,7 +113,63 @@ skill_data = {
                 "description": "Gives a chance to add extra hits when Sylphid activates. Each extra hit is rolled for individually."
             }
         },
-        "Chain Duelist": {}
+        "Chain Duelist": {
+            "Sonic Blade": {
+                'requirements': {
+                    'Rapier Mastery': 3
+                },
+                'description': 'When performing normal attacks, the user has a chance to attack twice. The second attack is cut damage, and deals the same amount of damage as the first hit (not accounting for standard variance).'
+            },
+            "Phys ATK Up": {
+                'requirements': {},
+                'description': 'Passively increases physical damage.'
+            },
+            "Chain Killer": {
+                'requirements': {
+                    'Chain Boost': 3,
+                    'Chain Burst': 3
+                },
+                'description': 'Targets one enemy. For one turn, when that enemy becomes afflicted with a status ailment, bind, or stun, the user will attack them with melee STR-based stab damage.'
+            },
+            "Chain All": {
+                'requirements': {
+                    'Chain Killer': 5
+                },
+                'description': 'Increases the maximum number of hits of the Chain skill used on the next turn, and the Chain skill used on the next turn will also target all enemies.'
+            },
+            "Chain Plus": {
+                'requirements': {
+                    'Chain Killer': 5
+                },
+                'description': 'For a set amount of turns, increases the damage and base activation chance of Chain skills.'
+            },
+            "Chain Double": {
+                'requirements': {
+                    'Chain Killer': 5
+                },
+                'description': 'Gives a chance for Chain attacks to hit twice when a Chain skill is activated.'
+            },
+            "Slyphscreen": {
+                'requirements': {},
+                'description': "Each time the user attacks an enemy, their defense and evasion are increased for the rest of that turn."
+            },
+            "Multi-Stab": {
+                'requirements': {
+                    'Optic Thrust': 3
+                },
+                'description': 'Deals a random amount of instances of melee STR-based stab damage to one row of enemies. Can hit the same enemy multiple times.'
+            }, 
+            "Resonance": {
+                'requirements': {
+                    'Multi-Stab': 5
+                },
+                'description': 'Deals melee STR-based stab damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user hit enemies last turn. Resonance can have its damage multiplied a maximum of 9 times.'
+            }, 
+            "Speed Up": {
+                'requirements': {},
+                'description': "Increases the user's action speed, accuracy, and evasion."
+            }
+        }
     },
     "dragoon": {
         "specializations": [
