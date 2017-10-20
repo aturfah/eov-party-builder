@@ -15,7 +15,7 @@ function formatName(name) {
 }
 
 function formatID(name) {
-    return name.toLowerCase().replace(' ', '_');
+    return name.toLowerCase().replace(/ /g, '_');
 }
 
 function loadClasses(item_id) {
@@ -99,6 +99,7 @@ function activateRequirements(item_id, className, tree, skill_name) {
         if (!active_skills[item_id].has(req_skill)) {
             selectSkill(item_id, className, tree_use, req_skill);
         }
+        
         //FIGURE OUT WHAT THIS CODE DOES??
         /*if (Object.keys(skill_data[className][tree_use][req_skill]['requirements']).length > 0) {
             req_skill_reqs = Object.keys(skill_data[className][tree_use][req_skill]['requirements']);
@@ -110,6 +111,7 @@ function activateRequirements(item_id, className, tree, skill_name) {
 }
 
 function selectSkill(item_id, className, tree, skill_name) {
+    console.log()
     id_name = formatID("#" + item_id + '_' + skill_name);
     $(id_name).toggleClass('skillbox_unselected skillbox_selected');
     if (active_skills[item_id].has(skill_name)) {
@@ -126,6 +128,7 @@ function loadSkills(item_id, className, specName){
     html_str = ''
     Object.keys(skills).forEach(function (skill_name) {
         id_name = formatID(item_id + '_' + skill_name);
+        console.log(id_name);
         html_str += '<div id="' + id_name + '" class="skillbox skillbox_unselected"\
          onmouseover="displaySkillData(\''+ item_id + '\',\'' + className + '\', \''+specName+'\', \'' + skill_name + '\');"\
           onclick="selectSkill(\''+ item_id + '\',\'' + className + '\',  \''+specName+'\', \'' + skill_name + '\')">';
