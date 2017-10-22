@@ -26,9 +26,24 @@ function resetDmgTable(){
     });
 }
 
+function updateDmgTable(sel_skills) {
+    sel_skills.forEach(function(skill_info){
+        //Add to the data in the right places
+        keys = new Set(Object.keys(skill_info));
+        if (keys.has('damage')) {
+            damage_types = new Set(skill_info['damage'].split(' '));
+            damage_target = skill_info['damage target'];
+            damage_types.forEach(function (dmg_type) {
+                var span_id = '#'.concat(dmg_type).concat('_').concat(damage_target);
+                var num_types = parseInt($(span_id).text());
+                // console.log(span_id);
+                $(span_id).html(num_types+1);
+            });
+        }
+    });
+}
+
 function updateTable() {
-    // Calculate Skill Damage Table
-    resetDmgTable();
     sel_skills = [];
     for(id in active_skills){
         var className = $("#"+id+"_class_dropdown").val();
@@ -44,21 +59,9 @@ function updateTable() {
         });
     }
 
-    sel_skills.forEach(function(skill_info){
-        //Add to the data in the right places
-        keys = new Set(Object.keys(skill_info));
-        if (keys.has('damage')) {
-            damage_types = new Set(skill_info['damage'].split(' '));
-            damage_target = skill_info['damage target'];
-            damage_types.forEach(function (dmg_type) {
-                var span_id = '#'.concat(dmg_type).concat('_').concat(damage_target);
-                var num_types = parseInt($(span_id).text());
-                // console.log(span_id);
-                $(span_id).html(num_types+1);
-            });
-        }
-    });
-
+    // Calculate Skill Damage Table
+    resetDmgTable();
+    updateDmgTable(sel_skills);
 
 }
 
