@@ -14,7 +14,7 @@ function formatName(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-function resetBindTable() {
+function resetAilBindTable() {
     var types = ['h_bind', 'l_bind', 'a_bind', 'blind', 'sleep', 'paralyzed',
         'petrified', 'cursed', 'poison']
 
@@ -24,7 +24,7 @@ function resetBindTable() {
     });
 }
 
-function updateBindTable(sel_skills) {
+function updateAilBindTable(sel_skills) {
     sel_skills.forEach(function (skill_info) {
         //Add to the data in the right places
         keys = new Set(Object.keys(skill_info));
@@ -33,7 +33,13 @@ function updateBindTable(sel_skills) {
             var num_ailments = parseInt($(span_id).text());
             $(span_id).html(num_ailments+1);
         }
+        if (keys.has('bind')){
+            var span_id = '#'.concat(skill_info['bind']).concat('bind_num');
+            var num_binds = parseInt($(span_id).text());
+            $(span_id).html(num_binds+1);
+        }
     });
+
 }
 
 function resetDmgTable() {
@@ -86,8 +92,8 @@ function updateTable() {
     updateDmgTable(sel_skills);
 
     // Calculate Bind/Ailment Table
-    resetBindTable();
-    updateBindTable(sel_skills);
+    resetAilBindTable();
+    updateAilBindTable(sel_skills);
 
 }
 
