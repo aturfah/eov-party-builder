@@ -107,13 +107,17 @@ skill_data = {
                 'requirements': {
                     "Optic Thrust": 2
                 },
-                "description": "Deals melee STR-based stab damage to one enemy. For the rest of the turn, the user's evasion and chance to be targeted are increased."
+                "description": "Deals melee STR-based stab damage to one enemy. For the rest of the turn, the user's evasion and chance to be targeted are increased.",
+                'damage': 'physical',
+                'damage target': 'enemy'
             },
             "Revenge Thrust": {
                 'requirements': {
                     'Deft Thrust': 5
                 },
-                "description": "Deals melee STR-based stab+volt damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user has dodged an attack since the last use of Revenge Thrust.<br/> There is a maximum amount of times Revenge Thrust can have its damage multiplied."
+                "description": "Deals melee STR-based stab+volt damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user has dodged an attack since the last use of Revenge Thrust.<br/> There is a maximum amount of times Revenge Thrust can have its damage multiplied.",
+                'damage': 'physical volt',
+                'damage target': 'enemy'
             },
             "Counter Boost": {
                 'requirements': {
@@ -166,13 +170,17 @@ skill_data = {
                 'requirements': {
                     'Optic Thrust': 3
                 },
-                'description': 'Deals a random amount of instances of melee STR-based stab damage to one row of enemies. Can hit the same enemy multiple times.'
+                'description': 'Deals a random amount of instances of melee STR-based stab damage to one row of enemies. Can hit the same enemy multiple times.',
+                'damage': 'physical',
+                'damage target': 'multi row'
             }, 
             "Resonance": {
                 'requirements': {
                     'Multi-Stab': 5
                 },
-                'description': 'Deals melee STR-based stab damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user hit enemies last turn. Resonance can have its damage multiplied a maximum of 9 times.'
+                'description': 'Deals melee STR-based stab damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user hit enemies last turn. Resonance can have its damage multiplied a maximum of 9 times.',
+                'damage': 'physical',
+                'damage target': 'enemy'
             }, 
             "Speed Up": {
                 'requirements': {},
