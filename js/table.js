@@ -44,12 +44,14 @@ function updateDmgTable(sel_skills) {
         keys = new Set(Object.keys(skill_info));
         if (keys.has('damage')) {
             damage_types = new Set(skill_info['damage'].split(' '));
-            damage_target = skill_info['damage target'];
+            damage_target = skill_info['damage target'].split(' ');
             damage_types.forEach(function (dmg_type) {
-                var span_id = '#'.concat(dmg_type).concat('_').concat(damage_target);
-                var num_types = parseInt($(span_id).text());
-                // console.log(span_id);
-                $(span_id).html(num_types + 1);
+                damage_target.forEach(function(dmg_target){
+                    var span_id = '#'.concat(dmg_type).concat('_').concat(dmg_target);
+                    var num_types = parseInt($(span_id).text());
+                    // console.log(span_id);
+                    $(span_id).html(num_types + 1);
+                })
             });
         }
     });
