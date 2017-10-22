@@ -8,6 +8,12 @@ $(document).ready(function () {
         loadSpecs(id, 'none');
         active_skills[id] = new Set();
     });
+
+    $(".nav a").on("click", function(){
+        console.log("HERE!");
+        $(".nav").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+     });
 });
 
 function loadClasses(item_id) {
