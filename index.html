@@ -2,18 +2,22 @@
 
 <head>
     <!-- Bootstrap imports -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 
     <!-- JQuery -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    
+
     <!-- Fontawesome and Comfortaa -->
     <script src="https://use.fontawesome.com/8b4dfc24ba.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    
+
     <script src='js/data.js'></script>
     <script src='js/helpers.js'></script>
     <script src='js/table.js'></script>
@@ -31,409 +35,441 @@
     </div>
 
     <div class='mainbody row'>
-        <div class="col-sm-4 sidebar">
-            <h5>Party Overview</h5>
-            <div class='col-sm-12 party_images'>
-                <img id='m1_img' src='static/images/classes/no.png' alt='m1_img' />
-                <img id='m2_img' src='static/images/classes/no.png' alt='m2_img' />
-                <img id='m3_img' src='static/images/classes/no.png' alt='m3_img' />
-                <img id='m4_img' src='static/images/classes/no.png' alt='m4_img' />
-                <img id='m5_img' src='static/images/classes/no.png' alt='m5_img' />
-            </div>
-
-
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <b>
-                        <a data-toggle="tab" href="#dmg_tab">Damage</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" href="#binds">Binds/Ailments</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" href="#buffs">De/Buffs</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" href="#healing">Healing</a>
-                    </b>
-                </li>
-            </ul>
-
-            <br />
-
-            <div class="tab-content">
-                <div id="dmg_tab" class="tab-pane active">
-                    <table id='dmg_tbl'>
-                        <tr>
-                            <th style='text-align:center;' colspan='5'>
-                                <h5>Skill Damage Sources</h5>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>&#149;</td>
-                            <td>
-                                <b>Enemy</b>
-                            </td>
-                            <td>
-                                <b>Row</b>
-                            </td>
-                            <td>
-                                <b>AOE</b>
-                            </td>
-                            <td>
-                                <b>Multi-Hit</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Physical</td>
-                            <td>
-                                <span id='physical_enemy'>0</span>
-                            </td>
-                            <td>
-                                <span id='physical_row'>0</span>
-                            </td>
-                            <td>
-                                <span id='physical_aoe'>0</span>
-                            </td>
-                            <td>
-                                <span id='physical_multi'>0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ranged</td>
-                            <td>
-                                <span id='ranged_enemy'>0</span>
-                            </td>
-                            <td>
-                                <span id='ranged_row'>0</span>
-                            </td>
-                            <td>
-                                <span id='ranged_aoe'>0</span>
-                            </td>
-                            <td>
-                                <span id='ranged_multi'>0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Fire</td>
-                            <td>
-                                <span id='fire_enemy'>0</span>
-                            </td>
-                            <td>
-                                <span id='fire_row'>0</span>
-                            </td>
-                            <td>
-                                <span id='fire_aoe'>0</span>
-                            </td>
-                            <td>
-                                <span id='fire_multi'>0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ice</td>
-                            <td>
-                                <span id='ice_enemy'>0</span>
-                            </td>
-                            <td>
-                                <span id='ice_row'>0</span>
-                            </td>
-                            <td>
-                                <span id='ice_aoe'>0</span>
-                            </td>
-                            <td>
-                                <span id='ice_multi'>0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Volt</td>
-                            <td>
-                                <span id='volt_enemy'>0</span>
-                            </td>
-                            <td>
-                                <span id='volt_row'>0</span>
-                            </td>
-                            <td>
-                                <span id='volt_aoe'>0</span>
-                            </td>
-                            <td>
-                                <span id='volt_multi'>0</span>
-                            </td>
-                        </tr>
-
-                    </table>
+        <div class="col-sm-4">
+            <div class='sidebar'>
+                <h5>Party Overview</h5>
+                <div class='col-sm-12 party_images'>
+                    <img id='m1_img' src='static/images/classes/no.png' alt='m1_img' />
+                    <img id='m2_img' src='static/images/classes/no.png' alt='m2_img' />
+                    <img id='m3_img' src='static/images/classes/no.png' alt='m3_img' />
+                    <img id='m4_img' src='static/images/classes/no.png' alt='m4_img' />
+                    <img id='m5_img' src='static/images/classes/no.png' alt='m5_img' />
                 </div>
-                <div id="binds" class="tab-pane fade">
-                    <table id='bind_tbl'>
-                        <tr>
-                            <th colspan='3'>
-                                <h5>Binds/Ailments</h5>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td colspan='3'>Binds</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src='static/images/binds/HeadBound.png' />:
-                                <span id='h_bind_num'>0</span>
-                            </td>
-                            <td>
-                                <img src='static/images/binds/ArmBound.png' />:
-                                <span id='a_bind_num'>0</span>
-                            </td>
-                            <td>
-                                <img src='static/images/binds/LegBound.png' />:
-                                <span id='l_bind_num'>0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan='3'>Ailments</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src='static/images/binds/Blind.png' />:
-                                <span id='blind_num'>0</span>
-                            </td>
-                            <td>
-                                <img src='static/images/binds/Asleep.png' />:
-                                <span id='sleep_num'>0</span>
-                            </td>
-                            <td>
-                                <img src='static/images/binds/Paralyzed.png' />:
-                                <span id='paralyzed_num'>0</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src='static/images/binds/Poison.png' />:
-                                <span id='poison_num'>0</span>
-                            </td>
-                            <td>
-                                <img src='static/images/binds/Cursed.png' />:
-                                <span id='cursed_num'>0</span>
-                            </td>
-                            <td>
-                                <img src='static/images/binds/Petrified.png' />:
-                                <span id='petrified_num'>0</span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="buffs" class="tab-pane fade">
-                    <table id='buff_tbl'>
-                        <tr>
-                            <th colspan='4'>
-                                <h5>Buffs</h5>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
+
+
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <b>
+                            <a data-toggle="tab" href="#dmg_tab">Damage</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" href="#binds">Binds/Ailments</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" href="#buffs">De/Buffs</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" href="#healing">Healing</a>
+                        </b>
+                    </li>
+                </ul>
+
+                <br />
+
+                <div class="tab-content">
+                    <div id="dmg_tab" class="tab-pane active">
+                        <table id='dmg_tbl'>
+                            <tr>
+                                <th style='text-align:center;' colspan='5'>
+                                    <h5>Skill Damage Sources</h5>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>&#149;</td>
+                                <td>
+                                    <b>Enemy</b>
+                                </td>
+                                <td>
+                                    <b>Row</b>
+                                </td>
+                                <td>
+                                    <b>AOE</b>
+                                </td>
+                                <td>
+                                    <b>Multi-Hit</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Physical</td>
+                                <td>
+                                    <span id='physical_enemy'>0</span>
+                                </td>
+                                <td>
+                                    <span id='physical_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='physical_aoe'>0</span>
+                                </td>
+                                <td>
+                                    <span id='physical_multi'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ranged</td>
+                                <td>
+                                    <span id='ranged_enemy'>0</span>
+                                </td>
+                                <td>
+                                    <span id='ranged_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='ranged_aoe'>0</span>
+                                </td>
+                                <td>
+                                    <span id='ranged_multi'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fire</td>
+                                <td>
+                                    <span id='fire_enemy'>0</span>
+                                </td>
+                                <td>
+                                    <span id='fire_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='fire_aoe'>0</span>
+                                </td>
+                                <td>
+                                    <span id='fire_multi'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ice</td>
+                                <td>
+                                    <span id='ice_enemy'>0</span>
+                                </td>
+                                <td>
+                                    <span id='ice_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='ice_aoe'>0</span>
+                                </td>
+                                <td>
+                                    <span id='ice_multi'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Volt</td>
+                                <td>
+                                    <span id='volt_enemy'>0</span>
+                                </td>
+                                <td>
+                                    <span id='volt_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='volt_aoe'>0</span>
+                                </td>
+                                <td>
+                                    <span id='volt_multi'>0</span>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="binds" class="tab-pane fade">
+                        <table id='bind_tbl'>
+                            <tr>
+                                <th colspan='3'>
+                                    <h5>Binds/Ailments</h5>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>Binds</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src='static/images/binds/HeadBound.png' />:
+                                    <span id='h_bind_num'>0</span>
+                                </td>
+                                <td>
+                                    <img src='static/images/binds/ArmBound.png' />:
+                                    <span id='a_bind_num'>0</span>
+                                </td>
+                                <td>
+                                    <img src='static/images/binds/LegBound.png' />:
+                                    <span id='l_bind_num'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan='3'>Ailments</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src='static/images/binds/Blind.png' />:
+                                    <span id='blind_num'>0</span>
+                                </td>
+                                <td>
+                                    <img src='static/images/binds/Asleep.png' />:
+                                    <span id='sleep_num'>0</span>
+                                </td>
+                                <td>
+                                    <img src='static/images/binds/Paralyzed.png' />:
+                                    <span id='paralyzed_num'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src='static/images/binds/Poison.png' />:
+                                    <span id='poison_num'>0</span>
+                                </td>
+                                <td>
+                                    <img src='static/images/binds/Cursed.png' />:
+                                    <span id='cursed_num'>0</span>
+                                </td>
+                                <td>
+                                    <img src='static/images/binds/Petrified.png' />:
+                                    <span id='petrified_num'>0</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="buffs" class="tab-pane fade">
+                        <table id='buff_tbl'>
+                            <tr>
+                                <th colspan='4'>
+                                    <h5>Buffs</h5>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
                                     &#149;
-                            </td>
-                            <td>
-                                <b>Single</b>
-                            </td>
-                            <td>
-                                <b>Row</b>
-                            </td>
-                            <td>
-                                <b>Party</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Attack</td>
-                            <td><span id='buff_atk_single'>0</span></td>
-                            <td><span id='buff_atk_row'>0</span></td>
-                            <td><span id='buff_atk_party'>0</span></td>
-                        </tr>
-                        <tr>
-                            <td>Defense</td>
-                            <td><span id='buff_def_single'>0</span></td>
-                            <td><span id='buff_def_row'>0</span></td>
-                            <td><span id='buff_def_party'>0</span></td>
-                        </tr>
-                        <tr>
-                            <td>Accuracy</td>
-                            <td><span id='buff_acc_single'>0</span></td>
-                            <td><span id='buff_acc_row'>0</span></td>
-                            <td><span id='buff_acc_party'>0</span></td>
-                        </tr>
-                        <tr>
-                            <td>Evasion</td>
-                            <td><span id='buff_eva_single'>0</span></td>
-                            <td><span id='buff_eva_row'>0</span></td>
-                            <td><span id='buff_eva_party'>0</span></td>
-                        </tr>
-                        <tr>
-                            <td>Accuracy</td>
-                            <td><span id='buff_acc_single'>0</span></td>
-                            <td><span id='buff_acc_row'>0</span></td>
-                            <td><span id='buff_acc_party'>0</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="healing" class="tab-pane fade">
+                                </td>
+                                <td>
+                                    <b>Single</b>
+                                </td>
+                                <td>
+                                    <b>Row</b>
+                                </td>
+                                <td>
+                                    <b>Party</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Attack</td>
+                                <td>
+                                    <span id='buff_atk_single'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_atk_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_atk_party'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Defense</td>
+                                <td>
+                                    <span id='buff_def_single'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_def_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_def_party'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accuracy</td>
+                                <td>
+                                    <span id='buff_acc_single'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_acc_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_acc_party'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Evasion</td>
+                                <td>
+                                    <span id='buff_eva_single'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_eva_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_eva_party'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accuracy</td>
+                                <td>
+                                    <span id='buff_acc_single'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_acc_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='buff_acc_party'>0</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="healing" class="tab-pane fade">
 
-                    <table id='heal_tbl'>
-                        <tr>
-                            <th>
-                                <h5>Party Healing</h5>
-                            </th>
-                        </tr>
-                    </table>
+                        <table id='heal_tbl'>
+                            <tr>
+                                <th>
+                                    <h5>Party Healing</h5>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-
-
         </div>
-        <div class="col-sm-8 classbox">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <b>
-                        <a data-toggle="tab" id='m1_tab' href="#member1">None</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" id='m2_tab' href="#member2">None</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" id='m3_tab' href="#member3">None</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" id='m4_tab' href="#member4">None</a>
-                    </b>
-                </li>
-                <li>
-                    <b>
-                        <a data-toggle="tab" id='m5_tab' href="#member5">None</a>
-                    </b>
-                </li>
-            </ul>
+        <div class="col-sm-8">
+            <div class='classbox'>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <b>
+                            <a data-toggle="tab" id='m1_tab' href="#member1">None</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" id='m2_tab' href="#member2">None</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" id='m3_tab' href="#member3">None</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" id='m4_tab' href="#member4">None</a>
+                        </b>
+                    </li>
+                    <li>
+                        <b>
+                            <a data-toggle="tab" id='m5_tab' href="#member5">None</a>
+                        </b>
+                    </li>
+                </ul>
 
-            <div class="tab-content">
-                <div id="member1" class="tab-pane active in">
-                    <h3 id='m1_title'>None</h3>
-                    <select id='m1_class_dropdown' onChange='updateClass("m1");'></select>
-                    <select id='m1_spec_dropdown' onChange='updateSpec("m1");'></select>
-                    <br />
-                    <br />
-                    <div class='row'>
-                        <div class='col-sm-6'>
-                            <h5>Base Skills</h5>
-                            <div id='m1_base_skills'>
-                                Base Skillz go here
+                <div class="tab-content">
+                    <div id="member1" class="tab-pane active in">
+                        <h3 id='m1_title'>None</h3>
+                        <select id='m1_class_dropdown' onChange='updateClass("m1");'></select>
+                        <select id='m1_spec_dropdown' onChange='updateSpec("m1");'></select>
+                        <br />
+                        <br />
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                <h5>Base Skills</h5>
+                                <div id='m1_base_skills'>
+                                    Base Skillz go here
+                                </div>
+                                <hr />
+                                <h5>Second Name Skills</h5>
+                                <div id='m1_spec_skills'>
+                                    Second Name Skillz go here
+                                </div>
                             </div>
-                            <hr />
-                            <h5>Second Name Skills</h5>
-                            <div id='m1_spec_skills'>
-                                Second Name Skillz go here
+                            <div class='col-sm-6' id='m1_skill_data'>
+                                Skill Data goez here
                             </div>
-                        </div>
-                        <div class='col-sm-6' id='m1_skill_data'>
-                            Skill Data goez here
                         </div>
                     </div>
-                </div>
-                <div id="member2" class="tab-pane fade">
-                    <h3 id='m2_title'>None</h3>
-                    <select id='m2_class_dropdown' onChange='updateClass("m2");'></select>
-                    <select id='m2_spec_dropdown' onChange='updateSpec("m2");'></select>
-                    <br />
-                    <br />
-                    <div class='row'>
-                        <div class='col-sm-6'>
-                            <h5>Base Skills</h5>
-                            <div id='m2_base_skills'>
-                                Base Skillz go here
+                    <div id="member2" class="tab-pane fade">
+                        <h3 id='m2_title'>None</h3>
+                        <select id='m2_class_dropdown' onChange='updateClass("m2");'></select>
+                        <select id='m2_spec_dropdown' onChange='updateSpec("m2");'></select>
+                        <br />
+                        <br />
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                <h5>Base Skills</h5>
+                                <div id='m2_base_skills'>
+                                    Base Skillz go here
+                                </div>
+                                <hr />
+                                <h5>Second Name Skills</h5>
+                                <div id='m2_spec_skills'>
+                                    Second Name Skillz go here
+                                </div>
                             </div>
-                            <hr />
-                            <h5>Second Name Skills</h5>
-                            <div id='m2_spec_skills'>
-                                Second Name Skillz go here
+                            <div class='col-sm-6' id='m2_skill_data'>
+                                Skill Data goez here
                             </div>
-                        </div>
-                        <div class='col-sm-6' id='m2_skill_data'>
-                            Skill Data goez here
                         </div>
                     </div>
-                </div>
-                <div id="member3" class="tab-pane fade">
-                    <h3 id='m3_title'>None</h3>
-                    <select id='m3_class_dropdown' onChange='updateClass("m3");'></select>
-                    <select id='m3_spec_dropdown' onChange='updateSpec("m3");'></select>
-                    <br />
-                    <br />
-                    <div class='row'>
-                        <div class='col-sm-6'>
-                            <h5>Base Skills</h5>
-                            <div id='m3_base_skills'>
-                                Base Skillz go here
+                    <div id="member3" class="tab-pane fade">
+                        <h3 id='m3_title'>None</h3>
+                        <select id='m3_class_dropdown' onChange='updateClass("m3");'></select>
+                        <select id='m3_spec_dropdown' onChange='updateSpec("m3");'></select>
+                        <br />
+                        <br />
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                <h5>Base Skills</h5>
+                                <div id='m3_base_skills'>
+                                    Base Skillz go here
+                                </div>
+                                <hr />
+                                <h5>Second Name Skills</h5>
+                                <div id='m3_spec_skills'>
+                                    Second Name Skillz go here
+                                </div>
                             </div>
-                            <hr />
-                            <h5>Second Name Skills</h5>
-                            <div id='m3_spec_skills'>
-                                Second Name Skillz go here
+                            <div class='col-sm-6' id='m3_skill_data'>
+                                Skill Data goez here
                             </div>
-                        </div>
-                        <div class='col-sm-6' id='m3_skill_data'>
-                            Skill Data goez here
                         </div>
                     </div>
-                </div>
-                <div id="member4" class="tab-pane fade">
-                    <h3 id='m4_title'>None</h3>
-                    <select id='m4_class_dropdown' onChange='updateClass("m4");'></select>
-                    <select id='m4_spec_dropdown' onChange='updateSpec("m4");'></select>
-                    <br />
-                    <br />
-                    <div class='row'>
-                        <div class='col-sm-6'>
-                            <h5>Base Skills</h5>
-                            <div id='m4_base_skills'>
-                                Base Skillz go here
+                    <div id="member4" class="tab-pane fade">
+                        <h3 id='m4_title'>None</h3>
+                        <select id='m4_class_dropdown' onChange='updateClass("m4");'></select>
+                        <select id='m4_spec_dropdown' onChange='updateSpec("m4");'></select>
+                        <br />
+                        <br />
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                <h5>Base Skills</h5>
+                                <div id='m4_base_skills'>
+                                    Base Skillz go here
+                                </div>
+                                <hr />
+                                <h5>Second Name Skills</h5>
+                                <div id='m4_spec_skills'>
+                                    Second Name Skillz go here
+                                </div>
                             </div>
-                            <hr />
-                            <h5>Second Name Skills</h5>
-                            <div id='m4_spec_skills'>
-                                Second Name Skillz go here
+                            <div class='col-sm-6' id='m4_skill_data'>
+                                Skill Data goez here
                             </div>
-                        </div>
-                        <div class='col-sm-6' id='m4_skill_data'>
-                            Skill Data goez here
                         </div>
                     </div>
-                </div>
-                <div id="member5" class="tab-pane fade">
-                    <h3 id='m5_title'>None</h3>
-                    <select id='m5_class_dropdown' onChange='updateClass("m5");'></select>
-                    <select id='m5_spec_dropdown' onChange='updateSpec("m5");'></select>
-                    <br />
-                    <br />
-                    <div class='row'>
-                        <div class='col-sm-6'>
-                            <h5>Base Skills</h5>
-                            <div id='m5_base_skills'>
-                                Base Skillz go here
+                    <div id="member5" class="tab-pane fade">
+                        <h3 id='m5_title'>None</h3>
+                        <select id='m5_class_dropdown' onChange='updateClass("m5");'></select>
+                        <select id='m5_spec_dropdown' onChange='updateSpec("m5");'></select>
+                        <br />
+                        <br />
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                <h5>Base Skills</h5>
+                                <div id='m5_base_skills'>
+                                    Base Skillz go here
+                                </div>
+                                <hr />
+                                <h5>Second Name Skills</h5>
+                                <div id='m5_spec_skills'>
+                                    Second Name Skillz go here
+                                </div>
                             </div>
-                            <hr />
-                            <h5>Second Name Skills</h5>
-                            <div id='m5_spec_skills'>
-                                Second Name Skillz go here
+                            <div class='col-sm-6' id='m5_skill_data'>
+                                Skill Data goez here
                             </div>
-                        </div>
-                        <div class='col-sm-6' id='m5_skill_data'>
-                            Skill Data goez here
                         </div>
                     </div>
                 </div>
