@@ -14,7 +14,29 @@ function formatName(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-function resetDmgTable(){
+function resetBindTable() {
+    var types = ['h_bind', 'l_bind', 'a_bind', 'blind', 'sleep', 'paralyzed',
+        'petrified', 'cursed', 'poison']
+
+    types.forEach(function(type){
+        var span_id = '#'.concat(type).concat('_num');
+        $(span_id).html(0);
+    });
+}
+
+function updateBindTable(sel_skills) {
+    sel_skills.forEach(function (skill_info) {
+        //Add to the data in the right places
+        keys = new Set(Object.keys(skill_info));
+        if (keys.has('ailment')) {
+            var span_id = '#'.concat(skill_info['ailment']).concat('_num');
+            var num_ailments = parseInt($(span_id).text());
+            $(span_id).html(num_ailments+1);
+        }
+    });
+}
+
+function resetDmgTable() {
     var damage_types = ['physical', 'ranged', 'fire', 'ice', 'volt'];
     var damage_targets = ['enemy', 'row', 'aoe', 'multi'];
 
@@ -27,7 +49,7 @@ function resetDmgTable(){
 }
 
 function updateDmgTable(sel_skills) {
-    sel_skills.forEach(function(skill_info){
+    sel_skills.forEach(function (skill_info) {
         //Add to the data in the right places
         keys = new Set(Object.keys(skill_info));
         if (keys.has('damage')) {
@@ -37,7 +59,7 @@ function updateDmgTable(sel_skills) {
                 var span_id = '#'.concat(dmg_type).concat('_').concat(damage_target);
                 var num_types = parseInt($(span_id).text());
                 // console.log(span_id);
-                $(span_id).html(num_types+1);
+                $(span_id).html(num_types + 1);
             });
         }
     });
@@ -45,13 +67,13 @@ function updateDmgTable(sel_skills) {
 
 function updateTable() {
     sel_skills = [];
-    for(id in active_skills){
-        var className = $("#"+id+"_class_dropdown").val();
-        var specName = $("#"+id+"_spec_dropdown").val();
+    for (id in active_skills) {
+        var className = $("#" + id + "_class_dropdown").val();
+        var specName = $("#" + id + "_spec_dropdown").val();
         //console.log(id, className, specName)
-        active_skills[id].forEach(function(skillName){
+        active_skills[id].forEach(function (skillName) {
             skillName_data = skill_data[className][specName][skillName];
-            if(skillName_data){
+            if (skillName_data) {
                 sel_skills.push(skillName_data);
             } else {
                 sel_skills.push(skill_data[className]['Base'][skillName]);
@@ -62,6 +84,10 @@ function updateTable() {
     // Calculate Skill Damage Table
     resetDmgTable();
     updateDmgTable(sel_skills);
+
+    // Calculate Bind/Ailment Table
+    resetBindTable();
+    updateBindTable(sel_skills);
 
 }
 
@@ -92,16 +118,16 @@ function loadSpecs(item_id, className) {
 function updateClass(item_id) {
     var className = $('#' + item_id + '_class_dropdown').val();
     if (className === "none") {
-        $('#'+item_id+'_base_skills').html("Base Skillz go here");    
+        $('#' + item_id + '_base_skills').html("Base Skillz go here");
     } else {
-        loadSkills(item_id, className, 'Base');    
+        loadSkills(item_id, className, 'Base');
     }
     loadSpecs(item_id, className);
     updateImg(item_id, className);
     updateTitle(item_id, className, 'None');
     active_skills[item_id].clear();
     updateTable()
-    $('#'+item_id+'_spec_skills').html("Second Name Skillz go here");
+    $('#' + item_id + '_spec_skills').html("Second Name Skillz go here");
 }
 
 function updateTitle(item_id, className, specName) {
@@ -149,13 +175,13 @@ function activateRequirements(item_id, className, tree, skill_name) {
         //console.log(req_skill);
 
         var tree_use = tree;
-        if (!(new Set(Object.keys(skill_data[className][tree])).has(req_skill))){
+        if (!(new Set(Object.keys(skill_data[className][tree])).has(req_skill))) {
             tree_use = 'Base';
         }
         if (!active_skills[item_id].has(req_skill)) {
             selectSkill(item_id, className, tree_use, req_skill);
         }
-        
+
         //FIGURE OUT WHAT THIS CODE DOES??
         /*if (Object.keys(skill_data[className][tree_use][req_skill]['requirements']).length > 0) {
             req_skill_reqs = Object.keys(skill_data[className][tree_use][req_skill]['requirements']);
@@ -179,19 +205,19 @@ function selectSkill(item_id, className, tree, skill_name) {
     updateTable();
 }
 
-function loadSkills(item_id, className, specName){
+function loadSkills(item_id, className, specName) {
     skills = skill_data[className][specName];
     html_str = ''
     Object.keys(skills).forEach(function (skill_name) {
         id_name = formatID(item_id + '_' + skill_name);
         html_str += '<div id="' + id_name + '" class="skillbox skillbox_unselected"\
-         onmouseover="displaySkillData(\''+ item_id + '\',\'' + className + '\', \''+specName+'\', \'' + skill_name + '\');"\
-          onclick="selectSkill(\''+ item_id + '\',\'' + className + '\',  \''+specName+'\', \'' + skill_name + '\')">';
+         onmouseover="displaySkillData(\''+ item_id + '\',\'' + className + '\', \'' + specName + '\', \'' + skill_name + '\');"\
+          onclick="selectSkill(\''+ item_id + '\',\'' + className + '\',  \'' + specName + '\', \'' + skill_name + '\')">';
         html_str += '<b>' + skill_name + '</b>';
         //html_str += '<p style="display:none;">' + skills[skill_name]['description'] + '</p>'
         html_str += '</div>';
     });
-    if (specName === 'Base'){
+    if (specName === 'Base') {
         $('#' + item_id + '_base_skills').html(html_str);
     }
     else {
@@ -205,13 +231,13 @@ function updateSpec(item_id) {
 
     sel_skills = active_skills[item_id];
     base_skills = new Set(Object.keys(skill_data[className]['Base']));
-    sel_skills.forEach(function(skill){
-        if (!base_skills.has(skill)){
+    sel_skills.forEach(function (skill) {
+        if (!base_skills.has(skill)) {
             sel_skills.delete(skill);
         }
     });
     active_skills[item_id] = sel_skills;
-    if(specName === 'Base'){
+    if (specName === 'Base') {
         $('#' + item_id + '_spec_skills').html("Second Name Skillz go here");
     } else {
         loadSkills(item_id, className, specName);
