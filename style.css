@@ -6,23 +6,26 @@ body {
   padding:0;
   margin: 0;
   font-family: 'Comfortaa', cursive;
+  height: 100%;
+  background-color: lightblue;
+}
+html {
+  height: 100%;
 }
 
 .mainbody {
-  border-bottom-color: black;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
+  min-height: 90%;
   border-top-color: black;
   border-top-width: 2px;
   border-top-style: solid;
 }
 
 .sidebar {
-  background-color: lightblue;
   padding: 10px;
   border-right-color: black;
   border-right-width: 2px;
   border-right-style: solid;
+  min-height: 100%;
 }
 
 .sidebar h5 {
@@ -40,7 +43,6 @@ body {
   margin: auto;
   display: inline-block;
   width: 15%;
-  mwax-width: 70px;
   margin: 5px;
 }
 
@@ -64,7 +66,6 @@ table tr td img {
 }
 
 .classbox {
-  background-color: turquoise;
   padding: 5px;
 }
 
@@ -85,6 +86,7 @@ li a:link, li a:visited, li a:hover, li a:active  {
   margin: 5px;
   padding: 3px;
   border-radius: 5px;
+  min-height: 100%;
 }
 
 .skillbox_unselected {
@@ -112,6 +114,8 @@ li a:link, li a:visited, li a:hover, li a:active  {
 .header_bar {
   padding: 5px;
   text-align: left;
+  background-color: #2855AB;
+  color: white;
 }
 
 .banner_img {
