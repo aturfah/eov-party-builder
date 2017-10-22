@@ -39,8 +39,8 @@ body {
 .party_images img {
   margin: auto;
   display: inline-block;
-  width: 30%;
-  max-width: 70px;
+  width: 15%;
+  mwax-width: 70px;
   margin: 5px;
 }
 
