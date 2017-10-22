@@ -14,6 +14,54 @@ function formatName(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
+function resetDmgTable(){
+    var damage_types = ['physical', 'ranged', 'fire', 'ice', 'volt'];
+    var damage_targets = ['enemy', 'row', 'aoe', 'multi'];
+
+    damage_types.forEach(function (dmg_type) {
+        damage_targets.forEach(function (dmg_target) {
+            var span_id = '#'.concat(dmg_type).concat('_').concat(dmg_target);
+            $(span_id).html(0);
+        });
+    });
+}
+
+function updateTable() {
+    // Calculate Skill Damage Table
+    resetDmgTable();
+    sel_skills = [];
+    for(id in active_skills){
+        var className = $("#"+id+"_class_dropdown").val();
+        var specName = $("#"+id+"_spec_dropdown").val();
+        //console.log(id, className, specName)
+        active_skills[id].forEach(function(skillName){
+            skillName_data = skill_data[className][specName][skillName];
+            if(skillName_data){
+                sel_skills.push(skillName_data);
+            } else {
+                sel_skills.push(skill_data[className]['Base'][skillName]);
+            }
+        });
+    }
+
+    sel_skills.forEach(function(skill_info){
+        //Add to the data in the right places
+        keys = new Set(Object.keys(skill_info));
+        if (keys.has('damage')) {
+            damage_types = new Set(skill_info['damage'].split(' '));
+            damage_target = skill_info['damage target'];
+            damage_types.forEach(function (dmg_type) {
+                var span_id = '#'.concat(dmg_type).concat('_').concat(damage_target);
+                var num_types = parseInt($(span_id).text());
+                // console.log(span_id);
+                $(span_id).html(num_types+1);
+            });
+        }
+    });
+
+
+}
+
 function formatID(name) {
     return name.toLowerCase().replace(/ /g, '_');
 }
@@ -49,6 +97,7 @@ function updateClass(item_id) {
     updateImg(item_id, className);
     updateTitle(item_id, className, 'None');
     active_skills[item_id].clear();
+    updateTable()
     $('#'+item_id+'_spec_skills').html("Second Name Skillz go here");
 }
 
@@ -124,6 +173,7 @@ function selectSkill(item_id, className, tree, skill_name) {
         activateRequirements(item_id, className, tree, skill_name);
     }
     console.log(active_skills[item_id])
+    updateTable();
 }
 
 function loadSkills(item_id, className, specName){
@@ -157,12 +207,12 @@ function updateSpec(item_id) {
             sel_skills.delete(skill);
         }
     });
-    console.log(sel_skills);
-
+    active_skills[item_id] = sel_skills;
     if(specName === 'Base'){
         $('#' + item_id + '_spec_skills').html("Second Name Skillz go here");
     } else {
         loadSkills(item_id, className, specName);
     }
     updateTitle(item_id, className, specName);
+    updateTable()
 }

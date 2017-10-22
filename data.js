@@ -12,14 +12,20 @@ skill_data = {
             'Chain Flame': {
                 'requirements': {},
                 'description': 'Targets one enemy. When that enemy takes stab or fire damage, the caster will follow up with another attack. The element is either cut or stab, depending on if the user knows Rapier Mastery, and fire depending on the skill. Each time Chain Flame activates, the chance of it activating again on that turn is decreased. The base activation chance is 100%.<br/>Has standard priority. Has a base accuracy of 99% at all levels.',
+                'damage': 'physical fire',
+                'damage target': 'enemy'
             },
             'Chain Freeze': {
                 'requirements': {},
                 'description': 'Targets one enemy. When that enemy takes stab or ice damage, the caster will follow up with another attack. The element is either cut or stab, depending on if the user knows Rapier Mastery, and ice depending on the skill. Each time Chain Flame activates, the chance of it activating again on that turn is decreased. The base activation chance is 100%.<br/>Has standard priority. Has a base accuracy of 99% at all levels.',
+                'damage': 'physical ice',
+                'damage target': 'enemy'
             },
             'Chain Shock': {
                 'requirements': {},
                 'description': 'Targets one enemy. When that enemy takes stab or volt damage, the caster will follow up with another attack. The element is either cut or stab, depending on if the user knows Rapier Mastery, and volt depending on the skill. Each time Chain Shock activates, the chance of it activating again on that turn is decreased. The base activation chance is 100%.<br/>Has standard priority. Has a base accuracy of 99% at all levels.',
+                'damage': 'physical volt',
+                'damage target': 'enemy'
             },
             'Chain Boost': {
                 'requirements': {
@@ -49,7 +55,10 @@ skill_data = {
             },
             'Optic Thrust': {
                 'requirements': {},
-                'description': 'Deals melee STR-based stab damage to one enemy. Attempts to inflict blind on the target.'
+                'description': 'Deals melee STR-based stab damage to one enemy. Attempts to inflict blind on the target.',
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'ailment': 'blind'
             },
             'Sylphid': {
                 'requirements': {},
