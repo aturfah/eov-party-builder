@@ -10,14 +10,6 @@ $(document).ready(function () {
     });
 });
 
-function formatName(name) {
-    return name.charAt(0).toUpperCase() + name.slice(1);
-}
-
-function formatID(name) {
-    return name.toLowerCase().replace(/ /g, '_');
-}
-
 function loadClasses(item_id) {
     var html_str = "<option value='none'>(None)</option>";
     Object.keys(skill_data).forEach(function (item) {
