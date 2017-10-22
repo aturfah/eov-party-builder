@@ -10,7 +10,6 @@ $(document).ready(function () {
     });
 
     $(".nav a").on("click", function(){
-        console.log("HERE!");
         $(".nav").find(".active").removeClass("active");
         $(this).parent().addClass("active");
      });
