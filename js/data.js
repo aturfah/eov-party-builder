@@ -195,7 +195,63 @@ skill_data = {
             "Shield Bearer",
             "Cannon Bearer"
         ],
-        "Base": {},
+        "Base": {
+            "Shield Mastery": {
+                'requirements': {},
+                'description': "Decreases physical (cut/stab/bash) damage taken when the user has a shield equipped."
+            },
+            "Cannon Mastery": {
+                'requirements': {},
+                'description': "Increases damage dealt with cannons."
+            },
+            "Line Guard": {
+                'requirements': {},
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. Requires Shield."
+            },
+            "Mana Guard": {
+                'requirements': {},
+                'description': "Reduces elemental (fire/ice/volt) damage taken by all party members for one turn. Requires Shield."
+            },
+            "Healing Guard": {
+                'requirements': {},
+                'description': "Reduces physical (cut/stab/bash) damage taken by the user for one turn. When the user takes damage while Healing Guard is active, their HP is restored. The restoration is a static amount plus a percentage of the user's maximum HP. Requires Shield."
+            },
+            "Gunmount": {
+                'requirements': {
+                    'Line Guard': 2,
+                    'Mana Guard': 2,
+                    'Healing Guard': 2
+                },
+                'description': 'Can only be used on the turn after a shield skill was used. Deals ranged STR-based bash damage to one enemy. Replicates the effect of the shield skill used on the last turn.<br /><br /><b>BUG:</b> Gunmount will replicate any shield skill used on the last turn, including those not casted by the Gunmount user.',
+                'damage': 'ranged',
+                'damage target': 'enemy'
+            },
+            "Barrage Wall": {
+                'requirements': {},
+                'description': "Deals ranged STR-based bash damage to all enemies. Reduces hit targets' physical (cut/stab/bash) attack for a set amount of turns.",
+                'damage': 'ranged',
+                'damage target': 'aoe'
+            },
+            "Dragon Roar": {
+                'requirements': {},
+                'description': "Increases one ally's defense against physical (cut/stab/bash) attacks and chance of being targeted for a set amount of turns.",
+                'buff': 'aggro def',
+                'buff target': 'single'
+            },
+            "Decoy Bunker": {
+                'requirements': {},
+                'description': 'Creates a Decoy Bunker in the summon row. The Decoy Bunker has 10 HP. In addition to having a DEF value, the Decoy Bunker also has a set vulnerability to all damage. The Decoy Bunker has an increased base chance of drawing enemy attacks.'
+            },
+            "Defense Form": {
+                'requirements': {
+                    'Decoy Bunker': 2
+                },
+                'description': "Increases all party members' defense against physical (cut/stab/bash) attacks for a set amount of turns.",
+                'buff': 'def',
+                'buff target': 'party'
+            }
+            
+        },
         "Shield Bearer": {},
         "Cannon Bearer": {}
     },
