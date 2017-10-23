@@ -148,7 +148,9 @@ skill_data = {
                 'requirements': {
                     'Chain Killer': 5
                 },
-                'description': 'Increases the maximum number of hits of the Chain skill used on the next turn, and the Chain skill used on the next turn will also target all enemies.'
+                'description': 'Increases the maximum number of hits of the Chain skill used on the next turn, and the Chain skill used on the next turn will also target all enemies.',
+                'damage': 'physical fire volt ice',
+                'damage target': 'aoe'
             },
             "Chain Plus": {
                 'requirements': {
