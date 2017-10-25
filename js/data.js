@@ -235,7 +235,7 @@ skill_data = {
             "Dragon Roar": {
                 'requirements': {},
                 'description': "Increases one ally's defense against physical (cut/stab/bash) attacks and chance of being targeted for a set amount of turns.",
-                'buff': 'aggro def',
+                'buff': 'agg def',
                 'buff target': 'single'
             },
             "Decoy Bunker": {
@@ -252,8 +252,73 @@ skill_data = {
             }
             
         },
-        "Shield Bearer": {},
-        "Cannon Bearer": {}
+        "Shield Bearer": {
+            "HP Up": {
+                'requirements': {},
+                'description': "Increases the user's maximum HP."
+            },
+            "Recovery Guard": {
+                'requirements': {
+                    'Gunmount': 3
+                },
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. Party members under the effect of Recovery Guard also have a chance to have a set amount of binds removed when Recovery Guard activates.<br />If a party member has more binds than Recovery Guard removes, which binds are removed is random.<br />Has standard priority.",
+            },
+            "Counter Guard": {
+                'requirements': {
+                    'Gunmount': 3
+                },
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. When Counter Guard activates, the caster will counter with their equipped weapon, with a damage bonus. Each time Counter Guard counterattacks at levels 1-9, the chance of it attacking again on that same turn is decreased. At level 10, Counter Guard will always counterattack. The base chance of counterattacks is 100%. <b>Counter Guard only activates once per attack<b>.<br />Any modifiers to the user's normal attacks are applied for Counter Guard. For example, if the user has a Blaze Oil effect, Counter Guard counterattacks will be bash+fire.<br />Has standard priority. Counterattacks have a base accuracy of 102% at all levels."
+            },
+            "Divide Guard": {
+                "requirements": {
+                    'Gunmount': 3
+                },
+                'description': "argets one ally. The caster will take all damage for that ally for one turn. From levels 2-10, the caster takes reduced damage from attacks redirected by Divide Guard."
+            },
+            "Full Guard": {
+                'requirements': {
+                    "Recovery Guard": 3,
+                    "Counter Guard": 3,
+                    "Divide Guard": 3
+                },
+                'description': "Reduces all non-almighty damage to the party for one turn. After use, Full Guard goes on cooldown for a set amount of turns."
+            },
+            "Soul Guard": {
+                'requirements': {
+                    "Recovery Guard": 3,
+                    "Counter Guard": 3,
+                    "Divide Guard": 3
+                },
+                'description': "Reduces STR-based damage taken by one row for one turn. Party members under the effect of Soul Guard have a chance to survive fatal damage at 1 HP."
+            },
+            "Shield Throw": {
+                'requirements': {},
+                'description': "Deals ranged cut damage to one row of enemies. Shield Throw uses the user's equipped shield's DEF value multiplied by 3 as a replacement for weapon ATK.",
+                'damage': 'ranged',
+                'damage target': 'row'
+            },
+            "Auto-Roar": {
+                'requirements': {
+                    "Dragon Roar": 3
+                },
+                'description': "Gives the user a chance to use Dragon Roar on themselves at the start of battle"
+            }, 
+            "Dragon Force": {
+                'requirements': {
+                    'Auto-Roar': 3
+                },
+                'description': "Gives a chance for the user and any party members in their row to nullify physical (cut/stab/bash) damage."
+            },
+            "Auto-Bunker": {
+                'requirements': {
+                    "Defense Form": 3
+                },
+                "description": 'Gives the user a chance to use Decoy Bunker at the start of battle.'
+            }
+        },
+        "Cannon Bearer": {
+            
+        }
     },
     "pugilist": {
         "specializations": [
