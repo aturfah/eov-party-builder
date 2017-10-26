@@ -317,7 +317,62 @@ skill_data = {
             }
         },
         "Cannon Bearer": {
-            
+            "Gun Revenge": {
+                'requirements': {},
+                'description': "Increases the damage of artillery skills when either a shield skill activates, or when a Decoy Bunker or Decoy Turret is attacked. Gun Revenge's bonus is reset whenever it is applied."
+            },
+            "Phys Atk Up": {
+                'requirements': {},
+                "description": "Increases cut, stab, and bash damage."
+            },
+            "TP Up": {
+                'requirements': {},
+                "description": "Increases the user's maximum TP."
+            },
+            "Prep Artillery": {
+                'requirements': {
+                    'TP Up': 3
+                },
+                'description': "Increases the damage, accuracy, and speed of the artillery skill used on the next turn."
+            },
+            "Rapid Cannon": {
+                'requirements': {
+                    "Barrage Wall": 3
+                },
+                "description": "Deals ranged STR-based bash damage to one enemy.<br />Has absolute priority and a base accuracy of 112% at all levels."
+            },
+            "Curse Cannon": {
+                'requirements': {
+                    "Barrage Wall": 3
+                },
+                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict curse on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels."
+            },
+            "Hypno Cannon": {
+                'requirements': {
+                    "Barrage Wall": 3
+                },
+                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict sleep on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels."
+            },
+            "Buster Cannon": {
+                "requirements": {
+                    "Rapid Cannon": 3,
+                    "Curse Cannon": 3,
+                    "Hypno Cannon": 3
+                },
+                "description": "On the next turn's end, deals ranged bash+fire damage to one enemy. Damage is doubled when attacking a front row enemy while the caster is in the front row, multiplied by 1.5x when attacking a front row enemy while the caster is in the back row or vice versa, and is not increased when attacking a back row enemy while the user is in the back.<br /><br />The user cannot select another action on the turn where Buster Cannon activates. If the user is incapacitated or their arms become bound, Buster Cannon will not activate.<br /><br />The initial cast has a 90% speed modifier at all levels. The actual hit has a base accuracy of 92% at all levels."
+            },
+            "Decoy Turret": {
+                "requirements": {
+                    "Defense Form": 3
+                },
+                "description": "Creates a Decoy Turret in the summon row. The Decoy Turret has 10 HP. In addition to having a DEF value, the Decoy Turret also has a set vulnerability to all damage. The Decoy Bunker has an increased base chance of drawing enemy attacks. When the Decoy Turret is attacked, it will counterattack the source of damage. The counterattack is bash damage, and is based solely on the Decoy Turret's ATK value."
+            },
+            "Gun Support": {
+                "requirements": {
+                    "Decoy Turret": 3
+                },
+                "description": "When the user reduces damage they themselves take, or negates an attack entirely (ie. another Dragoon activating Dragon Force on them), they have a chance to create a Decoy Turret."
+            }
         }
     },
     "pugilist": {
