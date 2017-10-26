@@ -57,6 +57,33 @@ function updateDmgTable(sel_skills) {
     });
 }
 
+function resetBuffTable(){
+    var buff_types = ['atk', 'def', 'acc', 'eva', 'bind', 'agg']
+    var buff_targets = ['single', 'row', 'party']
+
+    buff_types.forEach(function(buff_type){
+        buff_targets.forEach(function(buff_target){
+            var span_id = '#buff_'.concat(buff_type).concat('_').concat(buff_target);
+            $(span_id).html(0);
+        });
+    });
+}
+
+function updateBuffTable(sel_skills) {
+    sel_skills.forEach(function (skill_info){
+        keys = new Set(Object.keys(skill_info));
+        if (keys.has('buff')){
+            buff_arr = skill_info['buff'].split(' ');
+            buff_arr.forEach(function(buff) {
+                var span_id = '#buff_'.concat(buff).concat('_').concat(skill_info['buff target']);
+                var num_types = parseInt($(span_id).text());
+                // console.log(span_id);
+                $(span_id).html(num_types + 1);
+            });
+        }
+    });
+}
+
 function updateTable() {
     sel_skills = [];
     for (id in active_skills) {
@@ -81,4 +108,7 @@ function updateTable() {
     resetAilBindTable();
     updateAilBindTable(sel_skills);
 
+    //Calculate Buffs
+    resetBuffTable();
+    updateBuffTable(sel_skills);
 }

@@ -195,9 +195,185 @@ skill_data = {
             "Shield Bearer",
             "Cannon Bearer"
         ],
-        "Base": {},
-        "Shield Bearer": {},
-        "Cannon Bearer": {}
+        "Base": {
+            "Shield Mastery": {
+                'requirements': {},
+                'description': "Decreases physical (cut/stab/bash) damage taken when the user has a shield equipped."
+            },
+            "Cannon Mastery": {
+                'requirements': {},
+                'description': "Increases damage dealt with cannons."
+            },
+            "Line Guard": {
+                'requirements': {},
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. Requires Shield."
+            },
+            "Mana Guard": {
+                'requirements': {},
+                'description': "Reduces elemental (fire/ice/volt) damage taken by all party members for one turn. Requires Shield."
+            },
+            "Healing Guard": {
+                'requirements': {},
+                'description': "Reduces physical (cut/stab/bash) damage taken by the user for one turn. When the user takes damage while Healing Guard is active, their HP is restored. The restoration is a static amount plus a percentage of the user's maximum HP. Requires Shield."
+            },
+            "Gunmount": {
+                'requirements': {
+                    'Line Guard': 2,
+                    'Mana Guard': 2,
+                    'Healing Guard': 2
+                },
+                'description': 'Can only be used on the turn after a shield skill was used. Deals ranged STR-based bash damage to one enemy. Replicates the effect of the shield skill used on the last turn.<br /><br /><b>BUG:</b> Gunmount will replicate any shield skill used on the last turn, including those not casted by the Gunmount user.',
+                'damage': 'ranged',
+                'damage target': 'enemy'
+            },
+            "Barrage Wall": {
+                'requirements': {},
+                'description': "Deals ranged STR-based bash damage to all enemies. Reduces hit targets' physical (cut/stab/bash) attack for a set amount of turns.",
+                'damage': 'ranged',
+                'damage target': 'aoe'
+            },
+            "Dragon Roar": {
+                'requirements': {},
+                'description': "Increases one ally's defense against physical (cut/stab/bash) attacks and chance of being targeted for a set amount of turns.",
+                'buff': 'agg def',
+                'buff target': 'single'
+            },
+            "Decoy Bunker": {
+                'requirements': {},
+                'description': 'Creates a Decoy Bunker in the summon row. The Decoy Bunker has 10 HP. In addition to having a DEF value, the Decoy Bunker also has a set vulnerability to all damage. The Decoy Bunker has an increased base chance of drawing enemy attacks.'
+            },
+            "Defense Form": {
+                'requirements': {
+                    'Decoy Bunker': 2
+                },
+                'description': "Increases all party members' defense against physical (cut/stab/bash) attacks for a set amount of turns.",
+                'buff': 'def',
+                'buff target': 'party'
+            }
+            
+        },
+        "Shield Bearer": {
+            "HP Up": {
+                'requirements': {},
+                'description': "Increases the user's maximum HP."
+            },
+            "Recovery Guard": {
+                'requirements': {
+                    'Gunmount': 3
+                },
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. Party members under the effect of Recovery Guard also have a chance to have a set amount of binds removed when Recovery Guard activates.<br />If a party member has more binds than Recovery Guard removes, which binds are removed is random.<br />Has standard priority.",
+            },
+            "Counter Guard": {
+                'requirements': {
+                    'Gunmount': 3
+                },
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. When Counter Guard activates, the caster will counter with their equipped weapon, with a damage bonus. Each time Counter Guard counterattacks at levels 1-9, the chance of it attacking again on that same turn is decreased. At level 10, Counter Guard will always counterattack. The base chance of counterattacks is 100%. <b>Counter Guard only activates once per attack<b>.<br />Any modifiers to the user's normal attacks are applied for Counter Guard. For example, if the user has a Blaze Oil effect, Counter Guard counterattacks will be bash+fire.<br />Has standard priority. Counterattacks have a base accuracy of 102% at all levels."
+            },
+            "Divide Guard": {
+                "requirements": {
+                    'Gunmount': 3
+                },
+                'description': "argets one ally. The caster will take all damage for that ally for one turn. From levels 2-10, the caster takes reduced damage from attacks redirected by Divide Guard."
+            },
+            "Full Guard": {
+                'requirements': {
+                    "Recovery Guard": 3,
+                    "Counter Guard": 3,
+                    "Divide Guard": 3
+                },
+                'description': "Reduces all non-almighty damage to the party for one turn. After use, Full Guard goes on cooldown for a set amount of turns."
+            },
+            "Soul Guard": {
+                'requirements': {
+                    "Recovery Guard": 3,
+                    "Counter Guard": 3,
+                    "Divide Guard": 3
+                },
+                'description': "Reduces STR-based damage taken by one row for one turn. Party members under the effect of Soul Guard have a chance to survive fatal damage at 1 HP."
+            },
+            "Shield Throw": {
+                'requirements': {},
+                'description': "Deals ranged cut damage to one row of enemies. Shield Throw uses the user's equipped shield's DEF value multiplied by 3 as a replacement for weapon ATK.",
+                'damage': 'ranged',
+                'damage target': 'row'
+            },
+            "Auto-Roar": {
+                'requirements': {
+                    "Dragon Roar": 3
+                },
+                'description': "Gives the user a chance to use Dragon Roar on themselves at the start of battle"
+            }, 
+            "Dragon Force": {
+                'requirements': {
+                    'Auto-Roar': 3
+                },
+                'description': "Gives a chance for the user and any party members in their row to nullify physical (cut/stab/bash) damage."
+            },
+            "Auto-Bunker": {
+                'requirements': {
+                    "Defense Form": 3
+                },
+                "description": 'Gives the user a chance to use Decoy Bunker at the start of battle.'
+            }
+        },
+        "Cannon Bearer": {
+            "Gun Revenge": {
+                'requirements': {},
+                'description': "Increases the damage of artillery skills when either a shield skill activates, or when a Decoy Bunker or Decoy Turret is attacked. Gun Revenge's bonus is reset whenever it is applied."
+            },
+            "Phys Atk Up": {
+                'requirements': {},
+                "description": "Increases cut, stab, and bash damage."
+            },
+            "TP Up": {
+                'requirements': {},
+                "description": "Increases the user's maximum TP."
+            },
+            "Prep Artillery": {
+                'requirements': {
+                    'TP Up': 3
+                },
+                'description': "Increases the damage, accuracy, and speed of the artillery skill used on the next turn."
+            },
+            "Rapid Cannon": {
+                'requirements': {
+                    "Barrage Wall": 3
+                },
+                "description": "Deals ranged STR-based bash damage to one enemy.<br />Has absolute priority and a base accuracy of 112% at all levels."
+            },
+            "Curse Cannon": {
+                'requirements': {
+                    "Barrage Wall": 3
+                },
+                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict curse on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels."
+            },
+            "Hypno Cannon": {
+                'requirements': {
+                    "Barrage Wall": 3
+                },
+                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict sleep on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels."
+            },
+            "Buster Cannon": {
+                "requirements": {
+                    "Rapid Cannon": 3,
+                    "Curse Cannon": 3,
+                    "Hypno Cannon": 3
+                },
+                "description": "On the next turn's end, deals ranged bash+fire damage to one enemy. Damage is doubled when attacking a front row enemy while the caster is in the front row, multiplied by 1.5x when attacking a front row enemy while the caster is in the back row or vice versa, and is not increased when attacking a back row enemy while the user is in the back.<br /><br />The user cannot select another action on the turn where Buster Cannon activates. If the user is incapacitated or their arms become bound, Buster Cannon will not activate.<br /><br />The initial cast has a 90% speed modifier at all levels. The actual hit has a base accuracy of 92% at all levels."
+            },
+            "Decoy Turret": {
+                "requirements": {
+                    "Defense Form": 3
+                },
+                "description": "Creates a Decoy Turret in the summon row. The Decoy Turret has 10 HP. In addition to having a DEF value, the Decoy Turret also has a set vulnerability to all damage. The Decoy Bunker has an increased base chance of drawing enemy attacks. When the Decoy Turret is attacked, it will counterattack the source of damage. The counterattack is bash damage, and is based solely on the Decoy Turret's ATK value."
+            },
+            "Gun Support": {
+                "requirements": {
+                    "Decoy Turret": 3
+                },
+                "description": "When the user reduces damage they themselves take, or negates an attack entirely (ie. another Dragoon activating Dragon Force on them), they have a chance to create a Decoy Turret."
+            }
+        }
     },
     "pugilist": {
         "specializations": [
