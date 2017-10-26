@@ -339,19 +339,27 @@ skill_data = {
                 'requirements': {
                     "Barrage Wall": 3
                 },
-                "description": "Deals ranged STR-based bash damage to one enemy.<br />Has absolute priority and a base accuracy of 112% at all levels."
+                "description": "Deals ranged STR-based bash damage to one enemy.<br />Has absolute priority and a base accuracy of 112% at all levels.",
+                "damage": "ranged",
+                "damage target": "enemy"
             },
             "Curse Cannon": {
                 'requirements': {
                     "Barrage Wall": 3
                 },
-                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict curse on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels."
+                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict curse on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels.",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "ailment": "cursed"
             },
             "Hypno Cannon": {
                 'requirements': {
                     "Barrage Wall": 3
                 },
-                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict sleep on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels."
+                "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict sleep on the target.<br />Has a 60% speed modifier and a base accuracy of 92% at all levels.",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "ailment": "sleep",
             },
             "Buster Cannon": {
                 "requirements": {
@@ -359,7 +367,9 @@ skill_data = {
                     "Curse Cannon": 3,
                     "Hypno Cannon": 3
                 },
-                "description": "On the next turn's end, deals ranged bash+fire damage to one enemy. Damage is doubled when attacking a front row enemy while the caster is in the front row, multiplied by 1.5x when attacking a front row enemy while the caster is in the back row or vice versa, and is not increased when attacking a back row enemy while the user is in the back.<br /><br />The user cannot select another action on the turn where Buster Cannon activates. If the user is incapacitated or their arms become bound, Buster Cannon will not activate.<br /><br />The initial cast has a 90% speed modifier at all levels. The actual hit has a base accuracy of 92% at all levels."
+                "description": "On the next turn's end, deals ranged bash+fire damage to one enemy. Damage is doubled when attacking a front row enemy while the caster is in the front row, multiplied by 1.5x when attacking a front row enemy while the caster is in the back row or vice versa, and is not increased when attacking a back row enemy while the user is in the back.<br /><br />The user cannot select another action on the turn where Buster Cannon activates. If the user is incapacitated or their arms become bound, Buster Cannon will not activate.<br /><br />The initial cast has a 90% speed modifier at all levels. The actual hit has a base accuracy of 92% at all levels.",
+                "damage": "ranged fire",
+                "damage target": "enemy"
             },
             "Decoy Turret": {
                 "requirements": {
