@@ -64,14 +64,17 @@ skill_data = {
             },
             'Sylphid': {
                 'requirements': {},
-                'description': "When the user dodges an attack, they will counterattack the attack source with their equipped weapon. Each time the user counterattacks, the chance of Sylphid activating again on that turn is decreased by 40%."
+                'description': "When the user dodges an attack, they will counterattack the attack source with their equipped weapon. Each time the user counterattacks, the chance of Sylphid activating again on that turn is decreased by 40%.",
+                'damage': 'counter',
+                'damage target': 'physical'
             }
-
         },
         "Phantom Duelist": {
             'Ray of Light': {
                 'requirements': {},
-                'description': "When the user dodges an attack, their chance to be targeted and defense are increased. When the user is damaged, Ray of Light's effects are reset.<br/><br/>Ray of Light uses a stack system--each dodge adds one stack of target/defense bonus to the user. There is a maximum amount of stacks that is determined by skill level."
+                'description': "When the user dodges an attack, their chance to be targeted and defense are increased. When the user is damaged, Ray of Light's effects are reset.<br/><br/>Ray of Light uses a stack system--each dodge adds one stack of target/defense bonus to the user. There is a maximum amount of stacks that is determined by skill level.",
+                'buff': 'def agg',
+                'buff target': 'self'
             },
             'Lightweight': {
                 'requirements': {},
@@ -79,13 +82,17 @@ skill_data = {
             },
             'Phantom Swords': {
                 'requirements': {},
-                'description': "Reduces one row of enemies' accuracy for a set amount of turns."
+                'description': "Reduces one row of enemies' accuracy for a set amount of turns.",
+                'debuff': 'acc',
+                'debuff target': 'row'
             },
             'Lure': {
                 'requirements': {
                     'Phantom Swords': 3
                 },
-                'description': "For one turn, when the caster dodges an attack, all other party members in their row will counterattack the attack source.<br/><br/>Any modifiers to an attacker's normal attacks are applied for Lure. For example, if the attacker has at least one level in Rapier Mastery, and has a Blaze Oil effect, Lure counterattacks will be stab+fire."
+                'description': "For one turn, when the caster dodges an attack, all other party members in their row will counterattack the attack source.<br/><br/>Any modifiers to an attacker's normal attacks are applied for Lure. For example, if the attacker has at least one level in Rapier Mastery, and has a Blaze Oil effect, Lure counterattacks will be stab+fire.",
+                'damage': 'counter',
+                'damage target': 'enemy'
             },
             'Dodge Boon': {
                 'requirements': {
@@ -113,7 +120,9 @@ skill_data = {
                 },
                 "description": "Deals melee STR-based stab damage to one enemy. For the rest of the turn, the user's evasion and chance to be targeted are increased.",
                 'damage': 'physical',
-                'damage target': 'enemy'
+                'damage target': 'enemy',
+                'buff': 'eva agg',
+                'buff target': 'self'
             },
             "Revenge Thrust": {
                 'requirements': {
