@@ -45,7 +45,9 @@ skill_data = {
             },
             'Predict': {
                 'requirements': {},
-                'description': "For one turn, increases the user's evasion and their chances to be targeted by enemies. However, it also makes the user take 2.5x damage. When the user evades an attack, their evasion and chance to be targeted are decreased."
+                'description': "For one turn, increases the user's evasion and their chances to be targeted by enemies. However, it also makes the user take 2.5x damage. When the user evades an attack, their evasion and chance to be targeted are decreased.",
+                'buff': 'agg def',
+                'buff target': 'single'
             },
             'Wind Curtain': {
                 'requirements': {
@@ -101,7 +103,9 @@ skill_data = {
                 'requirements': {
                     "Auto-Curtain": 3
                 },
-                "description": "For one turn, increases all party members' evasion. Each time a party member dodges an attack, the bonus provided by Divine Gust is decreased."
+                "description": "For one turn, increases all party members' evasion. Each time a party member dodges an attack, the bonus provided by Divine Gust is decreased.",
+                "buff": "eva",
+                "buff target": "party"
             },
             "Deft Thrust": {
                 'requirements': {
