@@ -520,17 +520,25 @@ skill_data = {
                 'damage': 'physical',
                 'damage target': 'counter'
             },
-            "Skill Name": {
+            "Breather": {
                 'requirements': {},
-                'description': ""
+                'description': "Can only be used if the user is afflicted with an ailment or bind. Removes all binds and ailments from the user. Increases the user's damage on the next turn.",
+                'buff': 'atk',
+                'target': 'self'
             },
-            "Skill Name": {
+            "Fault Blocker": {
                 'requirements': {},
-                'description': ""
+                'description': "Reduces the chance of being afflicted with ailments and binds for party members in the user's row for a set amount of turns.",
+                'buff': 'bind',
+                'buff target': 'row'
             },
-            "Skill Name": {
-                'requirements': {},
-                'description': ""
+            "Clinch": {
+                'requirements': {
+                    "Breather": 3,
+                    "Fault Blocker": 3
+                },
+                'description': "Attempts to bind the head, arms, and legs of both one enemy and the user. Each bind is rolled for individually.<br/><br/>Has an 80% speed modifier at all levels.",
+                'bind': 'head arm leg'
             }
         },
         "Impact Brawler": {}
