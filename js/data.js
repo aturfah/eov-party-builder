@@ -541,7 +541,56 @@ skill_data = {
                 'bind': 'head arm leg'
             }
         },
-        "Impact Brawler": {}
+        "Impact Brawler": {
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements':{},
+                'description': ""
+            }
+        }
     },
     "harbringer": {
         "specializations": [
