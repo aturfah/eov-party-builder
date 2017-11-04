@@ -273,7 +273,9 @@ skill_data = {
                 'requirements': {
                     'Gunmount': 3
                 },
-                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. When Counter Guard activates, the caster will counter with their equipped weapon, with a damage bonus. Each time Counter Guard counterattacks at levels 1-9, the chance of it attacking again on that same turn is decreased. At level 10, Counter Guard will always counterattack. The base chance of counterattacks is 100%. <b>Counter Guard only activates once per attack<b>.<br />Any modifiers to the user's normal attacks are applied for Counter Guard. For example, if the user has a Blaze Oil effect, Counter Guard counterattacks will be bash+fire.<br />Has standard priority. Counterattacks have a base accuracy of 102% at all levels."
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. When Counter Guard activates, the caster will counter with their equipped weapon, with a damage bonus. Each time Counter Guard counterattacks at levels 1-9, the chance of it attacking again on that same turn is decreased. At level 10, Counter Guard will always counterattack. The base chance of counterattacks is 100%. <b>Counter Guard only activates once per attack<b>.<br />Any modifiers to the user's normal attacks are applied for Counter Guard. For example, if the user has a Blaze Oil effect, Counter Guard counterattacks will be bash+fire.<br />Has standard priority. Counterattacks have a base accuracy of 102% at all levels.",
+                'damage': 'ranged',
+                'damage target': 'counter'
             },
             "Divide Guard": {
                 "requirements": {
@@ -455,7 +457,7 @@ skill_data = {
                 'damage': 'physical volt',
                 'damage target': 'enemy'
             },
-            "Devil's Fist": {
+            "Devils Fist": {
                 'requirements': {
                     'Thunder Fist': 2
                 },
@@ -464,7 +466,64 @@ skill_data = {
                 'damage target': 'enemy'
             }
         },
-        "Barrage Brawler": {},
+        "Barrage Brawler": {
+            "Double Punch": {
+                'requirements': {},
+                'description': "When using Concussion, Arm Crusher, Low Blow, or Corkscrew on their own (not as follow-ups from One-Two Punch or Leading Blow), if the skill fails to inflict its ailment/bind, the user has a chance to use the skill again. Will not activate if the target already has the applicable disable"
+            },
+            "Status ATK Up": {
+                'requirements': {},
+                'description': "Increases the user's chance of inflicting ailments, binds, and stuns."
+            },
+            "Corkscrew": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to inflict paralysis on the target.",
+                "ailment": "paralyzed",
+                "damage": "melee",
+                "damage target": "enemy"
+            },
+            "Leading Blow": {
+                'requirements': {
+                    "Corkscrew": 2,
+                    "One-Two Punch": 5
+                },
+                'description': "Deals melee STR-based bash damage to one enemy. If the target has an ailment and/or binds, follows up with the following skills: Concussion for head bind, Arm Crusher for arm bind, Low Blow for leg bind, and Corkscrew for any ailment. The follow-up skills have a multiplier applied to their damage.<br /><br />Has a 90% speed modifier and a base accuracy of 97% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            },
+            "Speed Up": {
+                'requirements': {},
+                'description': "Increases the user's action speed, accuracy, and evasion."
+            },
+            "Lash Out": {
+                'requirements': {
+                    "Speed Up": 5
+                },
+                'description': "Deals multiple instances of melee STR-based bash damage to random enemies. Can hit the same target multiple times. The amount of attacks Lash Out deals is equal to the number of times the user hit an enemy on the last turn. As an example, if the user used One-Two Punch and activated all three follow-ups, Lash Out would hit four times.<br /><br />Has an 80% speed modifier and a base accuracy of 87% at all levels.",
+                'damage': 'physical',
+                'damage target': 'multi'
+            },
+            "Cross Counter": {
+                'requirements': {
+                    "Overexertion": 5
+                },
+                'description': "For one turn, when an ally in the same row as the user first takes STR-based damage, the user will deal melee STR-based bash damage to the attacker. Attempts to bind whichever body part was used to attack the damage receiver. If the source was a normal physical attack, Cross Counter (most likely) will attempt to bind the source's arms. Only activates once per turn.<br/><br/>Initial prep has standard priority and a 1500% speed modifier at all levels. Counterattacks have a base accuracy of 147% at all levels.",
+                'damage': 'physical',
+                'damage target': 'counter'
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            }
+        },
         "Impact Brawler": {}
     },
     "harbringer": {

@@ -32,7 +32,7 @@ function updateAilBindTable(sel_skills) {
 
 function resetDmgTable() {
     var damage_types = ['physical', 'ranged', 'fire', 'ice', 'volt'];
-    var damage_targets = ['enemy', 'row', 'aoe', 'multi'];
+    var damage_targets = ['enemy', 'row', 'aoe', 'multi', 'counter'];
 
     damage_types.forEach(function (dmg_type) {
         damage_targets.forEach(function (dmg_target) {
