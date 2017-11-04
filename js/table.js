@@ -18,9 +18,13 @@ function updateAilBindTable(sel_skills) {
             $(span_id).html(num_ailments+1);
         }
         if (keys.has('bind')){
-            var span_id = '#'.concat(skill_info['bind']).concat('bind_num');
-            var num_binds = parseInt($(span_id).text());
-            $(span_id).html(num_binds+1);
+            var bind_types = new Set(skill_info['bind'].split(' '));
+            bind_types.forEach(function(bind_name){
+                bind_key = bind_name.charAt(0);
+                var span_id = '#'.concat(bind_key).concat('_bind_num');
+                var num_binds = parseInt($(span_id).text());
+                $(span_id).html(num_binds+1);
+            });
         }
     });
 
@@ -43,8 +47,8 @@ function updateDmgTable(sel_skills) {
         //Add to the data in the right places
         keys = new Set(Object.keys(skill_info));
         if (keys.has('damage')) {
-            damage_types = new Set(skill_info['damage'].split(' '));
-            damage_target = skill_info['damage target'].split(' ');
+            var damage_types = new Set(skill_info['damage'].split(' '));
+            var damage_target = skill_info['damage target'].split(' ');
             damage_types.forEach(function (dmg_type) {
                 damage_target.forEach(function(dmg_target){
                     var span_id = '#'.concat(dmg_type).concat('_').concat(dmg_target);
