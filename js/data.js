@@ -214,7 +214,9 @@ skill_data = {
             },
             "Healing Guard": {
                 'requirements': {},
-                'description': "Reduces physical (cut/stab/bash) damage taken by the user for one turn. When the user takes damage while Healing Guard is active, their HP is restored. The restoration is a static amount plus a percentage of the user's maximum HP. Requires Shield."
+                'description': "Reduces physical (cut/stab/bash) damage taken by the user for one turn. When the user takes damage while Healing Guard is active, their HP is restored. The restoration is a static amount plus a percentage of the user's maximum HP. Requires Shield.",
+                'healing': 'conditional',
+                'healing target': 'single'
             },
             "Gunmount": {
                 'requirements': {
