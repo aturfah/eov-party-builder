@@ -47,7 +47,7 @@ skill_data = {
                 'requirements': {},
                 'description': "For one turn, increases the user's evasion and their chances to be targeted by enemies. However, it also makes the user take 2.5x damage. When the user evades an attack, their evasion and chance to be targeted are decreased.",
                 'buff': 'agg def',
-                'buff target': 'single'
+                'buff target': 'self'
             },
             'Wind Curtain': {
                 'requirements': {

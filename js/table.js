@@ -63,7 +63,7 @@ function updateDmgTable(sel_skills) {
 
 function resetBuffTable(){
     var buff_types = ['atk', 'def', 'acc', 'eva', 'bind', 'agg']
-    var buff_targets = ['single', 'row', 'party']
+    var buff_targets = ['self', 'single', 'row', 'party']
 
     buff_types.forEach(function(buff_type){
         buff_targets.forEach(function(buff_target){
