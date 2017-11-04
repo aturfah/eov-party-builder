@@ -396,7 +396,74 @@ skill_data = {
             "Barrage Brawler",
             "Impact Brawler"
         ],
-        "Base": {},
+        "Base": {
+            "Brawl Mastery": {
+                'requirements': {},
+                'description': "Increases damage dealt with cesti.",
+            },
+            "Phys ATK Up": {
+                'requirements': {},
+                'description': "Passively increases physical (cut/stab/bash) damage.",
+            },
+            "Concussion": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to bind the target's head.<br/>Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'head'
+            },
+            "Arm Crusher": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to bind the target's arms.<br/>Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'arm'
+            },
+            "Low Blow": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to bind the target's legs.<br/>Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'leg'
+            },
+            "One-Two Punch": {
+                'requirements': {
+                    "Concussion": 3,
+                    "Arm Crusher": 3,
+                    "Low Blow": 3,
+                },
+                'description': "Deals melee STR-based bash damage to one enemy. The user has a chance to follow up the initial One-Two Punch hit with Concussion, Arm Crusher, and Low Blow, if the target does not have the body part for that respective skill bound. If the target's arms are bound, for example, Concussion and Low Blow can activate, but Arm Crusher cannot. If the target is completely bound, One-Two Punch will only deal its initial damage.<br /><br />The skills are rolled for in this order: Concussion, Arm Crusher, Low Blow. Each skill is rolled for individually--failing to roll for Concussion, for example, means that Arm Crusher and Low Blow can still activate.<br />Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'head arm leg'
+            },
+            "Blood Wrath": {
+                'requirements': {},
+                'description': "When the user loses HP, they have a chance to attack an enemy with their equipped weapon.<br />Blood Wrath can activate on self-inflicted HP loss, such as Overexertion.<br />Any modifiers to the user's normal attacks are applied for Blood Wrath. For example, if the user has a Blaze Oil effect, Blood Wrath attacks will be bash+fire.<br />Blood Wrath attacks have a base accuracy of 102% at all levels.",
+            },
+            "Overexertion": {
+                'requirements': {
+                    "Blood Wrath": 1
+                },
+                'description': "Places a buff on one party member that increases their cut/stab/bash damage, at the cost of losing a percentage of their current HP whenever they act, for 4 turns.<br />Has a 40% speed modifier at all levels.",
+                'buff': 'atk',
+                'buff target': 'single'
+            },
+            "Thunder Fist": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash+volt damage to one enemy. If the target is not killed by Thunder Fist, the user suffers backlash damage--a percentage of their current HP.",
+                'damage': 'physical volt',
+                'damage target': 'enemy'
+            },
+            "Devil's Fist": {
+                'requirements': {
+                    'Thunder Fist': 2
+                },
+                'description': "Consumes a percentage of the user's current HP to deal melee STR-based bash damage to one enemy, with splash damage.<br /><br />Has an 80% speed modifier and no base accuracy modifier at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            }
+        },
         "Barrage Brawler": {},
         "Impact Brawler": {}
     },
