@@ -84,6 +84,30 @@ function updateBuffTable(sel_skills) {
     });
 }
 
+function resetHealTable(){
+    var heal_types = ['direct', 'conditional']
+    var heal_targets = ['single', 'row', 'party']
+
+    heal_types.forEach(function(heal_type){
+        heal_targets.forEach(function(heal_target){
+            var span_id = '#heal_'.concat(heal_type).concat('_').concat(heal_target);
+            $(span_id).html(0)
+        });
+    });
+}
+
+function updateHealTable(){
+    sel_skills.forEach(function (skill_info){
+        keys = new Set(Object.keys(skill_info));
+        if (keys.has('healing')){
+            var span_id = '#heal_'.concat(skill_info['healing']).concat('_').concat(skill_info['healing target']);
+            var num_types = parseInt($(span_id).text());
+            // console.log(span_id);
+            $(span_id).html(num_types + 1);
+        }
+    });
+}
+
 function updateTable() {
     sel_skills = [];
     for (id in active_skills) {
@@ -111,4 +135,8 @@ function updateTable() {
     //Calculate Buffs
     resetBuffTable();
     updateBuffTable(sel_skills);
+
+    // Calculate Heal Table
+    resetHealTable();
+    updateHealTable(sel_skills);
 }
