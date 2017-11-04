@@ -85,8 +85,8 @@ function updateBuffTable(sel_skills) {
 }
 
 function resetHealTable(){
-    var heal_types = ['direct', 'conditional']
-    var heal_targets = ['single', 'row', 'party']
+    var heal_types = ['direct', 'conditional'];
+    var heal_targets = ['single', 'row', 'party'];
 
     heal_types.forEach(function(heal_type){
         heal_targets.forEach(function(heal_target){
