@@ -89,7 +89,15 @@ function updateBuffTable(sel_skills) {
 }
 
 function resetDebuffTable(){
-    
+    var debuff_types = ['atk','def','eva','acc','res']
+    var debuff_targets = ['enemy', 'row', 'aoe']
+
+    debuff_types.forEach(function(debuff_type){
+        debuff_targets.forEach(function(debuff_target){
+            var span_id = '#debuff_'.concat(debuff_type).concat('_').concat(debuff_target);
+            $(span_id).html(0);
+        });
+    });
 }
 
 function updateDebuffTable(sel_skills){
@@ -147,6 +155,9 @@ function updateTable() {
     //Calculate Buffs
     resetBuffTable();
     updateBuffTable(sel_skills);
+
+    resetDebuffTable();
+    updateDebuffTable();
 
     // Calculate Heal Table
     resetHealTable();
