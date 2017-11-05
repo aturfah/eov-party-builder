@@ -101,7 +101,14 @@ function resetDebuffTable(){
 }
 
 function updateDebuffTable(sel_skills){
-
+    sel_skills.forEach(function (skill_info){
+        keys = new Set(Object.keys(skill_info));
+        if (keys.has('debuff')){
+            var span_id = '#debuff_'.concat(skill_info['debuff']).concat('_').concat(skill_info['debuff target']);
+            var num_types = parseInt($(span_id).text());
+            $(span_id).html(num_types + 1);
+        }
+    });
 }
 
 function resetHealTable(){
@@ -157,7 +164,7 @@ function updateTable() {
     updateBuffTable(sel_skills);
 
     resetDebuffTable();
-    updateDebuffTable();
+    updateDebuffTable(sel_skills);
 
     // Calculate Heal Table
     resetHealTable();
