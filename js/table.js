@@ -88,6 +88,14 @@ function updateBuffTable(sel_skills) {
     });
 }
 
+function resetDebuffTable(){
+    
+}
+
+function updateDebuffTable(sel_skills){
+
+}
+
 function resetHealTable(){
     var heal_types = ['direct', 'conditional'];
     var heal_targets = ['single', 'row', 'party'];
