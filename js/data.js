@@ -568,6 +568,8 @@ skill_data = {
                     'Soul Crusher': 5
                 },
                 'description': "For one turn, the user will endure mortal damage once. If the user endured a fatal hit through usage of Abyssal Killer, their damage on the next turn is increased by the value listed here multiplied by the square root of the square root of the percentage of the user's max HP the endured hit would've overkilled them by.<br/><br/>Has a 200% speed modifier at all levels.",
+                'buff': 'atk',
+                'buff target': 'self'
             },
             "Titan Killer": {
                 'requirements':{},
@@ -588,7 +590,9 @@ skill_data = {
                     'Titan Killer': 3,
                     "Deaths Edge": 3
                 },
-                'description': "Increases the user's damage on the next turn based on how much HP they recover on the turn that Heavenly Aid is casted. If the user does not recover any HP, Heavenly Aid has no effect. The final charge amount is approximately the value listed here multiplied by the percentage of their max HP the user recovered last turn.<br/><br/>Has a 200% speed modifier at all levels."
+                'description': "Increases the user's damage on the next turn based on how much HP they recover on the turn that Heavenly Aid is casted. If the user does not recover any HP, Heavenly Aid has no effect. The final charge amount is approximately the value listed here multiplied by the percentage of their max HP the user recovered last turn.<br/><br/>Has a 200% speed modifier at all levels.",
+                'buff': 'atk',
+                'buff target': 'self'
             },
             "Satans Fist": {
                 'requirements':{
