@@ -542,53 +542,65 @@ skill_data = {
             }
         },
         "Impact Brawler": {
-            "Skill Name": {
+            "Fortitude": {
                 'requirements':{},
-                'description': ""
+                'description': "Increases the user's damage when their current HP is below a certain percentage of their maximum HP."
             },
-            "Skill Name": {
+            "HP Up": {
                 'requirements':{},
-                'description': ""
+                'description': "Increases the user's maximum HP."
             },
-            "Skill Name": {
+            "Vajra Stance": {
                 'requirements':{},
-                'description': ""
+                'description': "Increases the user's row's defense against physical (cut/stab/bash) attacks for a set amount of turns.<br /><br />Has a 70% speed modifier at all levels.",
+                'buff': 'def',
+                'buff target': 'row'
             },
-            "Skill Name": {
+            "Soul Crusher": {
                 'requirements':{},
-                'description': ""
+                'description': "Deals melee STR-based bash damage to all enemies. Heals the user for a percentage of the damage dealt.<br/><br/>Has an 80% speed modifier and a base accuracy of 92% at all levels.",
+                'damage': 'physical',
+                'damage target': 'aoe'
             },
-            "Skill Name": {
-                'requirements':{},
-                'description': ""
+            "Abyssal Killer": {
+                'requirements':{
+                    'Vajra Stance': 5,
+                    'Soul Crusher': 5
+                },
+                'description': "For one turn, the user will endure mortal damage once. If the user endured a fatal hit through usage of Abyssal Killer, their damage on the next turn is increased by the value listed here multiplied by the square root of the square root of the percentage of the user's max HP the endured hit would've overkilled them by.<br/><br/>Has a 200% speed modifier at all levels.",
             },
-            "Skill Name": {
+            "Titan Killer": {
                 'requirements':{},
-                'description': ""
+                'description': "Deals melee STR-based bash damage to one enemy. Damage is increased if the target has a higher percentage of their max HP than the user does--ie. if the user has 50% of their max HP and the target has 80%, the damage is amplified.<br/><br/>Has a 150% speed modifier and a base accuracy of 97% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
             },
-            "Skill Name": {
-                'requirements':{},
-                'description': ""
+            "Deaths Edge": {
+                'requirements':{
+                    'Overexertion': 3
+                },
+                'description': "Deals melee STR-based bash damage to one enemy. Damage is affected in some way by how low the party's HP is.<br/><br/>The specific formula by which Death's Edge damage scales is very complicated--as such, all I will mention is that both the party's current average percentage of HP remaining, as well as the raw amount of HP missing, are both taken into account by Death's Edge.<br/>Has a 20% speed modifier and a base accuracy of 147% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
             },
-            "Skill Name": {
-                'requirements':{},
-                'description': ""
+            "Heavenly Aid": {
+                'requirements':{
+                    'Titan Killer': 3,
+                    "Deaths Edge": 3
+                },
+                'description': "Increases the user's damage on the next turn based on how much HP they recover on the turn that Heavenly Aid is casted. If the user does not recover any HP, Heavenly Aid has no effect. The final charge amount is approximately the value listed here multiplied by the percentage of their max HP the user recovered last turn.<br/><br/>Has a 200% speed modifier at all levels."
             },
-            "Skill Name": {
-                'requirements':{},
-                'description': ""
+            "Satans Fist": {
+                'requirements':{
+                    'Devils Fist': 3
+                },
+                'description': "Consumes a percentage of the user's current HP to deal melee STR-based bash damage to one row of enemies.<br/><br/>Has an 80% speed modifier and a base accuracy of 97% at all levels.",
+                'damage': 'physical',
+                'damage target': 'row'
             },
-            "Skill Name": {
+            "Status DEF Up": {
                 'requirements':{},
-                'description': ""
-            },
-            "Skill Name": {
-                'requirements':{},
-                'description': ""
-            },
-            "Skill Name": {
-                'requirements':{},
-                'description': ""
+                'description': "Reduces the user's chance of being afflicted with ailments and binds."
             }
         }
     },
