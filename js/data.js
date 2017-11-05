@@ -613,8 +613,139 @@ skill_data = {
             "Deathbringer",
             "Deathguard"
         ],
-        "Base": {},
-        "Deathbringer": {},
+        "Base": {
+            "Scythe Mastery": {
+                "requirements": {},
+                "description": "Increases damage dealt with scythes."
+            },
+            "Soul Gather": {
+                "requirements": {},
+                "description": "Increases the encounter rate for a certain number of steps. Increases EXP earned from battles."
+            },
+            "Miasma Armor": {
+                "requirements": {},
+                "description": "Consumes a percentage of the user's current HP to gain the Miasma Armor state. The Miasma Armor state lasts for three turns. The Miasma Armor state increases the user's speed while active.<br/><br/>Has a 30% speed modifier at all levels."
+            },
+            "Auto-Miasma": {
+                "requirements": {
+                    "Miasma Armor": 2
+                },
+                "description": "Gives the user a chance to gain the Miasma Armor state at the start of battle."
+            },
+            "Endless Shroud": {
+                "requirements": {
+                    'Miasma Armor': 2
+                },
+                "description": "Gives the user a chance to gain the Miasma Armor state when using a debuff skill."
+            },
+            "Deaths Judgement": {
+                "requirements": {
+                    'Miasma Armor': 2
+                },
+                "description": "When the user has the Miasma Armor state, when they lose HP (either through damage or self-inflicted HP loss), they have a chance to attempt to inflict sleep on one enemy. The base chance of the sleep infliction is 100%.",
+                "ailment": 'sleep',
+                'ailment target': 'enemy'
+            },
+            "Stiffling Miasma": {
+                "requirements": {},
+                "description": "Reduces all enemies' attack for a set amount of turns.<br/><br/>Has an 85% speed modifier at all levels.",
+                "debuff": 'atk',
+                'debuff target': 'aoe'
+            },
+            "Wilting Miasma": {
+                "requirements": {},
+                "description": "Increases all enemies' chance of being inflicted with ailments and binds for a set amount of turns.<br/><br/>Has an 85% speed modifier at all levels.",
+                "debuff": 'res',
+                "debuff target": 'aoe'
+            },
+            "Paralyzing Reap": {
+                "requirements": {},
+                "description": "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict paralysis on hit targets.<br/><br/>Has a 60% speed modifier and a base accuracy of 98% at all levels.",
+                "ailment": "paralyzed",
+                "ailment target": "row",
+                'damage': 'physical',
+                "damage target": "row"
+            },
+            "Cursed Reap": {
+                "requirements": {},
+                "description": "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict curse on hit targets.<br/><br/>Has a 60% speed modifier and a base accuracy of 98% at all levels.",
+                "ailment": "cursed",
+                "ailment target": "row",
+                'damage': 'physical',
+                "damage target": "row"
+            }
+        },
+        "Deathbringer": {
+            "Black Blade": {
+                'requirements': {},
+                'description': "When the user has the Miasma Armor state, increases their damage when they inflict an ailment. The bonus provided by Black Blade is reset after the Miasma Armor state is ended."
+            },
+            "Black Shroud": {
+                'requirements': {},
+                'description': "When the user has the Miasma Armor state, increases their defense when they inflict an ailment. The bonus provided by Black Shroud is reset after the Miasma Armor state is ended."
+            },
+            "TP Up": {
+                'requirements': {},
+                'description': "Increases the user's maximum TP."
+            },
+            "Status ATK Up": {
+                'requirements': {},
+                'description': "Increases the user's chance of inflicting ailments, binds, and stuns."
+            },
+            "Bloody Reap": {
+                'requirements': {
+                    'Deaths Judgement': 3
+                },
+                'description': "Consumes a percentage of the user's current HP to deal 2-4 of melee STR-based cut damage to random enemies. Can hit the same target multiple times.<br/><br/>Has a 50% speed modifier and a base accuracy of 88% at all levels.",
+                'damage': 'physical',
+                'damage target': 'multi'
+            },
+            "Frigid Reap": {
+                'requirements': {
+                    'Deaths Judgement': 3
+                },
+                'description': "Deals melee STR-based cut+ice damage to one row of enemies. If a target has an ailment, they are also hit with an extra melee STR-based cut+ice damage attack that deals double the damage of the first hit.<br/><br/>Has a 75% speed modifier and a base accuracy of 98% at all levels.",
+                'damage': 'phyiscal ice',
+                'damage target': 'row'
+
+            },
+            "Temporal Shroud": {
+                'requirements': {
+                    'Bloody Reap': 3,
+                    'Frigid Reap': 3
+                },
+                'description': "Requires the Miasma Armor state to use. Ends the Miasma Armor state, and takes the user out of battle. At the end of the turn, deals melee STR-based cut damage to one enemy, and returns the user to battle.<br/><br/>Has a base accuracy of 148% at all levels.",
+                "damage": 'physical',
+                'damage target': 'enemy'
+            },
+            "Toxic Reap": {
+                'requirements': {
+                    'Cursed Reap': 3
+                },
+                'description': "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict poison on hit targets.<br/><br/>Has a 60% speed modifier and a base accuracy of 98% at all levels.",
+                'damage': 'physical',
+                'damage target': 'row',
+                'ailment': 'poison'
+            },
+            "Chaos Reap": {
+                'requirements': {
+                    'Cursed Reap': 3
+                },
+                'description': "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict panic on hit targets.<br/><br/>Has a 60% speed modifier and a base accuracy of 98% at all levels.",
+                'damage': 'physical',
+                'damage target': 'row',
+                'ailment': 'panic'
+            },
+            "Fatal Reap": {
+                'requirements': {
+                    'Chaos Reap': 3,
+                    'Toxic Reap': 3
+                },
+                'description': "Deals melee STR-based cut damage to one enemy. Damage is amplified if the target is asleep--this includes the original 1.5x sleep damage bonus. Attempts to instantly kill the target. The instant kill chance is increased if the target is asleep.<br/><br/>Has a 20% speed modifier and a base accuracy of 88% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            }
+        },
         "Deathguard": {}
     },
     "warlock": {
