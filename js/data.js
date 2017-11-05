@@ -1,3 +1,10 @@
+/*
+"Skill Name": {
+    'requirements': {},
+    'description': "",
+}
+*/
+
 skill_data = {
     "fencer": {
         "specializations": [
@@ -746,7 +753,48 @@ skill_data = {
                 'damage target': 'enemy'
             }
         },
-        "Deathguard": {}
+        "Deathguard": {
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            },
+            "Skill Name": {
+                'requirements': {},
+                'description': ""
+            }
+        }
     },
     "warlock": {
         "specializations": [

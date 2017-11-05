@@ -2,7 +2,7 @@ function resetAilBindTable() {
     var types = ['h_bind', 'l_bind', 'a_bind', 'blind', 'sleep', 'paralyzed',
         'petrified', 'cursed', 'poison']
 
-    types.forEach(function(type){
+    types.forEach(function (type) {
         var span_id = '#'.concat(type).concat('_num');
         $(span_id).html(0);
     });
@@ -15,15 +15,15 @@ function updateAilBindTable(sel_skills) {
         if (keys.has('ailment')) {
             var span_id = '#'.concat(skill_info['ailment']).concat('_num');
             var num_ailments = parseInt($(span_id).text());
-            $(span_id).html(num_ailments+1);
+            $(span_id).html(num_ailments + 1);
         }
-        if (keys.has('bind')){
+        if (keys.has('bind')) {
             var bind_types = new Set(skill_info['bind'].split(' '));
-            bind_types.forEach(function(bind_name){
+            bind_types.forEach(function (bind_name) {
                 bind_key = bind_name.charAt(0);
                 var span_id = '#'.concat(bind_key).concat('_bind_num');
                 var num_binds = parseInt($(span_id).text());
-                $(span_id).html(num_binds+1);
+                $(span_id).html(num_binds + 1);
             });
         }
     });
@@ -50,7 +50,7 @@ function updateDmgTable(sel_skills) {
             var damage_types = new Set(skill_info['damage'].split(' '));
             var damage_target = skill_info['damage target'].split(' ');
             damage_types.forEach(function (dmg_type) {
-                damage_target.forEach(function(dmg_target){
+                damage_target.forEach(function (dmg_target) {
                     var span_id = '#'.concat(dmg_type).concat('_').concat(dmg_target);
                     var num_types = parseInt($(span_id).text());
                     // console.log(span_id);
@@ -61,12 +61,12 @@ function updateDmgTable(sel_skills) {
     });
 }
 
-function resetBuffTable(){
+function resetBuffTable() {
     var buff_types = ['atk', 'def', 'acc', 'eva', 'bind', 'agg']
     var buff_targets = ['self', 'single', 'row', 'party']
 
-    buff_types.forEach(function(buff_type){
-        buff_targets.forEach(function(buff_target){
+    buff_types.forEach(function (buff_type) {
+        buff_targets.forEach(function (buff_target) {
             var span_id = '#buff_'.concat(buff_type).concat('_').concat(buff_target);
             $(span_id).html(0);
         });
@@ -74,11 +74,11 @@ function resetBuffTable(){
 }
 
 function updateBuffTable(sel_skills) {
-    sel_skills.forEach(function (skill_info){
+    sel_skills.forEach(function (skill_info) {
         keys = new Set(Object.keys(skill_info));
-        if (keys.has('buff')){
+        if (keys.has('buff')) {
             buff_arr = skill_info['buff'].split(' ');
-            buff_arr.forEach(function(buff) {
+            buff_arr.forEach(function (buff) {
                 var span_id = '#buff_'.concat(buff).concat('_').concat(skill_info['buff target']);
                 var num_types = parseInt($(span_id).text());
                 // console.log(span_id);
@@ -88,22 +88,22 @@ function updateBuffTable(sel_skills) {
     });
 }
 
-function resetDebuffTable(){
-    var debuff_types = ['atk','def','eva','acc','res']
+function resetDebuffTable() {
+    var debuff_types = ['atk', 'def', 'eva', 'acc', 'res']
     var debuff_targets = ['enemy', 'row', 'aoe']
 
-    debuff_types.forEach(function(debuff_type){
-        debuff_targets.forEach(function(debuff_target){
+    debuff_types.forEach(function (debuff_type) {
+        debuff_targets.forEach(function (debuff_target) {
             var span_id = '#debuff_'.concat(debuff_type).concat('_').concat(debuff_target);
             $(span_id).html(0);
         });
     });
 }
 
-function updateDebuffTable(sel_skills){
-    sel_skills.forEach(function (skill_info){
+function updateDebuffTable(sel_skills) {
+    sel_skills.forEach(function (skill_info) {
         keys = new Set(Object.keys(skill_info));
-        if (keys.has('debuff')){
+        if (keys.has('debuff')) {
             var span_id = '#debuff_'.concat(skill_info['debuff']).concat('_').concat(skill_info['debuff target']);
             var num_types = parseInt($(span_id).text());
             $(span_id).html(num_types + 1);
@@ -111,22 +111,22 @@ function updateDebuffTable(sel_skills){
     });
 }
 
-function resetHealTable(){
+function resetHealTable() {
     var heal_types = ['direct', 'conditional'];
     var heal_targets = ['single', 'row', 'party'];
 
-    heal_types.forEach(function(heal_type){
-        heal_targets.forEach(function(heal_target){
+    heal_types.forEach(function (heal_type) {
+        heal_targets.forEach(function (heal_target) {
             var span_id = '#heal_'.concat(heal_type).concat('_').concat(heal_target);
             $(span_id).html(0)
         });
     });
 }
 
-function updateHealTable(){
-    sel_skills.forEach(function (skill_info){
+function updateHealTable() {
+    sel_skills.forEach(function (skill_info) {
         keys = new Set(Object.keys(skill_info));
-        if (keys.has('healing')){
+        if (keys.has('healing')) {
             var span_id = '#heal_'.concat(skill_info['healing']).concat('_').concat(skill_info['healing target']);
             var num_types = parseInt($(span_id).text());
             // console.log(span_id);
