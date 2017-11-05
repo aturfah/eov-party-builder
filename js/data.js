@@ -47,7 +47,7 @@ skill_data = {
                 'requirements': {},
                 'description': "For one turn, increases the user's evasion and their chances to be targeted by enemies. However, it also makes the user take 2.5x damage. When the user evades an attack, their evasion and chance to be targeted are decreased.",
                 'buff': 'agg def',
-                'buff target': 'single'
+                'buff target': 'self'
             },
             'Wind Curtain': {
                 'requirements': {
@@ -64,14 +64,17 @@ skill_data = {
             },
             'Sylphid': {
                 'requirements': {},
-                'description': "When the user dodges an attack, they will counterattack the attack source with their equipped weapon. Each time the user counterattacks, the chance of Sylphid activating again on that turn is decreased by 40%."
+                'description': "When the user dodges an attack, they will counterattack the attack source with their equipped weapon. Each time the user counterattacks, the chance of Sylphid activating again on that turn is decreased by 40%.",
+                'damage': 'counter',
+                'damage target': 'physical'
             }
-
         },
         "Phantom Duelist": {
             'Ray of Light': {
                 'requirements': {},
-                'description': "When the user dodges an attack, their chance to be targeted and defense are increased. When the user is damaged, Ray of Light's effects are reset.<br/><br/>Ray of Light uses a stack system--each dodge adds one stack of target/defense bonus to the user. There is a maximum amount of stacks that is determined by skill level."
+                'description': "When the user dodges an attack, their chance to be targeted and defense are increased. When the user is damaged, Ray of Light's effects are reset.<br/><br/>Ray of Light uses a stack system--each dodge adds one stack of target/defense bonus to the user. There is a maximum amount of stacks that is determined by skill level.",
+                'buff': 'def agg',
+                'buff target': 'self'
             },
             'Lightweight': {
                 'requirements': {},
@@ -79,13 +82,17 @@ skill_data = {
             },
             'Phantom Swords': {
                 'requirements': {},
-                'description': "Reduces one row of enemies' accuracy for a set amount of turns."
+                'description': "Reduces one row of enemies' accuracy for a set amount of turns.",
+                'debuff': 'acc',
+                'debuff target': 'row'
             },
             'Lure': {
                 'requirements': {
                     'Phantom Swords': 3
                 },
-                'description': "For one turn, when the caster dodges an attack, all other party members in their row will counterattack the attack source.<br/><br/>Any modifiers to an attacker's normal attacks are applied for Lure. For example, if the attacker has at least one level in Rapier Mastery, and has a Blaze Oil effect, Lure counterattacks will be stab+fire."
+                'description': "For one turn, when the caster dodges an attack, all other party members in their row will counterattack the attack source.<br/><br/>Any modifiers to an attacker's normal attacks are applied for Lure. For example, if the attacker has at least one level in Rapier Mastery, and has a Blaze Oil effect, Lure counterattacks will be stab+fire.",
+                'damage': 'counter',
+                'damage target': 'enemy'
             },
             'Dodge Boon': {
                 'requirements': {
@@ -113,7 +120,9 @@ skill_data = {
                 },
                 "description": "Deals melee STR-based stab damage to one enemy. For the rest of the turn, the user's evasion and chance to be targeted are increased.",
                 'damage': 'physical',
-                'damage target': 'enemy'
+                'damage target': 'enemy',
+                'buff': 'eva agg',
+                'buff target': 'self'
             },
             "Revenge Thrust": {
                 'requirements': {
@@ -273,7 +282,9 @@ skill_data = {
                 'requirements': {
                     'Gunmount': 3
                 },
-                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. When Counter Guard activates, the caster will counter with their equipped weapon, with a damage bonus. Each time Counter Guard counterattacks at levels 1-9, the chance of it attacking again on that same turn is decreased. At level 10, Counter Guard will always counterattack. The base chance of counterattacks is 100%. <b>Counter Guard only activates once per attack<b>.<br />Any modifiers to the user's normal attacks are applied for Counter Guard. For example, if the user has a Blaze Oil effect, Counter Guard counterattacks will be bash+fire.<br />Has standard priority. Counterattacks have a base accuracy of 102% at all levels."
+                'description': "Reduces physical (cut/stab/bash) damage taken by one row for one turn. When Counter Guard activates, the caster will counter with their equipped weapon, with a damage bonus. Each time Counter Guard counterattacks at levels 1-9, the chance of it attacking again on that same turn is decreased. At level 10, Counter Guard will always counterattack. The base chance of counterattacks is 100%. <b>Counter Guard only activates once per attack<b>.<br />Any modifiers to the user's normal attacks are applied for Counter Guard. For example, if the user has a Blaze Oil effect, Counter Guard counterattacks will be bash+fire.<br />Has standard priority. Counterattacks have a base accuracy of 102% at all levels.",
+                'damage': 'ranged',
+                'damage target': 'counter'
             },
             "Divide Guard": {
                 "requirements": {
@@ -396,9 +407,206 @@ skill_data = {
             "Barrage Brawler",
             "Impact Brawler"
         ],
-        "Base": {},
-        "Barrage Brawler": {},
-        "Impact Brawler": {}
+        "Base": {
+            "Brawl Mastery": {
+                'requirements': {},
+                'description': "Increases damage dealt with cesti.",
+            },
+            "Phys ATK Up": {
+                'requirements': {},
+                'description': "Passively increases physical (cut/stab/bash) damage.",
+            },
+            "Concussion": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to bind the target's head.<br/>Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'head'
+            },
+            "Arm Crusher": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to bind the target's arms.<br/>Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'arm'
+            },
+            "Low Blow": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to bind the target's legs.<br/>Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'leg'
+            },
+            "One-Two Punch": {
+                'requirements': {
+                    "Concussion": 3,
+                    "Arm Crusher": 3,
+                    "Low Blow": 3,
+                },
+                'description': "Deals melee STR-based bash damage to one enemy. The user has a chance to follow up the initial One-Two Punch hit with Concussion, Arm Crusher, and Low Blow, if the target does not have the body part for that respective skill bound. If the target's arms are bound, for example, Concussion and Low Blow can activate, but Arm Crusher cannot. If the target is completely bound, One-Two Punch will only deal its initial damage.<br /><br />The skills are rolled for in this order: Concussion, Arm Crusher, Low Blow. Each skill is rolled for individually--failing to roll for Concussion, for example, means that Arm Crusher and Low Blow can still activate.<br />Has a 90% speed modifier and a base accuracy of 102% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy',
+                'bind': 'head arm leg'
+            },
+            "Blood Wrath": {
+                'requirements': {},
+                'description': "When the user loses HP, they have a chance to attack an enemy with their equipped weapon.<br />Blood Wrath can activate on self-inflicted HP loss, such as Overexertion.<br />Any modifiers to the user's normal attacks are applied for Blood Wrath. For example, if the user has a Blaze Oil effect, Blood Wrath attacks will be bash+fire.<br />Blood Wrath attacks have a base accuracy of 102% at all levels.",
+            },
+            "Overexertion": {
+                'requirements': {
+                    "Blood Wrath": 1
+                },
+                'description': "Places a buff on one party member that increases their cut/stab/bash damage, at the cost of losing a percentage of their current HP whenever they act, for 4 turns.<br />Has a 40% speed modifier at all levels.",
+                'buff': 'atk',
+                'buff target': 'single'
+            },
+            "Thunder Fist": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash+volt damage to one enemy. If the target is not killed by Thunder Fist, the user suffers backlash damage--a percentage of their current HP.",
+                'damage': 'physical volt',
+                'damage target': 'enemy'
+            },
+            "Devils Fist": {
+                'requirements': {
+                    'Thunder Fist': 2
+                },
+                'description': "Consumes a percentage of the user's current HP to deal melee STR-based bash damage to one enemy, with splash damage.<br /><br />Has an 80% speed modifier and no base accuracy modifier at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            }
+        },
+        "Barrage Brawler": {
+            "Double Punch": {
+                'requirements': {},
+                'description': "When using Concussion, Arm Crusher, Low Blow, or Corkscrew on their own (not as follow-ups from One-Two Punch or Leading Blow), if the skill fails to inflict its ailment/bind, the user has a chance to use the skill again. Will not activate if the target already has the applicable disable"
+            },
+            "Status ATK Up": {
+                'requirements': {},
+                'description': "Increases the user's chance of inflicting ailments, binds, and stuns."
+            },
+            "Corkscrew": {
+                'requirements': {},
+                'description': "Deals melee STR-based bash damage to one enemy. Attempts to inflict paralysis on the target.",
+                "ailment": "paralyzed",
+                "damage": "melee",
+                "damage target": "enemy"
+            },
+            "Leading Blow": {
+                'requirements': {
+                    "Corkscrew": 2,
+                    "One-Two Punch": 5
+                },
+                'description': "Deals melee STR-based bash damage to one enemy. If the target has an ailment and/or binds, follows up with the following skills: Concussion for head bind, Arm Crusher for arm bind, Low Blow for leg bind, and Corkscrew for any ailment. The follow-up skills have a multiplier applied to their damage.<br /><br />Has a 90% speed modifier and a base accuracy of 97% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            },
+            "Speed Up": {
+                'requirements': {},
+                'description': "Increases the user's action speed, accuracy, and evasion."
+            },
+            "Lash Out": {
+                'requirements': {
+                    "Speed Up": 5
+                },
+                'description': "Deals multiple instances of melee STR-based bash damage to random enemies. Can hit the same target multiple times. The amount of attacks Lash Out deals is equal to the number of times the user hit an enemy on the last turn. As an example, if the user used One-Two Punch and activated all three follow-ups, Lash Out would hit four times.<br /><br />Has an 80% speed modifier and a base accuracy of 87% at all levels.",
+                'damage': 'physical',
+                'damage target': 'multi'
+            },
+            "Cross Counter": {
+                'requirements': {
+                    "Overexertion": 5
+                },
+                'description': "For one turn, when an ally in the same row as the user first takes STR-based damage, the user will deal melee STR-based bash damage to the attacker. Attempts to bind whichever body part was used to attack the damage receiver. If the source was a normal physical attack, Cross Counter (most likely) will attempt to bind the source's arms. Only activates once per turn.<br/><br/>Initial prep has standard priority and a 1500% speed modifier at all levels. Counterattacks have a base accuracy of 147% at all levels.",
+                'damage': 'physical',
+                'damage target': 'counter'
+            },
+            "Breather": {
+                'requirements': {},
+                'description': "Can only be used if the user is afflicted with an ailment or bind. Removes all binds and ailments from the user. Increases the user's damage on the next turn.",
+                'buff': 'atk',
+                'target': 'self'
+            },
+            "Fault Blocker": {
+                'requirements': {},
+                'description': "Reduces the chance of being afflicted with ailments and binds for party members in the user's row for a set amount of turns.",
+                'buff': 'bind',
+                'buff target': 'row'
+            },
+            "Clinch": {
+                'requirements': {
+                    "Breather": 3,
+                    "Fault Blocker": 3
+                },
+                'description': "Attempts to bind the head, arms, and legs of both one enemy and the user. Each bind is rolled for individually.<br/><br/>Has an 80% speed modifier at all levels.",
+                'bind': 'head arm leg'
+            }
+        },
+        "Impact Brawler": {
+            "Fortitude": {
+                'requirements':{},
+                'description': "Increases the user's damage when their current HP is below a certain percentage of their maximum HP."
+            },
+            "HP Up": {
+                'requirements':{},
+                'description': "Increases the user's maximum HP."
+            },
+            "Vajra Stance": {
+                'requirements':{},
+                'description': "Increases the user's row's defense against physical (cut/stab/bash) attacks for a set amount of turns.<br /><br />Has a 70% speed modifier at all levels.",
+                'buff': 'def',
+                'buff target': 'row'
+            },
+            "Soul Crusher": {
+                'requirements':{},
+                'description': "Deals melee STR-based bash damage to all enemies. Heals the user for a percentage of the damage dealt.<br/><br/>Has an 80% speed modifier and a base accuracy of 92% at all levels.",
+                'damage': 'physical',
+                'damage target': 'aoe'
+            },
+            "Abyssal Killer": {
+                'requirements':{
+                    'Vajra Stance': 5,
+                    'Soul Crusher': 5
+                },
+                'description': "For one turn, the user will endure mortal damage once. If the user endured a fatal hit through usage of Abyssal Killer, their damage on the next turn is increased by the value listed here multiplied by the square root of the square root of the percentage of the user's max HP the endured hit would've overkilled them by.<br/><br/>Has a 200% speed modifier at all levels.",
+                'buff': 'atk',
+                'buff target': 'self'
+            },
+            "Titan Killer": {
+                'requirements':{},
+                'description': "Deals melee STR-based bash damage to one enemy. Damage is increased if the target has a higher percentage of their max HP than the user does--ie. if the user has 50% of their max HP and the target has 80%, the damage is amplified.<br/><br/>Has a 150% speed modifier and a base accuracy of 97% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            },
+            "Deaths Edge": {
+                'requirements':{
+                    'Overexertion': 3
+                },
+                'description': "Deals melee STR-based bash damage to one enemy. Damage is affected in some way by how low the party's HP is.<br/><br/>The specific formula by which Death's Edge damage scales is very complicated--as such, all I will mention is that both the party's current average percentage of HP remaining, as well as the raw amount of HP missing, are both taken into account by Death's Edge.<br/>Has a 20% speed modifier and a base accuracy of 147% at all levels.",
+                'damage': 'physical',
+                'damage target': 'enemy'
+            },
+            "Heavenly Aid": {
+                'requirements':{
+                    'Titan Killer': 3,
+                    "Deaths Edge": 3
+                },
+                'description': "Increases the user's damage on the next turn based on how much HP they recover on the turn that Heavenly Aid is casted. If the user does not recover any HP, Heavenly Aid has no effect. The final charge amount is approximately the value listed here multiplied by the percentage of their max HP the user recovered last turn.<br/><br/>Has a 200% speed modifier at all levels.",
+                'buff': 'atk',
+                'buff target': 'self'
+            },
+            "Satans Fist": {
+                'requirements':{
+                    'Devils Fist': 3
+                },
+                'description': "Consumes a percentage of the user's current HP to deal melee STR-based bash damage to one row of enemies.<br/><br/>Has an 80% speed modifier and a base accuracy of 97% at all levels.",
+                'damage': 'physical',
+                'damage target': 'row'
+            },
+            "Status DEF Up": {
+                'requirements':{},
+                'description': "Reduces the user's chance of being afflicted with ailments and binds."
+            }
+        }
     },
     "harbringer": {
         "specializations": [
