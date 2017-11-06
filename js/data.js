@@ -14017,33 +14017,10 @@ skill_data = {
         "Flying Falcon": {
             "Sky Patrol": {
                 "description": "When a hawk is summoned, there is a chance theyll find food while walking around in the Labyrinth. What this entails specifically is unknown, as the skills themselves do not provide info.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
-                "requirements": {},
                 "table": []
             },
             "Finishing Shot": {
                 "description": "When an enemy is below a certain HP threshold after the user damages them, the user will perform a normal attack on them.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -14090,17 +14067,9 @@ skill_data = {
             },
             "Aerial Talons": {
                 "description": "Requires a hawk to use. Commands the hawk to attack one enemy. The hawk will then attack the target with a ranged STR-based cut attack. Attempts to bind the targets head.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "bind": "head",
                 "requirements": {
                     "Hawk Arrow": 3
                 },
@@ -14169,17 +14138,8 @@ skill_data = {
             },
             "Ice Peck": {
                 "description": "Requires a hawk to use. Deals ranged STR-based stab damage to all enemies. After the attack, the hawk will follow up with ranged STR-based ice damage to all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged ice",
+                "damage target": "aoe",
                 "requirements": {
                     "Wing Thrash": 3
                 },
@@ -14248,17 +14208,9 @@ skill_data = {
             },
             "Sky Dive": {
                 "description": "Requires a hawk to use. Commands the hawk to attack one enemy three turns later with ranged STR-based cut damage at the start of the turn. Attempts to bind the targets head. The hawk cannot perform other actions during the delay.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "bind": "head",
                 "requirements": {
                     "Aerial Talons": 5,
                     "Ice Peck": 5
@@ -14328,17 +14280,6 @@ skill_data = {
             },
             "Phys ATK Up": {
                 "description": "Passively increases physical (cut/stab/bash) damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -14385,17 +14326,6 @@ skill_data = {
             },
             "Speed Up": {
                 "description": "Increases the users action speed, accuracy, and evasion.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -14452,17 +14382,8 @@ skill_data = {
             },
             "Power Shot": {
                 "description": "Deals ranged STR-based stab damage to one enemy, with line-piercing effect.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Target Arrow": 5
                 },
@@ -14520,18 +14441,9 @@ skill_data = {
                 ]
             },
             "Million Arrows": {
-                "description": "None",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "description": "At the start of the next turn, deals multiple instances of ranged STR-based stab damage to random enemies. Can hit the same target 4 times at most. The maximum number of hits is 16 at all levels. Misses do not count towards Million Arrows's limit of hits per enemy.<br/>The user cannot select another action on the turn where Million Arrows activates. If the user is incapacitated or their arms become bound, Million Arrows will not activate.<br/>Has a base accuracy of 47% at all levels.",
+                "damage": "ranged",
+                "damage target": "multi",
                 "requirements": {
                     "Power Shot": 5
                 },
@@ -14600,17 +14512,8 @@ skill_data = {
             },
             "Feather Storm": {
                 "description": "Requires a hawk to use. Commands the hawk to attempt to inflict blind on one row of enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "ailment": "blind",
+                "ailment target": "row",
                 "requirements": {},
                 "table": [
                     {
