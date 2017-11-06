@@ -8440,17 +8440,6 @@ skill_data = {
         "Blade Dancer": {
             "Multi-Katana": {
                 "description": "Lets the user equip multiple katanas. Gives a chance for the user to attack with all of their equipped weapons when using the normal Attack command. Each successive hit deals less damage than the last--the second hit deals 80% damage, the third hit deals 65% damage, and the fifth hit deals 50% damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -8497,17 +8486,6 @@ skill_data = {
             },
             "HP Up": {
                 "description": "Increases the users maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -8554,15 +8532,6 @@ skill_data = {
             },
             "Reincarnation": {
                 "description": "When the user is dead, at the end of each turn that they are dead, they have a chance to revive at 1 HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -8615,15 +8584,6 @@ skill_data = {
                 "description": "Chases attacks by enemies and party members for one turn with the users equipped weapon. The maximum number of chases depends on how many katanas the user has equipped.",
                 "damage": "",
                 "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Swallow Soar": 3
                 },
@@ -8732,17 +8692,6 @@ skill_data = {
             },
             "Reblossom": {
                 "description": "If the user has multiple katanas equipped, they have a chance to repeat katana skills after use.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Hell Slash": 3
                 },
@@ -8811,17 +8760,8 @@ skill_data = {
             },
             "Sacred Tetrad": {
                 "description": "Deals multiple instances of melee STR-based cut damage to one enemy. The number of hits is equal to the number of katanas the user has equipped.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Whirlwind": 3
                 },
@@ -8910,17 +8850,8 @@ skill_data = {
             },
             "Layered Bloom": {
                 "description": "Deals 2-8 instances of melee STR-based cut damage to random enemies in one row. Can hit the same enemy multiple times. For each katana the user has equipped beyond one, the damage per hit is increased.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
                 "requirements": {
                     "Whirlwind": 3
                 },
@@ -9009,17 +8940,8 @@ skill_data = {
             },
             "Vast Flourish": {
                 "description": "Deals multiple instances of melee STR-based cut damage to random enemies. Can hit the same target multiple times. The number of hits is equal to the number of katanas the user has equipped multiplied by the number of enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "multi",
                 "requirements": {
                     "Sacred Tetrad": 3,
                     "Layered Bloom": 3
@@ -9079,17 +9001,6 @@ skill_data = {
             },
             "Phys ATK Up": {
                 "description": "Passively increases physical (cut/stab/bash) damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -9136,17 +9047,8 @@ skill_data = {
             },
             "Meteor Rain": {
                 "description": "Deals multiple instances of melee STR-based damage to random enemies. Can hit the same enemy multiple times. The number of hits is equal to the number of katanas the user has equipped. The element of the attack is random, and can be cut, stab, bash, fire, ice, volt, or almighty.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "multi",
                 "requirements": {
                     "Phys ATK Up": 3
                 },
