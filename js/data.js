@@ -5964,17 +5964,6 @@ skill_data = {
             },
             "Soul Gather": {
                 "description": "Increases the encounter rate for a certain number of steps. Increases EXP earned from battles.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -6051,17 +6040,6 @@ skill_data = {
             },
             "Miasma Armor": {
                 "description": "Consumes a percentage of the users current HP to gain the Miasma Armor state. The Miasma Armor state lasts for three turns. The Miasma Armor state increases the users speed while active.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -6098,17 +6076,6 @@ skill_data = {
             },
             "Auto-Miasma": {
                 "description": "Gives the user a chance to gain the Miasma Armor state at the start of battle.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Miasma Armor": 2
                 },
@@ -6157,17 +6124,6 @@ skill_data = {
             },
             "Endless Shroud": {
                 "description": "Gives the user a chance to gain the Miasma Armor state when using a debuff skill.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Miasma Armor": 2
                 },
@@ -6216,17 +6172,8 @@ skill_data = {
             },
             "Judgment": {
                 "description": "When the user has the Miasma Armor state, when they lose HP (either through damage or self-inflicted HP loss), they have a chance to attempt to inflict sleep on one enemy. The base chance of the sleep infliction is 100%.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "ailment": "sleep",
+                "ailment target": "enemy",
                 "requirements": {
                     "Miasma Armor": 2
                 },
@@ -6275,17 +6222,8 @@ skill_data = {
             },
             "Stifling Miasma": {
                 "description": "Reduces all enemies attack for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "atk",
+                "debuff target": "aoe",
                 "requirements": {},
                 "table": [
                     {
@@ -6352,17 +6290,8 @@ skill_data = {
             },
             "Wilting Miasma": {
                 "description": "Increases all enemies chance of being inflicted with ailments and binds for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "res",
+                "debuff target": "aoe",
                 "requirements": {
                     "Stifling Miasma": 3
                 },
@@ -6431,17 +6360,10 @@ skill_data = {
             },
             "Paralyzing Reap": {
                 "description": "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict paralysis on hit targets.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
+                "ailment": "paralyzed",
+                "ailment target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -6508,17 +6430,10 @@ skill_data = {
             },
             "Cursed Reap": {
                 "description": "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict curse on hit targets.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
+                "ailment": "cursed",
+                "ailment target": "row",
                 "requirements": {
                     "Paralyzing Reap": 3
                 },
