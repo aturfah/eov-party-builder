@@ -6504,17 +6504,8 @@ skill_data = {
         "Deathbringer": {
             "Black Blade": {
                 "description": "When the user has the Miasma Armor state, increases their damage when they inflict an ailment. The bonus provided by Black Blade is reset after the Miasma Armor state is ended.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -6581,17 +6572,8 @@ skill_data = {
             },
             "Black Shroud": {
                 "description": "When the user has the Miasma Armor state, increases their defense when they inflict an ailment. The bonus provided by Black Shroud is reset after the Miasma Armor state is ended.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "def",
+                "buff target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -6658,17 +6640,6 @@ skill_data = {
             },
             "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -6715,17 +6686,6 @@ skill_data = {
             },
             "Status ATK Up": {
                 "description": "Increases the users chance of inflicting ailments, binds, and stuns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -6772,17 +6732,8 @@ skill_data = {
             },
             "Bloody Reap": {
                 "description": "Consumes a percentage of the users current HP to deal 2-4 of melee STR-based cut damage to random enemies. Can hit the same target multiple times.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "multi",
                 "requirements": {
                     "Deaths Judgement": 3
                 },
@@ -6851,17 +6802,8 @@ skill_data = {
             },
             "Frigid Reap": {
                 "description": "Deals melee STR-based cut+ice damage to one row of enemies. If a target has an ailment, they are also hit with an extra melee STR-based cut+ice damage attack that deals double the damage of the first hit.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical ice",
+                "damage target": "row",
                 "requirements": {
                     "Deaths Judgement": 3
                 },
@@ -6930,17 +6872,8 @@ skill_data = {
             },
             "Temporal Shroud": {
                 "description": "Requires the Miasma Armor state to use. Ends the Miasma Armor state, and takes the user out of battle. At the end of the turn, deals melee STR-based cut damage to one enemy, and returns the user to battle.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Bloody Reap": 3,
                     "Frigid Reap": 3
@@ -7010,17 +6943,10 @@ skill_data = {
             },
             "Toxic Reap": {
                 "description": "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict poison on hit targets.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
+                "ailment": "poison",
+                "ailment target": "row",
                 "requirements": {
                     "Cursed Reap": 3
                 },
@@ -7099,17 +7025,10 @@ skill_data = {
             },
             "Chaos Reap": {
                 "description": "Deals melee STR-based cut damage to one row of enemies. If the user has the Miasma Armor state, attempts to inflict panic on hit targets.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
+                "ailment": "cursed",
+                "ailment target": "row",
                 "requirements": {
                     "Cursed Reap": 3
                 },
@@ -7178,17 +7097,10 @@ skill_data = {
             },
             "Fatal Reap": {
                 "description": "Deals melee STR-based cut damage to one enemy. Damage is amplified if the target is asleep--this includes the original 1.5x sleep damage bonus. Attempts to instantly kill the target. The instant kill chance is increased if the target is asleep.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
+                "ailment": "kill",
+                "ailment target": "single",
                 "requirements": {
                     "Toxic Reap": 3,
                     "Chaos Reap": 3
@@ -7280,17 +7192,8 @@ skill_data = {
         "Deathguard": {
             "Spirit Absorb": {
                 "description": "When the user inflicts a debuff, their HP is restored. The restoration from Spirit Absorb can increase the users maximum HP for one turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -7347,17 +7250,6 @@ skill_data = {
             },
             "HP Up": {
                 "description": "Increases the users maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -7404,17 +7296,6 @@ skill_data = {
             },
             "Magic DEF Up": {
                 "description": "Passively increases elemental defense.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -7461,15 +7342,6 @@ skill_data = {
             },
             "Deaths Asylum": {
                 "description": "Gives the user a chance to nullify ailments and debuffs inflicted on them.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -7520,17 +7392,8 @@ skill_data = {
             },
             "Atonement": {
                 "description": "Requires the Miasma Armor state to use. Ends the Miasma Armor state, and restores all party members HP. Also has a chance to cure ailments.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "party",
                 "requirements": {
                     "Deaths Asylum": 5
                 },
@@ -7599,17 +7462,6 @@ skill_data = {
             },
             "Miasma Wall": {
                 "description": "Requires the Miasma Armor state to use. Ends the Miasma Armor state, and gives all party members a chance to nullify any ailments or binds for one turn. Miasma Wall has a limit to how many inflictions it can block.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Deaths Asylum": 5
                 },
@@ -7678,17 +7530,8 @@ skill_data = {
             },
             "Eroding Miasma": {
                 "description": "Reduces all enemies defense for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "def",
+                "debuff target": "aoe",
                 "requirements": {
                     "Wilting Miasma": 3
                 },
@@ -7757,17 +7600,8 @@ skill_data = {
             },
             "Masking Miasma": {
                 "description": "Reduces all enemies accuracy for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "acc",
+                "debuff target": "aoe",
                 "requirements": {
                     "Wilting Miasma": 3
                 },
@@ -7836,17 +7670,8 @@ skill_data = {
             },
             "Ephemeral Reap": {
                 "description": "Targets one enemy. Removes all debuffs from the target, and deals multiple instances of melee STR-based cut damage to the target. The number of hits is equal to the number of debuffs removed from the target.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Eroding Miasma": 5,
                     "Masking Miasma": 5
@@ -7906,17 +7731,8 @@ skill_data = {
             },
             "Soul Transfer": {
                 "description": "Targets one enemy. Removes all debuffs from the target, and gives all party members a chance to revive at 1 HP after being killed for one turn. The revive can activate a maximum of 3 times.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "revive",
+                "healing target": "aoe",
                 "requirements": {
                     "Eroding Miasma": 5,
                     "Masking Miasma": 5
