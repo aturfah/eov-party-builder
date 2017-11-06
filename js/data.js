@@ -12203,18 +12203,6 @@ skill_data = {
         "Base": {
             "Brawl Mastery": {
                 "description": "Increases damage dealt with cesti.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
-                "requirements": {},
                 "table": [
                     {
                         "level": 1,
@@ -12260,17 +12248,6 @@ skill_data = {
             },
             "Phys ATK Up": {
                 "description": "Passively increases physical (cut/stab/bash) damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -12315,19 +12292,149 @@ skill_data = {
                     }
                 ]
             },
-            "Concussion / Arm Crusher / Low Blow": {
-                "description": "Deals melee STR-based bash damage to one enemy. Attempts to bind the targets head (Concussion), arms (Arm Crusher), or legs (Low Blow).",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+            "Concussion": {
+                "description": "Deals melee STR-based bash damage to one enemy. Attempts to bind the targets head.",
+                "damage": "physical",
+                "damage target": "enemy",
+                "bind": "head",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "3",
+                        "Damage": "150%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "3",
+                        "Damage": "159%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "3",
+                        "Damage": "168%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "3",
+                        "Damage": "177%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "5",
+                        "Damage": "177%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "5",
+                        "Damage": "189%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "5",
+                        "Damage": "201%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "5",
+                        "Damage": "213%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "5",
+                        "Damage": "225%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "8",
+                        "Damage": "225%",
+                        "Base Chance": "50%"
+                    }
+                ]
+            },
+            "Arm Crusher": {
+                "description": "Deals melee STR-based bash damage to one enemy. Attempts to bind the targets arm.",
+                "damage": "physical",
+                "damage target": "enemy",
+                "bind": "arm",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "3",
+                        "Damage": "150%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "3",
+                        "Damage": "159%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "3",
+                        "Damage": "168%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "3",
+                        "Damage": "177%",
+                        "Base Chance": "30%"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "5",
+                        "Damage": "177%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "5",
+                        "Damage": "189%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "5",
+                        "Damage": "201%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "5",
+                        "Damage": "213%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "5",
+                        "Damage": "225%",
+                        "Base Chance": "40%"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "8",
+                        "Damage": "225%",
+                        "Base Chance": "50%"
+                    }
+                ]
+            },
+            "Low Blow": {
+                "description": "Deals melee STR-based bash damage to one enemy. Attempts to bind the targets legs.",
+                "damage": "physical",
+                "damage target": "enemy",
+                "bind": "leg",
                 "requirements": {},
                 "table": [
                     {
@@ -12394,21 +12501,13 @@ skill_data = {
             },
             "One-Two Punch": {
                 "description": "Deals melee STR-based bash damage to one enemy. The user has a chance to follow up the initial One-Two Punch hit with Concussion, Arm Crusher, and Low Blow, if the target does not have the body part for that respective skill bound. If the targets arms are bound, for example, Concussion and Low Blow can activate, but Arm Crusher cannot. If the target is completely bound, One-Two Punch will only deal its initial damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
+                "bind": "head arm leg",
                 "requirements": {
-                    "<strong>Concussion</strong>": 3,
-                    "<strong>Arm Crusher</strong>": 3,
-                    "<strong>Low Blow</strong>": 3
+                    "Concussion": 3,
+                    "Arm Crusher": 3,
+                    "Low Blow": 3
                 },
                 "table": [
                     {
@@ -12475,17 +12574,6 @@ skill_data = {
             },
             "Blood Wrath": {
                 "description": "When the user loses HP, they have a chance to attack an enemy with their equipped weapon.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -12532,19 +12620,10 @@ skill_data = {
             },
             "Overexertion": {
                 "description": "Places a buff on one party member that increases their cut/stab/bash damage, at the cost of losing a percentage of their current HP whenever they act, for 4 turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "single",
                 "requirements": {
-                    "<strong>Blood Wrath</strong>": 1
+                    "Blood Wrath": 1
                 },
                 "table": [
                     {
@@ -12611,17 +12690,8 @@ skill_data = {
             },
             "Thunder Fist": {
                 "description": "Deals melee STR-based bash+volt damage to one enemy. If the target is not killed by Thunder Fist, the user suffers backlash damage--a percentage of their current HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical volt",
+                "damage target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -12688,19 +12758,10 @@ skill_data = {
             },
             "Devils Fist": {
                 "description": "Consumes a percentage of the users current HP to deal melee STR-based bash damage to one enemy, with splash damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
-                    "<strong>Thunder Fist</strong>": 2
+                    "Thunder Fist": 2
                 },
                 "table": [
                     {
