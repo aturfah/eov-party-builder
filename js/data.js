@@ -14,17 +14,6 @@ skill_data = {
         "Base": {
             "Herb Mastery": {
                 "description": "Increases HP restored with herb skills.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -71,17 +60,8 @@ skill_data = {
             },
             "Healing Herb": {
                 "description": "Restores one party members HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "direct",
+                "healing target": "single",
                 "requirements": {},
                 "table": [
                     {
@@ -138,17 +118,8 @@ skill_data = {
             },
             "Sweeping Herb": {
                 "description": "Restores one rows HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "direct",
+                "healing target": "row",
                 "requirements": {
                     "Healing Herb": 5
                 },
@@ -2156,17 +2127,6 @@ skill_data = {
         "Base": {
             "Shield Mastery": {
                 "description": "Decreases physical (cut/stab/bash) damage taken when the user has a shield equipped.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -2213,17 +2173,6 @@ skill_data = {
             },
             "Cannon Mastery": {
                 "description": "Increases damage dealt with cannons.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -2270,17 +2219,6 @@ skill_data = {
             },
             "Line Guard": {
                 "description": "Reduces physical (cut/stab/bash) damage taken by one row for one turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -2337,17 +2275,6 @@ skill_data = {
             },
             "Mana Guard": {
                 "description": "Reduces elemental (fire/ice/volt) damage taken by all party members for one turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -2404,17 +2331,8 @@ skill_data = {
             },
             "Healing Guard": {
                 "description": "Reduces physical (cut/stab/bash) damage taken by the user for one turn. When the user takes damage while Healing Guard is active, their HP is restored. The restoration is a static amount plus a percentage of the users maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -2491,17 +2409,8 @@ skill_data = {
             },
             "Gunmount": {
                 "description": "Can only be used on the turn after a shield skill was used. Deals ranged STR-based bash damage to one enemy. Replicates the effect of the shield skill used on the last turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "single",
                 "requirements": {
                     "Line Guard": 2,
                     "Mana Guard": 2,
@@ -2572,17 +2481,10 @@ skill_data = {
             },
             "Barrage Wall": {
                 "description": "Deals ranged STR-based bash damage to all enemies. Reduces hit targets physical (cut/stab/bash) attack for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "aoe",
+                "debuff": "atk",
+                "debuff target": "aoe",
                 "requirements": {},
                 "table": [
                     {
@@ -2659,17 +2561,8 @@ skill_data = {
             },
             "Dragon Roar": {
                 "description": "Increases one allys defense against physical (cut/stab/bash) attacks and chance of being targeted for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "def agg",
+                "buff target": "single",
                 "requirements": {},
                 "table": [
                     {
@@ -2756,17 +2649,6 @@ skill_data = {
             },
             "Decoy Bunker": {
                 "description": "Creates a Decoy Bunker in the summon row. The Decoy Bunker has 10 HP. In addition to having a DEF value, the Decoy Bunker also has a set vulnerability to all damage. The Decoy Bunker has an increased base chance of drawing enemy attacks.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -2843,10 +2725,8 @@ skill_data = {
             },
             "Defense Form": {
                 "description": "Increases all party members defense against physical (cut/stab/bash) attacks for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
+                "buff": "def",
+                "buff target": "party",
                 "debuff": "",
                 "debuff target": "",
                 "bind": "",
@@ -2924,17 +2804,6 @@ skill_data = {
         "Cannon Bearer": {
             "Gun Revenge": {
                 "description": "Increases the damage of artillery skills when either a shield skill activates, or when a Decoy Bunker or Decoy Turret is attacked. Gun Revenges bonus is reset whenever it is applied.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -3001,17 +2870,6 @@ skill_data = {
             },
             "Phys ATK Up": {
                 "description": "Increases cut, stab, and bash damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -3058,17 +2916,6 @@ skill_data = {
             },
             "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -3115,17 +2962,8 @@ skill_data = {
             },
             "Prep Artillery": {
                 "description": "Increases the damage, accuracy, and speed of the artillery skill used on the next turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk acc",
+                "buff target": "self",
                 "requirements": {
                     "TP Up": 3
                 },
@@ -3204,17 +3042,8 @@ skill_data = {
             },
             "Rapid Cannon": {
                 "description": "Deals ranged STR-based bash damage to one enemy.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Barrage Wall": 3
                 },
@@ -3273,17 +3102,10 @@ skill_data = {
             },
             "Curse Cannon": {
                 "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict curse on the target.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "ailment": "cursed",
+                "ailment target": "enemy",
                 "requirements": {
                     "Barrage Wall": 3
                 },
@@ -3352,15 +3174,15 @@ skill_data = {
             },
             "Hypno Cannon": {
                 "description": "Deals ranged STR-based bash damage to one enemy. Attempts to inflict sleep on the target.",
-                "damage": "",
-                "damage target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "buff": "",
                 "buff target": "",
                 "debuff": "",
                 "debuff target": "",
                 "bind": "",
-                "ailment": "",
-                "ailment target": "",
+                "ailment": "sleep",
+                "ailment target": "single",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -3431,21 +3253,12 @@ skill_data = {
             },
             "Buster Cannon": {
                 "description": "On the next turns end, deals ranged bash+fire damage to one enemy. Damage is doubled when attacking a front row enemy while the caster is in the front row, multiplied by 1.5x when attacking a front row enemy while the caster is in the back row or vice versa, and is not increased when attacking a back row enemy while the user is in the back.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "fire ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Rapid Cannon": 3,
                     "Curse Cannon": 3,
-                    "Sleep Cannon": 3
+                    "Hypno Cannon": 3
                 },
                 "table": [
                     {
@@ -3522,17 +3335,6 @@ skill_data = {
             },
             "Decoy Turret": {
                 "description": "Creates a Decoy Turret in the summon row. The Decoy Turret has 10 HP. In addition to having a DEF value, the Decoy Turret also has a set vulnerability to all damage. The Decoy Bunker has an increased base chance of drawing enemy attacks. When the Decoy Turret is attacked, it will counterattack the source of damage. The counterattack is bash damage, and is based solely on the Decoy Turrets ATK value.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Defense Form": 3
                 },
@@ -3621,17 +3423,6 @@ skill_data = {
             },
             "Gun Support": {
                 "description": "When the user reduces damage they themselves take, or negates an attack entirely (ie. another Dragoon activating Dragon Force on them), they have a chance to create a Decoy Turret.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Decoy Turret": 3
                 },
