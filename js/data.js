@@ -12830,17 +12830,6 @@ skill_data = {
         "Impact Brawler": {
             "Fortitude": {
                 "description": "Increases the users damage when their current HP is below a certain percentage of their maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -12897,17 +12886,6 @@ skill_data = {
             },
             "HP Up": {
                 "description": "Increases the users maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -12954,17 +12932,8 @@ skill_data = {
             },
             "Vajra Stance": {
                 "description": "Increases the users rows defense against physical (cut/stab/bash) attacks for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "def",
+                "buff target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -13031,17 +13000,10 @@ skill_data = {
             },
             "Soul Crusher": {
                 "description": "Deals melee STR-based bash damage to all enemies. Heals the user for a percentage of the damage dealt.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "aoe",
+                "healing": "direct",
+                "healing target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -13108,17 +13070,6 @@ skill_data = {
             },
             "Abyssal Killer": {
                 "description": "For one turn, the user will endure mortal damage once. If the user endured a fatal hit through usage of Abyssal Killer, their damage on the next turn is increased by the value listed here multiplied by the square root of the square root of the percentage of the users max HP the endured hit wouldve overkilled them by.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Vajra Stance": 5,
                     "Soul Crusher": 5
@@ -13178,17 +13129,8 @@ skill_data = {
             },
             "Titan Killer": {
                 "description": "Deals melee STR-based bash damage to one enemy. Damage is increased if the target has a higher percentage of their max HP than the user does--ie. if the user has 50% of their max HP and the target has 80%, the damage is amplified.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -13255,17 +13197,8 @@ skill_data = {
             },
             "Deaths Edge": {
                 "description": "Deals melee STR-based bash damage to one enemy. Damage is affected in some way by how low the partys HP is.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Overexertion": 3
                 },
@@ -13324,17 +13257,6 @@ skill_data = {
             },
             "Heavenly Aid": {
                 "description": "Increases the users damage on the next turn based on how much HP they recover on the turn that Heavenly Aid is casted. If the user does not recover any HP, Heavenly Aid has no effect. The final charge amount is approximately the value listed here multiplied by the percentage of their max HP the user recovered last turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Titan Killer": 3,
                     "Deaths Edge": 3
@@ -13394,17 +13316,8 @@ skill_data = {
             },
             "Satans Fist": {
                 "description": "Consumes a percentage of the users current HP to deal melee STR-based bash damage to one row of enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
                 "requirements": {
                     "Devils Fist": 3
                 },
@@ -13473,17 +13386,6 @@ skill_data = {
             },
             "Status DEF Up": {
                 "description": "Reduces the users chance of being afflicted with ailments and binds.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
