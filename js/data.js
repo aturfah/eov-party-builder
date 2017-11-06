@@ -7857,17 +7857,6 @@ skill_data = {
             },
             "Peerless Demon": {
                 "description": "Increases damage dealt based on the number of hits an attack has. One bonus stack is given for every hit of an attack.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -7934,17 +7923,6 @@ skill_data = {
             },
             "Duel": {
                 "description": "Increases damage dealt when hitting enemies that were also hit by the user on the last turn. The bonus is reset after one hit.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -7991,17 +7969,8 @@ skill_data = {
             },
             "Swallow Soar": {
                 "description": "Deals melee STR-based cut damage to one enemy. After the target has taken their turn, the user will attack them again for the same amount of damage. If the target acts before the user (really only applies to priority skills), the second hit will not activate.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Duel": 3
                 },
@@ -8070,17 +8039,10 @@ skill_data = {
             },
             "Armor Pierce": {
                 "description": "Deals melee STR-based stab damage to one enemy. Reduces the targets defense against STR-based attacks for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
+                "debuff": "def",
+                "debuff target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -8147,17 +8109,10 @@ skill_data = {
             },
             "Haze Slash": {
                 "description": "Deals melee STR-based cut damage to one enemy. Attempts to inflict sleep on the target.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
+                "ailment": "sleep",
+                "ailment target": "enemy",
                 "requirements": {
                     "Armor Pierce": 2
                 },
@@ -8236,17 +8191,8 @@ skill_data = {
             },
             "Air Blade": {
                 "description": "Deals ranged STR-based cut damage to one enemy.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -8303,17 +8249,8 @@ skill_data = {
             },
             "Whirlwind": {
                 "description": "Deals multiple instances of melee STR-based damage to random enemies. Can hit the same target once at most.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "aoe",
                 "requirements": {
                     "Air Blade": 3
                 },
@@ -8392,17 +8329,6 @@ skill_data = {
             },
             "New Challenger": {
                 "description": "Immediately begins a battle. Increases the chance of encountering rare breed enemies. When a battle ends, there is a chance to immediately begin another one.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -8444,17 +8370,8 @@ skill_data = {
             },
             "High Ground": {
                 "description": "Increases physical attack for the users row for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "row",
                 "requirements": {},
                 "table": [
                     {
