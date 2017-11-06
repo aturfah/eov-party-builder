@@ -15171,17 +15171,6 @@ skill_data = {
         "Base": {
             "Prayer Mastery": {
                 "description": "Increases the speed and reduces the TP cost of Prayer skills. The TP cost reduction is performed by subtracting a static amount from the base cost, and then multiplying that by a percentage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -15248,17 +15237,8 @@ skill_data = {
             },
             "Gospel": {
                 "description": "When the Shaman buffs an ally, a percentage of that allys maximum HP is restored.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -15305,17 +15285,8 @@ skill_data = {
             },
             "Ruinous Prayer": {
                 "description": "Increases all party members attack for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -15382,17 +15353,8 @@ skill_data = {
             },
             "Aegis Prayer": {
                 "description": "Increases all party members defense for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "def",
+                "buff target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -15459,17 +15421,8 @@ skill_data = {
             },
             "Focus Prayer": {
                 "description": "Increases all party members accuracy for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "acc",
+                "buff target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -15536,17 +15489,8 @@ skill_data = {
             },
             "Heavens Gift": {
                 "description": "Dispels one buff and one debuff on one ally. Restores that allys HP and increases their action speed for one turn. The healing is doubled if both a buff and debuff are removed.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "single",
                 "requirements": {
                     "Ruinous Prayer": 3,
                     "Aegis Prayer": 3,
@@ -15625,19 +15569,140 @@ skill_data = {
                     }
                 ]
             },
-            "Blaze Prayer / Hail Prayer / Bolt Prayer": {
-                "description": "Reduces all party members vulnerability to fire/ice/volt, and adds that element to their normal attacks, for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+            "Blaze Prayer": {
+                "description": "Reduces all party members vulnerability to fire, and adds that element to their normal attacks, for a set amount of turns.",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "15",
+                        "Damage Reduction": "25%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "15",
+                        "Damage Reduction": "28%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "15",
+                        "Damage Reduction": "31%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "15",
+                        "Damage Reduction": "34%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "21",
+                        "Damage Reduction": "34%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "21",
+                        "Damage Reduction": "38%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "21",
+                        "Damage Reduction": "42%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "21",
+                        "Damage Reduction": "46%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "21",
+                        "Damage Reduction": "50%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "28",
+                        "Damage Reduction": "50%",
+                        "Duration": "6"
+                    }
+                ]
+            },
+            "Hail Prayer": {
+                "description": "Reduces all party members vulnerability to ice, and adds that element to their normal attacks, for a set amount of turns.",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "15",
+                        "Damage Reduction": "25%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "15",
+                        "Damage Reduction": "28%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "15",
+                        "Damage Reduction": "31%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "15",
+                        "Damage Reduction": "34%",
+                        "Duration": "4"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "21",
+                        "Damage Reduction": "34%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "21",
+                        "Damage Reduction": "38%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "21",
+                        "Damage Reduction": "42%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "21",
+                        "Damage Reduction": "46%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "21",
+                        "Damage Reduction": "50%",
+                        "Duration": "5"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "28",
+                        "Damage Reduction": "50%",
+                        "Duration": "6"
+                    }
+                ]
+            },
+            "Bolt Prayer": {
+                "description": "Reduces all party members vulnerability to volt, and adds that element to their normal attacks, for a set amount of turns.",
                 "requirements": {},
                 "table": [
                     {
@@ -15704,21 +15769,14 @@ skill_data = {
             },
             "Dance Oracle": {
                 "description": "Cancels Blaze Prayer, Hail Prayer, or Bolt Prayer (whichever is oldest) on the user. Deals ranged INT-based damage of the element of the skill canceled to all enemies. Increases damage taken by hit targets from that element for one turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "fire ice volt",
+                "damage target": "aoe",
+                "debuff": "def",
+                "debuff target": "aoe",
                 "requirements": {
-                    "Blaze Prayer": 2,
-                    "Hail Prayer": 2,
-                    "Bolt Prayer": 2
+                    "Blaze Prayer": 3,
+                    "Hail Prayer": 3,
+                    "Bolt Prayer": 3
                 },
                 "table": [
                     {
