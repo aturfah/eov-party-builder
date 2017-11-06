@@ -1,10 +1,3 @@
-/*
-"Skill Name": {
-    'requirements': {},
-    'description': "",
-}
-*/
-
 skill_data = {
     "botanist": {
         "specializations": [
