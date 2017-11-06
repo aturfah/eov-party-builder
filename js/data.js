@@ -4056,16 +4056,6 @@ skill_data = {
         "Base": {
             "Rapier Mastery": {
                 "description": "Increases damage dealt using swords. Normal attacks deal stab damage instead of cut.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
                 "healing target": "",
                 "requirements": {},
                 "table": [
@@ -4111,19 +4101,166 @@ skill_data = {
                     }
                 ]
             },
-            "Chain Flame/Freeze/Shock": {
+            "Chain Flame": {
                 "description": "Targets one enemy. When that enemy takes either stab or fire/ice/volt damage, the caster will follow up with another attack. The element is either cut or stab, depending on if the user knows Rapier Mastery, and fire, ice, or volt, depending on the skill. Each time Chain Flame/Freeze/Shock activates, the chance of it activating again on that turn is decreased. The base activation chance is 100%.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "fire physical",
+                "damage target": "enemy",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "4",
+                        "Damage": "150%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "4",
+                        "Damage": "156%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "4",
+                        "Damage": "162%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "4",
+                        "Damage": "168%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "8",
+                        "Damage": "168%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "8",
+                        "Damage": "176%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "8",
+                        "Damage": "184%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "8",
+                        "Damage": "192%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "8",
+                        "Damage": "200%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "12",
+                        "Damage": "200%",
+                        "Maximum Chains": "5",
+                        "Chance Reduction": "-10%"
+                    }
+                ]
+            },
+            "Chain Freeze": {
+                "description": "Targets one enemy. When that enemy takes either stab or fire/ice/volt damage, the caster will follow up with another attack. The element is either cut or stab, depending on if the user knows Rapier Mastery, and fire, ice, or volt, depending on the skill. Each time Chain Flame/Freeze/Shock activates, the chance of it activating again on that turn is decreased. The base activation chance is 100%.",
+                "damage": "physical ice",
+                "damage target": "enemy",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "4",
+                        "Damage": "150%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "4",
+                        "Damage": "156%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "4",
+                        "Damage": "162%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "4",
+                        "Damage": "168%",
+                        "Maximum Chains": "3",
+                        "Chance Reduction": "-22%"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "8",
+                        "Damage": "168%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "8",
+                        "Damage": "176%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "8",
+                        "Damage": "184%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "8",
+                        "Damage": "192%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "8",
+                        "Damage": "200%",
+                        "Maximum Chains": "4",
+                        "Chance Reduction": "-15%"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "12",
+                        "Damage": "200%",
+                        "Maximum Chains": "5",
+                        "Chance Reduction": "-10%"
+                    }
+                ]
+            },
+            "Chain Shock": {
+                "description": "Targets one enemy. When that enemy takes either stab or fire/ice/volt damage, the caster will follow up with another attack. The element is either cut or stab, depending on if the user knows Rapier Mastery, and fire, ice, or volt, depending on the skill. Each time Chain Flame/Freeze/Shock activates, the chance of it activating again on that turn is decreased. The base activation chance is 100%.",
+                "damage": "physical volt",
+                "damage target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -4200,17 +4337,6 @@ skill_data = {
             },
             "Chain Boost": {
                 "description": "When using a Chain skill, each time the Chain skill activates, its damage is increased for the rest of the turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Chain Flame": 2,
                     "Chain Freeze": 2,
@@ -4261,17 +4387,6 @@ skill_data = {
             },
             "Chain Burst": {
                 "description": "When an enemy is killed by a Chain skill, the caster will attack another enemy with an attack of the same element as the Chain skill.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Chain Flame": 2,
                     "Chain Freeze": 2,
@@ -4332,17 +4447,8 @@ skill_data = {
             },
             "Predict": {
                 "description": "For one turn, increases the users evasion and their chances to be targeted by enemies. However, it also makes the user take 2.5x damage. When the user evades an attack, their evasion and chance to be targeted are decreased.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "agg eva",
+                "buff target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -4419,17 +4525,8 @@ skill_data = {
             },
             "Wind Curtain": {
                 "description": "Places a buff on one row that enables party members to dodge one physical attack. When an attack is dodged, the buff is dispelled.",
-                "damage": "",
-                "damage target": "",
                 "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff target": "row",
                 "requirements": {
                     "Predict": 3
                 },
@@ -4468,17 +4565,10 @@ skill_data = {
             },
             "Optic Thrust": {
                 "description": "Deals melee STR-based stab damage to one enemy. Attempts to inflict blind on the target.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
+                "ailment": "blind",
+                "ailment target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -4545,17 +4635,8 @@ skill_data = {
             },
             "Sylphid": {
                 "description": "When the user dodges an attack, they will counterattack the attack source with their equipped weapon. Each time the user counterattacks, the chance of Sylphid activating again on that turn is decreased by 40%.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "counter",
+                "damage target": "enemy",
                 "requirements": {},
                 "table": [
                     {
