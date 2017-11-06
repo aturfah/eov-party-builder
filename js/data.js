@@ -4705,17 +4705,6 @@ skill_data = {
         "Chain Duelist": {
             "Sonic Blade": {
                 "description": "When performing normal attacks, the user has a chance to attack twice. The second attack is cut damage, and deals the same amount of damage as the first hit (not accounting for standard variance).",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Rapier Mastery": 3
                 },
@@ -4764,17 +4753,6 @@ skill_data = {
             },
             "Phys ATK Up": {
                 "description": "Passively increases physical damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -4821,17 +4799,6 @@ skill_data = {
             },
             "Chain Killer": {
                 "description": "Targets one enemy. For one turn, when that enemy becomes afflicted with a status ailment, bind, or stun, the user will attack them with melee STR-based stab damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Chain Boost": 3,
                     "Chain Burst": 3
@@ -4891,17 +4858,6 @@ skill_data = {
             },
             "Chain All": {
                 "description": "Increases the maximum number of hits of the Chain skill used on the next turn, and the Chain skill used on the next turn will also target all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Chain Killer": 5
                 },
@@ -4935,17 +4891,6 @@ skill_data = {
             },
             "Chain Plus": {
                 "description": "For a set amount of turns, increases the damage and base activation chance of Chain skills.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Chain Killer": 5
                 },
@@ -5024,17 +4969,6 @@ skill_data = {
             },
             "Chain Double": {
                 "description": "Gives a chance for Chain attacks to hit twice when a Chain skill is activated.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Chain Killer": 5
                 },
@@ -5083,18 +5017,8 @@ skill_data = {
             },
             "Sylphscreen": {
                 "description": "Each time the user attacks an enemy, their defense and evasion are increased for the rest of that turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
-                "requirements": {},
+                "buff": "def eva",
+                "buff target": "self",
                 "table": [
                     {
                         "level": 1,
@@ -5150,17 +5074,8 @@ skill_data = {
             },
             "Multi-Stab": {
                 "description": "Deals a random amount of instances of melee STR-based stab damage to one row of enemies. Can hit the same enemy multiple times.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
                 "requirements": {
                     "Optic Thrust": 3
                 },
@@ -5239,17 +5154,8 @@ skill_data = {
             },
             "Resonance": {
                 "description": "Deals melee STR-based stab damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user hit enemies last turn. Resonance can have its damage multiplied a maximum of 9 times.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "melee",
+                "damage target": "enemy",
                 "requirements": {
                     "Deft Thrust": 5
                 },
@@ -5318,17 +5224,6 @@ skill_data = {
             },
             "Speed Up": {
                 "description": "Increases the users action speed, accuracy, and evasion.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
