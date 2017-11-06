@@ -3473,17 +3473,6 @@ skill_data = {
         "Shield Bearer": {
             "HP Up": {
                 "description": "Increases the users maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -3619,17 +3608,8 @@ skill_data = {
             },
             "Counter Guard": {
                 "description": "None",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "counter",
+                "damage target": "enemy",
                 "requirements": {
                     "Gunmount": 3
                 },
@@ -3708,17 +3688,6 @@ skill_data = {
             },
             "Divide Guard": {
                 "description": "Targets one ally. The caster will take all damage for that ally for one turn. From levels 2-10, the caster takes reduced damage from attacks redirected by Divide Guard.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Gunmount": 3
                 },
@@ -3777,17 +3746,6 @@ skill_data = {
             },
             "Full Guard": {
                 "description": "Reduces all non-almighty damage to the party for one turn. After use, Full Guard goes on cooldown for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Recovery Guard": 3,
                     "Counter Guard": 3,
@@ -3858,17 +3816,6 @@ skill_data = {
             },
             "Soul Guard": {
                 "description": "Reduces STR-based damage taken by one row for one turn. Party members under the effect of Soul Guard have a chance to survive fatal damage at 1 HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Recovery Guard": 3,
                     "Counter Guard": 3,
@@ -3939,17 +3886,8 @@ skill_data = {
             },
             "Shield Throw": {
                 "description": "Deals ranged cut damage to one row of enemies. Shield Throw uses the users equipped shields DEF value multiplied by 3 as a replacement for weapon ATK.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -4006,17 +3944,6 @@ skill_data = {
             },
             "Auto-Roar": {
                 "description": "Gives the user a chance to use Dragon Roar on themselves at the start of battle.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Dragon Roar": 3
                 },
@@ -4045,17 +3972,6 @@ skill_data = {
             },
             "Dragon Force": {
                 "description": "Gives a chance for the user and any party members in their row to nullify physical (cut/stab/bash) damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Auto-Roar": 3
                 },
@@ -4104,17 +4020,6 @@ skill_data = {
             },
             "Auto-Bunker": {
                 "description": "Gives the user a chance to use Decoy Bunker at the start of battle.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Decoy Bunker": 3
                 },
