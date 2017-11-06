@@ -11586,17 +11586,6 @@ skill_data = {
         "Barrage Brawler": {
             "Double Punch": {
                 "description": "When using Concussion, Arm Crusher, Low Blow, or Corkscrew on their own (not as follow-ups from One-Two Punch or Leading Blow), if the skill fails to inflict its ailment/bind, the user has a chance to use the skill again. Will not activate if the target already has the applicable disable.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -11643,17 +11632,6 @@ skill_data = {
             },
             "Status ATK Up": {
                 "description": "Increases the users chance of inflicting ailments, binds, and stuns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -11700,17 +11678,10 @@ skill_data = {
             },
             "Corkscrew": {
                 "description": "Deals melee STR-based bash damage to one enemy. Attempts to inflict paralysis on the target.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "melee",
+                "damage target": "enemy",
+                "ailment": "paralyzed",
+                "ailment target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -11777,17 +11748,8 @@ skill_data = {
             },
             "Leading Blow": {
                 "description": "Deals melee STR-based bash damage to one enemy. If the target has an ailment and/or binds, follows up with the following skills: Concussion for head bind, Arm Crusher for arm bind, Low Blow for leg bind, and Corkscrew for any ailment. The follow-up skills have a multiplier applied to their damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "One-Two Punch": 5,
                     "Corkscrew": 2
@@ -11857,17 +11819,6 @@ skill_data = {
             },
             "Speed Up": {
                 "description": "Increases the users action speed, accuracy, and evasion.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -11924,17 +11875,8 @@ skill_data = {
             },
             "Lash Out": {
                 "description": "Deals multiple instances of melee STR-based bash damage to random enemies. Can hit the same target multiple times. The amount of attacks Lash Out deals is equal to the number of times the user hit an enemy on the last turn. As an example, if the user used One-Two Punch and activated all three follow-ups, Lash Out would hit four times.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "multi",
                 "requirements": {
                     "Speed Up": 5
                 },
@@ -11993,17 +11935,8 @@ skill_data = {
             },
             "Cross Counter": {
                 "description": "For one turn, when an ally in the same row as the user first takes STR-based damage, the user will deal melee STR-based bash damage to the attacker. Attempts to bind whichever body part was used to attack the damage receiver. If the source was a normal physical attack, Cross Counter (most likely) will attempt to bind the sources arms. Only activates once per turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "counter",
                 "requirements": {
                     "Overexertion": 5
                 },
@@ -12072,15 +12005,6 @@ skill_data = {
             },
             "Breather": {
                 "description": "Can only be used if the user is afflicted with an ailment or bind. Removes all binds and ailments from the user. Increases the users damage on the next turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {},
@@ -12139,17 +12063,8 @@ skill_data = {
             },
             "Fault Blocker": {
                 "description": "Reduces the chance of being afflicted with ailments and binds for party members in the users row for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "bind",
+                "buff target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -12216,17 +12131,7 @@ skill_data = {
             },
             "Clinch": {
                 "description": "Attempts to bind the head, arms, and legs of both one enemy and the user. Each bind is rolled for individually.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "bind": "head arm leg",
                 "requirements": {
                     "Breather": 3,
                     "Fault Blocker": 3
