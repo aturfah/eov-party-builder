@@ -5282,17 +5282,8 @@ skill_data = {
         "Phantom Duelist": {
             "Ray of Light": {
                 "description": "When the user dodges an attack, their chance to be targeted and defense are increased. When the user is damaged, Ray of Lights effects are reset.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "agg def",
+                "buff target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -5379,17 +5370,6 @@ skill_data = {
             },
             "Lightweight": {
                 "description": "Increases the users evasion based on how many of their equipment slots are empty.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -5466,17 +5446,8 @@ skill_data = {
             },
             "Phantom Swords": {
                 "description": "Reduces one row of enemies accuracy for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "acc",
+                "debuff target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -5543,17 +5514,8 @@ skill_data = {
             },
             "Lure": {
                 "description": "For one turn, when the caster dodges an attack, all other party members in their row will counterattack the attack source.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "counter",
+                "damage target": "enemy",
                 "requirements": {
                     "Phantom Swords": 3
                 },
@@ -5612,17 +5574,6 @@ skill_data = {
             },
             "Dodge Boon": {
                 "description": "When the user dodges an attack, their Union gauge is restored.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Phantom Swords": 3
                 },
@@ -5651,17 +5602,8 @@ skill_data = {
             },
             "Auto-Curtain": {
                 "description": "Gives the user a chance to automatically use Wind Curtain at the start of a battle.",
-                "damage": "",
-                "damage target": "",
                 "buff": "",
                 "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Wind Curtain": 3
                 },
@@ -5690,17 +5632,8 @@ skill_data = {
             },
             "Divine Gust": {
                 "description": "For one turn, increases all party members evasion. Each time a party member dodges an attack, the bonus provided by Divine Gust is decreased.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "eva",
+                "buff target": "party",
                 "requirements": {
                     "Auto-Curtain": 3
                 },
@@ -5769,17 +5702,8 @@ skill_data = {
             },
             "Deft Thrust": {
                 "description": "Deals melee STR-based stab damage to one enemy. For the rest of the turn, the users evasion and chance to be targeted are increased.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Optic Thrust": 2
                 },
@@ -5848,17 +5772,8 @@ skill_data = {
             },
             "Revenge Thrust": {
                 "description": "Deals melee STR-based stab+volt damage to one enemy. The damage starts at a base value, and is then multiplied by the amount of times the user has dodged an attack since the last use of Revenge Thrust. There is a maximum amount of times Revenge Thrust can have its damage multiplied.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical volt",
+                "damage target": "enemy",
                 "requirements": {
                     "Deft Thrust": 5
                 },
@@ -5937,17 +5852,6 @@ skill_data = {
             },
             "Counter Boost": {
                 "description": "Gives a chance to add extra hits when Sylphid activates. Each extra hit is rolled for individually.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Sylphid": 5
                 },
@@ -6014,17 +5918,6 @@ skill_data = {
         "Base": {
             "Scythe Mastery": {
                 "description": "Increases damage dealt with scythes.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
