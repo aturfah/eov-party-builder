@@ -13440,17 +13440,6 @@ skill_data = {
         "Base": {
             "Bow Mastery": {
                 "description": "Increases damage dealt with bows.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -13497,17 +13486,8 @@ skill_data = {
             },
             "Animal Therapy": {
                 "description": "When a hawk or hound is summoned, restores all party members and summons HP at the end of the turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "direct",
+                "healing target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -13554,17 +13534,6 @@ skill_data = {
             },
             "Hawk/Hound Whistle": {
                 "description": "Summons a hawk/hound. The hawk/hounds stats (HP, STR, INT, VIT, WIS, AGI, LUC) are multiplied by a bonus provided by Hawk/Hound Whistle. Can be used in the Labyrinth.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -13621,8 +13590,8 @@ skill_data = {
             },
             "Hawk Arrow": {
                 "description": "Requires a hawk to use. Deals ranged STR-based stab damage to one enemy, with splash damage. After the attack, the hawk will attack the enemies hit with splash damage with a ranged STR-based cut attack.",
-                "damage": "",
-                "damage target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "buff": "",
                 "buff target": "",
                 "debuff": "",
@@ -13700,8 +13669,8 @@ skill_data = {
             },
             "Wing Thrash": {
                 "description": "Requires a hawk to use. Deals ranged STR-based stab damage to one enemy. After the attack, the hawk will attack the targets row with ranged STR-based cut damage.",
-                "damage": "",
-                "damage target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "buff": "",
                 "buff target": "",
                 "debuff": "",
@@ -13779,17 +13748,8 @@ skill_data = {
             },
             "Aid Command": {
                 "description": "Requires a hound to use. Commands the hound to heal one ally. Also cures the targeted allys ailments.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "direct",
+                "healing target": "single",
                 "requirements": {
                     "Hound Whistle": 3
                 },
@@ -13858,17 +13818,9 @@ skill_data = {
             },
             "Hunter Shot": {
                 "description": "Requires a hound to use. Deals ranged STR-based stab damage to one enemy. After the attack, the hound will attempt to bind the targets arms and legs.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "bind": "arms legs",
                 "requirements": {
                     "Hound Whistle": 3
                 },
@@ -13937,17 +13889,6 @@ skill_data = {
             },
             "Brushing": {
                 "description": "Restores the hound and/or hawks HP at the end of the turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -13994,17 +13935,10 @@ skill_data = {
             },
             "Target Arrow": {
                 "description": "Deals ranged STR-based stab damage to one enemy. Reduces the targets physical defense for a set amount of turns. The defense debuff also forces the hound and/or hawk to attack the debuffed enemy, if they are performing a normal attack on that turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "debuff": "def",
+                "debuff target": "enemy",
                 "requirements": {},
                 "table": [
                     {
