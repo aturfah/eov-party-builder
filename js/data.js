@@ -14572,33 +14572,11 @@ skill_data = {
         "Hunting Hound": {
             "Ground Patrol": {
                 "description": "When a hound is summoned, there is a chance theyll find food while walking around in the Labyrinth. What this entails specifically is unknown, as the skills themselves do not provide info.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": []
             },
             "Healing Up": {
                 "description": "Increases both the static amount of HP restored and the percentage of maximum HP restored by the hounds healing skills.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -14655,17 +14633,6 @@ skill_data = {
             },
             "Status ATK Up": {
                 "description": "Increases the users chance of inflicting ailments, binds, and stuns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -14712,17 +14679,6 @@ skill_data = {
             },
             "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -14769,17 +14725,8 @@ skill_data = {
             },
             "Menacing Howl": {
                 "description": "Requires a hound to use. Commands the hound to attempt to inflict panic on all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "ailment": "panic",
+                "ailment target": "aoe",
                 "requirements": {},
                 "table": [
                     {
@@ -14836,17 +14783,6 @@ skill_data = {
             },
             "Guard Command": {
                 "description": "Requires a hound to use. Commands the hound to take all damage for one party member for one turn. For levels 1-9, the hound takes extra damage from any attacks received. At the end of the turn, the hound will heal the party member it was tanking for.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Aid Command": 3
                 },
@@ -14925,17 +14861,9 @@ skill_data = {
             },
             "Foot Pierce": {
                 "description": "Requires a hound to use. Deals ranged STR-based stab damage to one row of enemies. Attempts to inflict leg bind on hit targets. If any enemy hit by Foot Pierce has their legs bound (this can include if their legs were already bound before being hit), the hound will follow up with a melee STR-based bash attack.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
+                "bind": "leg",
                 "requirements": {
                     "Hunter Shot": 3
                 },
@@ -15014,17 +14942,8 @@ skill_data = {
             },
             "Medicinal Lick": {
                 "description": "Requires a hound to use. Commands the hound to heal random allies a set number of times. Can only heal a party member twice at most.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "direct",
+                "healing target": "party",
                 "requirements": {
                     "Guard Command": 5,
                     "Foot Pierce": 5
@@ -15104,17 +15023,8 @@ skill_data = {
             },
             "Arc Shot": {
                 "description": "Deals ranged STR-based stab damage to one enemy. Damage is multiplied by 2.5x if hitting an enemy in the back row.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Target Arrow": 5
                 },
@@ -15183,17 +15093,8 @@ skill_data = {
             },
             "Stun Shot": {
                 "description": "Requires a hound to use. Deals ranged STR-based stab damage to one enemy. After use, the hound will attempt to stun the target.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Arc Shot": 5
                 },
