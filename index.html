@@ -1,6 +1,10 @@
 <!doctype HTML>
 
 <head>
+    <title>EOV Party Planner</title>
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    
     <!-- Bootstrap imports -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
@@ -258,7 +262,9 @@
                                 <td>
                                     &#149;
                                 </td>
-                                <td><b>Self</b></td>
+                                <td>
+                                    <b>Self</b>
+                                </td>
                                 <td>
                                     <b>Single</b>
                                 </td>
@@ -359,11 +365,85 @@
                                     N/A
                                 </td>
                             </tr>
+                        </table>
+                        <table>
                             <tr>
                                 <th colspan='4'>
                                     <br/>
                                     <h5>Debuffs (to Enemy)</h5>
                                 </th>
+                            </tr>
+                            <tr>
+                                <td>&#149;</td>
+                                <td>
+                                    <b>Enemy</b>
+                                </td>
+                                <td>
+                                    <b>Row</b>
+                                </td>
+                                <td>
+                                    <b>AOE</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Attack</td>
+                                <td>
+                                    <span id="debuff_atk_enemy">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_atk_row">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_atk_aoe">pew</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Defense</td>
+                                <td>
+                                    <span id="debuff_def_enemy">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_def_row">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_def_aoe">pew</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accuracy</td>
+                                <td>
+                                    <span id="debuff_acc_enemy">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_acc_row">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_acc_aoe">pew</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Evasion</td>
+                                <td>
+                                    <span id="debuff_eva_enemy">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_eva_row">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_eva_aoe">pew</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bind/Ail Res.</td>
+                                <td>
+                                    <span id="debuff_res_enemy">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_res_row">pew</span>
+                                </td>
+                                <td>
+                                    <span id="debuff_res_aoe">pew</span>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -375,22 +455,36 @@
                                 </th>
                             </tr>
                             <tr>
-                                <td>&#149;</td><td>Direct</td><td>Conditional</td>
+                                <td>&#149;</td>
+                                <td>Direct</td>
+                                <td>Conditional</td>
                             </tr>
                             <tr>
                                 <td>Single</td>
-                                <td><span id='heal_direct_single'>0</span></td>
-                                <td><span id='heal_conditional_single'>0</span></td>
+                                <td>
+                                    <span id='heal_direct_single'>0</span>
+                                </td>
+                                <td>
+                                    <span id='heal_conditional_single'>0</span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Row</td>
-                                <td><span id='heal_direct_row'>0</span></td>
-                                <td><span id='heal_conditional_row'>0</span></td>
+                                <td>
+                                    <span id='heal_direct_row'>0</span>
+                                </td>
+                                <td>
+                                    <span id='heal_conditional_row'>0</span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Party</td>
-                                <td><span id='heal_direct_party'>0</span></td>
-                                <td><span id='heal_conditional_party'>0</span></td>
+                                <td>
+                                    <span id='heal_direct_party'>0</span>
+                                </td>
+                                <td>
+                                    <span id='heal_conditional_party'>0</span>
+                                </td>
                             </tr>
                         </table>
                     </div>
