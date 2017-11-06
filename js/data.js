@@ -9777,17 +9777,6 @@ skill_data = {
         "Base": {
             "Wraith Mastery": {
                 "description": "Increases wraith normal attack damage, and the chance of them inflicting paralysis with their normal attacks. As a reminder, wraith attacks deal a base of 100% damage and have a base infliction chance of 1%.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -9844,17 +9833,6 @@ skill_data = {
             },
             "Summon Wraith": {
                 "description": "Consumes 15% of the users current HP to create a wraith with increased maximum HP. Can be used in the Labyrinth.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -9911,17 +9889,8 @@ skill_data = {
             },
             "Life Exchange": {
                 "description": "Destroys one wraith. Restores all party members HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "direct",
+                "healing target": "party",
                 "requirements": {
                     "Summon Wraith": 2
                 },
@@ -9980,12 +9949,8 @@ skill_data = {
             },
             "Wraith Cry": {
                 "description": "Destroys one wraith. Reduces one enemys defense for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
+                "debuff": "def",
+                "debuff target": "aoe",
                 "bind": "",
                 "ailment": "",
                 "ailment target": "",
@@ -10057,17 +10022,8 @@ skill_data = {
             },
             "Soul Candy": {
                 "description": "Destroys one wraith. Increases all party members elemental defense for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "def",
+                "buff target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -10134,17 +10090,6 @@ skill_data = {
             },
             "Fierce Shield": {
                 "description": "Targets one wraith. The selected wraith will take all damage to the party until the end of the turn. The wraith under the effect of Fierce Shield has a modifier applied to all damage it takes.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Wraith Cry": 2,
                     "Soul Candy": 2
@@ -10204,17 +10149,6 @@ skill_data = {
             },
             "Gravekeeping": {
                 "description": "If the user does not take any damage for one turn, they have a chance to summon a wraith at the end of the turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -10261,17 +10195,6 @@ skill_data = {
             },
             "Reincarnation": {
                 "description": "When a wraith is destroyed by a Necromancer skill in-battle, the user has a chance to summon another wraith.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Gravekeeping": 3
                 },
@@ -10320,17 +10243,8 @@ skill_data = {
             },
             "Poison Bomb": {
                 "description": "Destroys one wraith. Attempts to inflict poison on all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "ailment": "poison",
+                "ailment target": "aoe",
                 "requirements": {},
                 "table": [
                     {
@@ -10397,17 +10311,8 @@ skill_data = {
             },
             "Flame Bomb": {
                 "description": "Destroys one wraith. Deals ranged INT-based fire damage to all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "fire",
+                "damage target": "aoe",
                 "requirements": {},
                 "table": [
                     {
@@ -10464,7 +10369,7 @@ skill_data = {
             }
         },
         "Spirit Broker": {
-            "Hells Lure\n\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>: None</li>\n</ul>\n<p>When the user is below a certain HP threshold, they have a chance to summon a wraith at the end of a turn.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>HP Threshold</th>\n<td colspan=\"\" style=\"text-align:center;\">5%</td>\n<td colspan=\"\" style=\"text-align:center;\">6%</td>\n<td colspan=\"\" style=\"text-align:center;\">7%</td>\n<td colspan=\"\" style=\"text-align:center;\">8%</td>\n<td colspan=\"\" style=\"text-align:center;\">17%</td>\n<td colspan=\"\" style=\"text-align:center;\">18%</td>\n<td colspan=\"\" style=\"text-align:center;\">19%</td>\n<td colspan=\"\" style=\"text-align:center;\">20%</td>\n<td colspan=\"\" style=\"text-align:center;\">21%</td>\n<td colspan=\"\" style=\"text-align:center;\">30%</td>\n</tr>\n<tr>\n<th>Chance</th>\n<td>50%</td>\n<td>53%</td>\n<td>56%</td>\n<td>59%</td>\n<td>73%</td>\n<td>76%</td>\n<td>79%</td>\n<td>82%</td>\n<td>85%</td>\n<td>100%</td>\n</tr>\n</table>\n": {
+            "Hells Lure": {
                 "description": "When the user is below a certain HP threshold, they have a chance to summon a wraith at the end of a turn.",
                 "damage": "",
                 "damage target": "",
@@ -10531,20 +10436,8 @@ skill_data = {
                     }
                 ]
             },
-            "TP Up\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>: None</li>\n</ul>\n<p>Increases the users maximum TP.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>Max TP Increase</th>\n<td>10%</td>\n<td>11%</td>\n<td>12%</td>\n<td>13%</td>\n<td>17%</td>\n<td>19%</td>\n<td>21%</td>\n<td>23%</td>\n<td>25%</td>\n<td>30%</td>\n</tr>\n</table>\n": {
+            "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
-                "requirements": {},
                 "table": [
                     {
                         "level": 1,
@@ -10588,7 +10481,7 @@ skill_data = {
                     }
                 ]
             },
-            "Auto-Wraith\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>:\n\t\t\t\t\t\t\t\t\t\t\t<b>Life Exchange</b> level 3</li>\n</ul>\n<p>The user has a chance to use Summon Wraith at the start of a battle.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>Chance</th>\n<td>30%</td>\n<td>33%</td>\n<td>36%</td>\n<td>39%</td>\n<td>59%</td>\n<td>63%</td>\n<td>67%</td>\n<td>71%</td>\n<td>75%</td>\n<td>100%</td>\n</tr>\n</table>\n": {
+            "Auto-Wraith": {
                 "description": "The user has a chance to use Summon Wraith at the start of a battle.",
                 "damage": "",
                 "damage target": "",
@@ -10647,19 +10540,10 @@ skill_data = {
                     }
                 ]
             },
-            "Fair Trade\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>:\n\t\t\t\t\t\t\t\t\t\t\t<b>Fierce Shield</b> level 3</li>\n<li>\n<b>Body parts used</b>: Head</li>\n</ul>\n<p>Destroys one wraith. Deals ranged untyped damage to one enemy. The damage is exactly equal to a percentage of how\n\t\t\t\t\t\t\t\t\t\tmuch HP the wraith had when it was destroyed.</p>\n<p>Has an 80% speed modifier and a base accuracy of 150% at all levels.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>TP Cost</th>\n<td colspan=\"4\" style=\"text-align:center;\">2</td>\n<td colspan=\"5\" style=\"text-align:center;\">5</td>\n<td colspan=\"\" style=\"text-align:center;\">9</td>\n</tr>\n<tr>\n<th>% HP as Damage</th>\n<td>50%</td>\n<td>52%</td>\n<td>54%</td>\n<td>56%</td>\n<td>68%</td>\n<td>71%</td>\n<td>74%</td>\n<td>77%</td>\n<td>80%</td>\n<td>100%</td>\n</tr>\n</table>\n": {
-                "description": "Destroys one wraith. Deals ranged untyped damage to one enemy. The damage is exactly equal to a percentage of how\n\t\t\t\t\t\t\t\t\t\tmuch HP the wraith had when it was destroyed.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+            "Fair Trade": {
+                "description": "Destroys one wraith. Deals ranged untyped damage to one enemy. The damage is exactly equal to a percentage of how much HP the wraith had when it was destroyed.",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Fierce Shield": 3
                 },
@@ -10716,19 +10600,10 @@ skill_data = {
                     }
                 ]
             },
-            "Wraith Explosion\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>:\n\t\t\t\t\t\t\t\t\t\t\t<b>Fair Trade</b> level 5</li>\n<li>\n<b>Body parts used</b>: Head</li>\n</ul>\n<p>Destroys all wraiths. Deals ranged INT-based bash+fire damage to all enemies. The damage is based on how many wraiths\n\t\t\t\t\t\t\t\t\t\twere destroyed.</p>\n<p>Has no speed modifier and a base accuracy of 150% at all levels.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>TP Cost</th>\n<td colspan=\"4\" style=\"text-align:center;\">20</td>\n<td colspan=\"5\" style=\"text-align:center;\">30</td>\n<td colspan=\"\" style=\"text-align:center;\">45</td>\n</tr>\n<tr>\n<th>1 Wraith Damage</th>\n<td>100%</td>\n<td>103%</td>\n<td>106%</td>\n<td>109%</td>\n<td>139%</td>\n<td>143%</td>\n<td>147%</td>\n<td>151%</td>\n<td>155%</td>\n<td>200%</td>\n</tr>\n<tr>\n<th>2 Wraiths Damage</th>\n<td>200%</td>\n<td>206%</td>\n<td>212%</td>\n<td>218%</td>\n<td>278%</td>\n<td>286%</td>\n<td>294%</td>\n<td>302%</td>\n<td>310%</td>\n<td>400%</td>\n</tr>\n<tr>\n<th>3 Wraiths Damage</th>\n<td>300%</td>\n<td>309%</td>\n<td>318%</td>\n<td>327%</td>\n<td>417%</td>\n<td>429%</td>\n<td>441%</td>\n<td>453%</td>\n<td>465%</td>\n<td>600%</td>\n</tr>\n</table>\n": {
-                "description": "Destroys all wraiths. Deals ranged INT-based bash+fire damage to all enemies. The damage is based on how many wraiths\n\t\t\t\t\t\t\t\t\t\twere destroyed.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+            "Wraith Explosion": {
+                "description": "Destroys all wraiths. Deals ranged INT-based bash+fire damage to all enemies. The damage is based on how many wraiths were destroyed.",
+                "damage": "ranged fire",
+                "damage target": "aoe",
                 "requirements": {
                     "Fair Trade": 5
                 },
@@ -10805,19 +10680,10 @@ skill_data = {
                     }
                 ]
             },
-            "Sacrifice\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>: None</li>\n<li>\n<b>Body parts used</b>: Head</li>\n</ul>\n<p>Destroys one wraith. Increases the users damage until the end of the next turn.</p>\n<p>Has no speed modifier at all levels.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>TP Cost</th>\n<td colspan=\"4\" style=\"text-align:center;\">2</td>\n<td colspan=\"5\" style=\"text-align:center;\">10</td>\n<td colspan=\"\" style=\"text-align:center;\">25</td>\n</tr>\n<tr>\n<th>Damage Multiplier</th>\n<td>1.5x</td>\n<td>1.55x</td>\n<td>1.6x</td>\n<td>1.65x</td>\n<td>1.8x</td>\n<td>1.85x</td>\n<td>1.9x</td>\n<td>1.95x</td>\n<td>2x</td>\n<td>2.5x</td>\n</tr>\n</table>\n": {
+            "Sacrifice": {
                 "description": "Destroys one wraith. Increases the users damage until the end of the next turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -10872,19 +10738,10 @@ skill_data = {
                     }
                 ]
             },
-            "Negative Energy\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>:\n\t\t\t\t\t\t\t\t\t\t\t<b>Sacrifice</b> level 3</li>\n<li>\n<b>Body parts used</b>: Head</li>\n</ul>\n<p>Deals ranged INT-based almighty damage to one enemy at the end of the turn. For each party member and enemy that\n\t\t\t\t\t\t\t\t\t\tdied on that turn, as well as for each wraith destroyed on that turn, the damage is increased by 150% (additive,\n\t\t\t\t\t\t\t\t\t\tnot multiplicative). The damage has no cap.</p>\n<p>Does not check for accuracy.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>TP Cost</th>\n<td colspan=\"4\" style=\"text-align:center;\">5</td>\n<td colspan=\"5\" style=\"text-align:center;\">8</td>\n<td colspan=\"\" style=\"text-align:center;\">12</td>\n</tr>\n<tr>\n<th>Base Damage</th>\n<td>100%</td>\n<td>104%</td>\n<td>108%</td>\n<td>112%</td>\n<td>144%</td>\n<td>149%</td>\n<td>154%</td>\n<td>159%</td>\n<td>164%</td>\n<td>200%</td>\n</tr>\n</table>\n": {
-                "description": "Deals ranged INT-based almighty damage to one enemy at the end of the turn. For each party member and enemy that\n\t\t\t\t\t\t\t\t\t\tdied on that turn, as well as for each wraith destroyed on that turn, the damage is increased by 150% (additive,\n\t\t\t\t\t\t\t\t\t\tnot multiplicative). The damage has no cap.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+            "Negative Energy": {
+                "description": "Deals ranged INT-based almighty damage to one enemy at the end of the turn. For each party member and enemy that died on that turn, as well as for each wraith destroyed on that turn, the damage is increased by 150% (additive, not multiplicative). The damage has no cap.",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Sacrifice": 3
                 },
@@ -10941,19 +10798,8 @@ skill_data = {
                     }
                 ]
             },
-            "Magic ATK Up\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>: None</li>\n</ul>\n<p>Passively increases elemental damage.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>Attack Increase</th>\n<td>4%</td>\n<td>5%</td>\n<td>6%</td>\n<td>7%</td>\n<td>9%</td>\n<td>10%</td>\n<td>11%</td>\n<td>12%</td>\n<td>13%</td>\n<td>15%</td>\n</tr>\n</table>\n": {
+            "Magic ATK Up": {
                 "description": "Passively increases elemental damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -10998,19 +10844,10 @@ skill_data = {
                     }
                 ]
             },
-            "Gates of Hell\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>:\n\t\t\t\t\t\t\t\t\t\t\t<b>Poison Bomb</b> level 5,\n\t\t\t\t\t\t\t\t\t\t\t<b>Flame Bomb</b> level 5</li>\n<li>\n<b>Body parts used</b>: Head</li>\n</ul>\n<p>Deals ranged INT-based bash damage to one enemy. Summons a wraith with HP equal to how much damage was dealt.</p>\n<p>Has an 80% speed modifier and a base accuracy of 150% at all levels.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>TP Cost</th>\n<td colspan=\"4\" style=\"text-align:center;\">16</td>\n<td colspan=\"5\" style=\"text-align:center;\">24</td>\n<td colspan=\"\" style=\"text-align:center;\">34</td>\n</tr>\n<tr>\n<th>Damage</th>\n<td>140%</td>\n<td>146%</td>\n<td>152%</td>\n<td>158%</td>\n<td>202%</td>\n<td>209%</td>\n<td>216%</td>\n<td>223%</td>\n<td>230%</td>\n<td>280%</td>\n</tr>\n</table>\n": {
+            "Gates of Hell": {
                 "description": "Deals ranged INT-based bash damage to one enemy. Summons a wraith with HP equal to how much damage was dealt.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "enemy",
                 "requirements": {
                     "Poison Bomb": 5,
                     "Flame Bomb": 5
@@ -11068,19 +10905,10 @@ skill_data = {
                     }
                 ]
             },
-            "Zombie Powder\n\t\t\t\t\t\t\t\t\t\t\n</h4>\n<ul>\n<li>\n<b>Requirements</b>:\n\t\t\t\t\t\t\t\t\t\t\t<b>Gates of Hell</b> level 5</li>\n<li>\n<b>Body parts used</b>: Head</li>\n</ul>\n<p>Attempts to instantly kill one enemy. If the instant death succeeds, summons a wraith with HP equal to how much\n\t\t\t\t\t\t\t\t\t\tHP the enemy had left. wraiths have an HP cap of 9999.</p>\n<p>Has a 50% speed modifier at all levels.</p>\n<table class=\"ffaq\">\n<tr>\n<th>Level</th>\n<th>1</th>\n<th>2</th>\n<th>3</th>\n<th>4</th>\n<th>5</th>\n<th>6</th>\n<th>7</th>\n<th>8</th>\n<th>9</th>\n<th>10</th>\n</tr>\n<tr>\n<th>TP Cost</th>\n<td colspan=\"4\" style=\"text-align:center;\">9</td>\n<td colspan=\"5\" style=\"text-align:center;\">14</td>\n<td colspan=\"\" style=\"text-align:center;\">19</td>\n</tr>\n<tr>\n<th>Base Chance</th>\n<td>40%</td>\n<td>42%</td>\n<td>44%</td>\n<td>46%</td>\n<td>59%</td>\n<td>61%</td>\n<td>63%</td>\n<td>65%</td>\n<td>67%</td>\n<td>80%</td>\n</tr>\n</table>": {
-                "description": "Attempts to instantly kill one enemy. If the instant death succeeds, summons a wraith with HP equal to how much\n\t\t\t\t\t\t\t\t\t\tHP the enemy had left. wraiths have an HP cap of 9999.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+            "Zombie Powder": {
+                "description": "Attempts to instantly kill one enemy. If the instant death succeeds, summons a wraith with HP equal to how much HP the enemy had left. wraiths have an HP cap of 9999.",
+                "ailment": "kill",
+                "ailment target": "enemy",
                 "requirements": {
                     "Gates of Hell": 5
                 },
@@ -11141,17 +10969,6 @@ skill_data = {
         "Spirit Evoker": {
             "Necromancy": {
                 "description": "Whenever any party member or enemy dies, the user has a chance to summon a wraith.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -11198,17 +11015,6 @@ skill_data = {
             },
             "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -11255,15 +11061,6 @@ skill_data = {
             },
             "Burden Shift": {
                 "description": "If a wraith is summoned, when the user takes fatal damage, they have a chance to destroy the wraith and restore a static amount of HP, instead of dying.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -11324,15 +11121,6 @@ skill_data = {
             },
             "Soul Trade": {
                 "description": "Destroys one wraith. Attempts to revive all dead party members.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -11403,17 +11191,8 @@ skill_data = {
             },
             "Grave": {
                 "description": "Targets one ally. For one turn, when that ally is attacked, all wraiths will counterattack. The counterattack overrides normal wraith attacks. Counterattacks attempt to inflict paralysis on hit targets. Each time a wraith counterattacks, the chance of Grave activating decreases by 9%. The base chance starts at 100%.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "counter",
                 "requirements": {
                     "Fierce Shield": 3
                 },
@@ -11482,17 +11261,8 @@ skill_data = {
             },
             "Wraith Dance": {
                 "description": "For one turn, all wraiths will attack three times. Each attacks damage is multiplied at each level by a certain value. Benefits from Wraith Masterys wraith attack increase.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "multi",
                 "requirements": {
                     "Grave": 5
                 },
@@ -11561,17 +11331,6 @@ skill_data = {
             },
             "Status ATK Up": {
                 "description": "Increases the users chance of inflicting ailments, binds, and stuns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -11618,17 +11377,8 @@ skill_data = {
             },
             "Curse Bomb": {
                 "description": "Destroys one wraith. Attempts to inflict curse on all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "ailment": "cursed",
+                "ailment target": "aoe",
                 "requirements": {
                     "Poison Bomb": 3
                 },
@@ -11687,17 +11437,8 @@ skill_data = {
             },
             "Ice Bomb": {
                 "description": "Destroys one wraith. Deals ranged INT-based ice damage to all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ice",
+                "damage target": "aoe",
                 "requirements": {
                     "Flame Bomb": 3
                 },
@@ -11756,17 +11497,8 @@ skill_data = {
             },
             "Tombstone Vice": {
                 "description": "Destroys all wraiths. Attempts to inflict petrification on one enemy. The base infliction chance depends on the number of wraiths destroyed.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "ailment": "petrified",
+                "ailment target": "enemy",
                 "requirements": {
                     "Curse Bomb": 3,
                     "Ice Bomb": 3
