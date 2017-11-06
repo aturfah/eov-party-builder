@@ -9109,17 +9109,6 @@ skill_data = {
         "Blade Master": {
             "Sword God": {
                 "description": "Increases damage dealt with critical hits, and the users critical hit chance. Also lets skills be critical hits.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -9176,17 +9165,6 @@ skill_data = {
             },
             "Speed Up": {
                 "description": "Increases the users action speed, accuracy, and evasion.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -9243,17 +9221,6 @@ skill_data = {
             },
             "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -9300,17 +9267,8 @@ skill_data = {
             },
             "Bolt Slash": {
                 "description": "Deals melee STR-based cut+volt damage to one enemy.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical volt",
+                "damage target": "enemy",
                 "requirements": {
                     "TP Up": 5
                 },
@@ -9369,17 +9327,8 @@ skill_data = {
             },
             "Mirror Moon": {
                 "description": "For one turn, gives the user a chance to nullify cut, stab, and bash attacks against them and counterattack the source. Each time Mirror Moon activates, the chance of it activating on that same turn is reduced by 35%. Can only activate once per attack.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "counter",
                 "requirements": {
                     "TP Up": 5
                 },
@@ -9458,17 +9407,10 @@ skill_data = {
             },
             "Foot Sweep": {
                 "description": "Deals melee STR-based cut damage to one row of enemies. Reduces hit enemies evasion for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "row",
+                "debuff": "eva",
+                "debuff target": "row",
                 "requirements": {
                     "Haze Slash": 3
                 },
@@ -9547,17 +9489,8 @@ skill_data = {
             },
             "Helm Splitter": {
                 "description": "Deals melee STR-based cut damage to one enemy. Ignores the targets vulnerability to cut damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical almighty",
+                "damage target": "enemy",
                 "requirements": {
                     "Foot Sweep": 5
                 },
@@ -9626,17 +9559,8 @@ skill_data = {
             },
             "Spirit Sword": {
                 "description": "When the user hits an enemy with a single-target attack, that enemys damage is reduced for the rest of the turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "atk",
+                "debuff target": "enemy",
                 "requirements": {
                     "High Ground": 3
                 },
@@ -9685,17 +9609,8 @@ skill_data = {
             },
             "Triple Strike": {
                 "description": "Deals three instances of melee STR-based cut damage to one enemy. The first attack attempts to bind the targets head, the second attack attempts to bind the targets arms, and the third attack attempts to bind the targets legs. If the first or second attacks inflict their binds, Triple Strike will end.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "physical",
+                "damage target": "enemy",
                 "requirements": {
                     "Spirit Sword": 5
                 },
@@ -9764,17 +9679,8 @@ skill_data = {
             },
             "Petal Scatter": {
                 "description": "Deals ranged STR-based cut damage to all enemies. The damage is reduced by how many enemies are alive--0.65x for 2, 0.45x for 3, and 0.35x for 4 or more.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ranged",
+                "damage target": "aoe",
                 "requirements": {
                     "Spirit Sword": 5
                 },
