@@ -13525,8 +13525,64 @@ skill_data = {
                     }
                 ]
             },
-            "Hawk/Hound Whistle": {
-                "description": "Summons a hawk/hound. The hawk/hounds stats (HP, STR, INT, VIT, WIS, AGI, LUC) are multiplied by a bonus provided by Hawk/Hound Whistle. Can be used in the Labyrinth.",
+            "Hawk Whistle": {
+                "description": "Summons a hawk. The hawks stats (HP, STR, INT, VIT, WIS, AGI, LUC) are multiplied by a bonus provided by Hawk Whistle. Can be used in the Labyrinth.",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "25",
+                        "Stat Multiplier": "1x"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "25",
+                        "Stat Multiplier": "1.03x"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "25",
+                        "Stat Multiplier": "1.06x"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "25",
+                        "Stat Multiplier": "1.09x"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "45",
+                        "Stat Multiplier": "1.19x"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "45",
+                        "Stat Multiplier": "1.23x"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "45",
+                        "Stat Multiplier": "1.27x"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "45",
+                        "Stat Multiplier": "1.31x"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "45",
+                        "Stat Multiplier": "1.35x"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "75",
+                        "Stat Multiplier": "1.5x"
+                    }
+                ]
+            },
+            "Hound Whistle": {
+                "description": "Summons a hound. The hounds stats (HP, STR, INT, VIT, WIS, AGI, LUC) are multiplied by a bonus provided by Hound Whistle. Can be used in the Labyrinth.",
                 "requirements": {},
                 "table": [
                     {
@@ -15485,9 +15541,9 @@ skill_data = {
                 "healing": "conditional",
                 "healing target": "single",
                 "requirements": {
-                    "Ruinous Prayer": 3,
-                    "Aegis Prayer": 3,
-                    "Focus Prayer": 3
+                    "Ruinous Prayer": 2,
+                    "Aegis Prayer": 2,
+                    "Focus Prayer": 2
                 },
                 "table": [
                     {
