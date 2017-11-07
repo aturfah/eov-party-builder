@@ -17503,17 +17503,8 @@ skill_data = {
         "Elemancer": {
             "Common Magic": {
                 "description": "If another party member used an INT-based skill before the user, the users damage is increased for that turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "self",
                 "requirements": {},
                 "table": [
                     {
@@ -17560,17 +17551,6 @@ skill_data = {
             },
             "Magic ATK Up": {
                 "description": "Passively increases elemental damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -17615,19 +17595,126 @@ skill_data = {
                     }
                 ]
             },
-            "Explode / Hailstorm / Thunderbreak": {
+            "Explode": {
+                "description": "Deals ranged INT-based fire damage to all enemies.",
+                "damage": "fire",
+                "damage target": "aoe",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "24",
+                        "Damage": "125%"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "24",
+                        "Damage": "132%"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "24",
+                        "Damage": "139%"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "24",
+                        "Damage": "146%"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "30",
+                        "Damage": "185%"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "30",
+                        "Damage": "194%"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "30",
+                        "Damage": "203%"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "30",
+                        "Damage": "212%"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "30",
+                        "Damage": "221%"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "40",
+                        "Damage": "270%"
+                    }
+                ]
+            },
+            "Hailstorm": {
+                "description": "Deals ranged INT-based ice damage to all enemies.",
+                "damage": "ice",
+                "damage target": "aoe",
+                "requirements": {},
+                "table": [
+                    {
+                        "level": 1,
+                        "TP Cost": "24",
+                        "Damage": "125%"
+                    },
+                    {
+                        "level": 2,
+                        "TP Cost": "24",
+                        "Damage": "132%"
+                    },
+                    {
+                        "level": 3,
+                        "TP Cost": "24",
+                        "Damage": "139%"
+                    },
+                    {
+                        "level": 4,
+                        "TP Cost": "24",
+                        "Damage": "146%"
+                    },
+                    {
+                        "level": 5,
+                        "TP Cost": "30",
+                        "Damage": "185%"
+                    },
+                    {
+                        "level": 6,
+                        "TP Cost": "30",
+                        "Damage": "194%"
+                    },
+                    {
+                        "level": 7,
+                        "TP Cost": "30",
+                        "Damage": "203%"
+                    },
+                    {
+                        "level": 8,
+                        "TP Cost": "30",
+                        "Damage": "212%"
+                    },
+                    {
+                        "level": 9,
+                        "TP Cost": "30",
+                        "Damage": "221%"
+                    },
+                    {
+                        "level": 10,
+                        "TP Cost": "40",
+                        "Damage": "270%"
+                    }
+                ]
+            },
+            "Thunderbreak": {
                 "description": "Deals ranged INT-based fire/ice/volt damage to all enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "volt",
+                "damage target": "aoe",
                 "requirements": {},
                 "table": [
                     {
@@ -17684,15 +17771,6 @@ skill_data = {
             },
             "Mana Flow": {
                 "description": "Places a buff on the user that restores a percentage of any TP they use to a random party member for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -17765,17 +17843,6 @@ skill_data = {
             },
             "Cutting Costs": {
                 "description": "Gives the user a chance to not consume TP when using a skill.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Explode": 3,
                     "Hailstorm": 3,
@@ -17827,16 +17894,7 @@ skill_data = {
             "Clever Strike": {
                 "description": "Deals INT-based damage to one enemy. The element and range are determined by the users equipped weapon and any elemental attack modifiers they currently have, such as Blaze Oils.",
                 "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage target": "enemy",
                 "requirements": {
                     "Magic Shield": 3
                 },
@@ -17905,17 +17963,6 @@ skill_data = {
             },
             "Abating Chant": {
                 "description": "On the next turn, reduces the damage of the users next skill, but also reduces its TP cost.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Focus Chant": 5
                 },
@@ -17984,17 +18031,6 @@ skill_data = {
             },
             "Status DEF Up": {
                 "description": "Reduces the users chance of being afflicted with ailments and binds.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
