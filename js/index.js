@@ -85,6 +85,36 @@ function displaySkillData(item_id, className, tree, skill_name) {
     }
     html_str += new_list;
     html_str += "</ul>"
+
+    html_str += "<h6 style='margin-bottom:0;'>Skill Table</h6>"
+    table_str = "<table>"
+
+    header_str = "<tr><td>Level</td>"
+    titles = Object.keys(skill_data[className][tree][skill_name]['table'][0]) 
+    delete titles['level']
+    titles.forEach(function (header){
+        if (header !== 'level') {
+            header_str += "<td>" + header + "</td>"
+        }
+    });
+    header_str += "</tr>"    
+    table_str += header_str
+
+    skill_data[className][tree][skill_name]['table'].forEach(function (datum){
+        
+        temp_str = "<tr>"
+        temp_str += "<td>" + datum['level'] + "</td>"
+        titles.forEach(function (header){
+            if (header !== 'level') {
+                temp_str += "<td>" + datum[header] + "</td>"
+            }
+        });
+        temp_str += "</tr>"
+        table_str += temp_str
+    });
+    table_str += "</table>"
+
+    html_str += table_str
     $('#' + item_id + '_skill_data').html(html_str);
 }
 
