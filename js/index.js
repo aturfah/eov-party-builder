@@ -38,7 +38,7 @@ function loadSpecs(item_id, className) {
 function updateClass(item_id) {
     var className = $('#' + item_id + '_class_dropdown').val();
     if (className === "none") {
-        $('#' + item_id + '_base_skills').html("Base Skillz go here");
+        $('#' + item_id + '_base_skills').html("Base Skills go here");
     } else {
         loadSkills(item_id, className, 'Base');
     }
@@ -47,7 +47,7 @@ function updateClass(item_id) {
     updateTitle(item_id, className, 'None');
     active_skills[item_id].clear();
     updateTable()
-    $('#' + item_id + '_spec_skills').html("Second Name Skillz go here");
+    $('#' + item_id + '_spec_skills').html("Second Name Skills go here");
 }
 
 function updateTitle(item_id, className, specName) {
@@ -158,7 +158,7 @@ function updateSpec(item_id) {
     });
     active_skills[item_id] = sel_skills;
     if (specName === 'Base') {
-        $('#' + item_id + '_spec_skills').html("Second Name Skillz go here");
+        $('#' + item_id + '_spec_skills').html("Second Name Skills go here");
     } else {
         loadSkills(item_id, className, specName);
     }
