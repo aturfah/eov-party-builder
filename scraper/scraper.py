@@ -13,7 +13,7 @@ def requirements_li(tag):
 
 
 if __name__ == "__main__":
-    mypath = 'scraper/pages/'
+    mypath = 'scraper/pages/' # CHANGE ME
     pages = [join(mypath, f)
              for f in listdir(mypath) if isfile(join(mypath, f))]
     data = {}
@@ -130,7 +130,7 @@ if __name__ == "__main__":
             print('\n')
             data[class_name][spec_name] = datum
 
-    with open('js/scraper_output.json', 'w') as outfile:
+    with open('js/scraper_output.json', 'w') as outfile: # CHANGE ME
         json.dump(data, outfile)
 
     print(data)
