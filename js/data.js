@@ -16947,17 +16947,6 @@ skill_data = {
         "Base": {
             "Magi Mastery": {
                 "description": "Increases damage dealt with Warlock attack skills.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -17004,17 +16993,6 @@ skill_data = {
             },
             "Quick-Chant": {
                 "description": "Removes the need to use a turn to use Incantation skills, but increases the TP cost of Incantation skills as well.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Magi Mastery": 5
                 },
@@ -17043,17 +17021,8 @@ skill_data = {
             },
             "Fireball": {
                 "description": "Deals ranged INT-based fire damage to one enemy, with splash damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "fire",
+                "damage target": "enemy",
                 "requirements": {},
                 "table": [
                     {
@@ -17110,17 +17079,8 @@ skill_data = {
             },
             "Icicle Lance": {
                 "description": "Deals ranged INT-based ice damage to one enemy, with line-piercing effect.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "ice",
+                "damage target": "enemy ",
                 "requirements": {},
                 "table": [
                     {
@@ -17177,17 +17137,8 @@ skill_data = {
             },
             "Lightning": {
                 "description": "Deals ranged INT-based volt damage to one row of enemies.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "volt",
+                "damage target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -17244,17 +17195,8 @@ skill_data = {
             },
             "Amplifier": {
                 "description": "Increases one row of party members fire/ice/volt damage for a set number of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "atk",
+                "buff target": "row",
                 "requirements": {},
                 "table": [
                     {
@@ -17311,17 +17253,8 @@ skill_data = {
             },
             "Magic Shield": {
                 "description": "Reduces fire/ice/volt damage to all party members for one turn.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "def",
+                "buff target": "party",
                 "requirements": {
                     "Amplifier": 2
                 },
@@ -17380,17 +17313,6 @@ skill_data = {
             },
             "Focus Chant": {
                 "description": "On the next turn, multi-target skills will only hit one enemy. In exchange, their damage is increased.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -17447,17 +17369,6 @@ skill_data = {
             },
             "Levitation": {
                 "description": "For a set number of steps, damage tiles are negated, and the chance of getting a preemptive attack is increased.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -17524,17 +17435,6 @@ skill_data = {
             },
             "Invisibility": {
                 "description": "For a set number of steps, reduces the encounter rate.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
