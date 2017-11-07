@@ -15838,17 +15838,8 @@ skill_data = {
         "Divine Herald": {
             "Appease Spirits": {
                 "description": "When the user is alive, any allies with buffs have a percentage of their maximum HP restored when they act.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "party",
                 "requirements": {},
                 "table": [
                     {
@@ -15895,17 +15886,6 @@ skill_data = {
             },
             "Status DEF Up": {
                 "description": "Reduces the users chance of being afflicted with ailments and binds.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -15952,17 +15932,8 @@ skill_data = {
             },
             "Exorcism Prayer": {
                 "description": "Reduces the chance of all party members having ailments and binds inflicted on them for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "res",
+                "buff target": "party",
                 "requirements": {
                     "Heavens Gift": 3
                 },
@@ -16031,17 +16002,8 @@ skill_data = {
             },
             "Haste Prayer": {
                 "description": "Increases all party members evasion for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "buff": "eva",
+                "buff target": "party",
                 "requirements": {
                     "Heavens Gift": 3
                 },
@@ -16110,17 +16072,8 @@ skill_data = {
             },
             "Vitality Prayer": {
                 "description": "Increases all party members maximum HP for a set amount of turns.",
-                "damage": "",
-                "damage target": "",
                 "buff": "",
                 "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {
                     "Heavens Gift": 3
                 },
@@ -16189,15 +16142,6 @@ skill_data = {
             },
             "Sanctuary": {
                 "description": "For one turn, when an ailment/bind is inflicted on a party member, they have a chance to cancel a buff instead.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -16270,15 +16214,6 @@ skill_data = {
             },
             "Holy Flame": {
                 "description": "Restores HP to all party members for every 3 steps they take in the Labyrinth.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {},
@@ -16327,17 +16262,8 @@ skill_data = {
             },
             "Split Spirits": {
                 "description": "For one turn, all party members with buffs will recover a percentage of all damage they deal.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "party",
                 "requirements": {
                     "Dance Oracle": 3
                 },
@@ -16396,17 +16322,8 @@ skill_data = {
             },
             "Benevolence": {
                 "description": "While the user is alive, party members with buffs will have their HP restored when they take damage, once per turn. The restore is based on a static amount and a percentage of the targets maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "party",
                 "requirements": {
                     "Holy Flame": 2,
                     "Split Spirits": 2
@@ -16466,17 +16383,6 @@ skill_data = {
             },
             "Magic DEF Up": {
                 "description": "Passively increases elemental defense.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
