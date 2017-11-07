@@ -16431,17 +16431,6 @@ skill_data = {
         "Divine Punisher": {
             "Ancient Memory": {
                 "description": "When a buff is removed from the user, they have a chance to reapply it.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -16488,17 +16477,6 @@ skill_data = {
             },
             "HP Up": {
                 "description": "Increases the users maximum HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -16545,15 +16523,6 @@ skill_data = {
             },
             "Soul Grace": {
                 "description": "If the user has at least one buff on them when they take fatal damage, they have a chance to instead dispel their oldest buff and endure at 1 HP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -16604,15 +16573,6 @@ skill_data = {
             },
             "Offering": {
                 "description": "Cancels one buff and debuff on the user. Restores TP to other party members in the users row. The restore amount is doubled if both a buff and debuff are canceled.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -16673,15 +16633,6 @@ skill_data = {
             },
             "Purification": {
                 "description": "Cancels all buffs and debuffs on all party members and all enemies. Restores the users TP. The TP restoration is determined by multiplying the base restore by how many of the following types were removed: party member buff, party member debuff, enemy buff, enemy debuff.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
                 "healing": "",
                 "healing target": "",
                 "requirements": {
@@ -16728,17 +16679,6 @@ skill_data = {
             },
             "Magic ATK Up": {
                 "description": "Passively increases INT-based damage.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -16785,17 +16725,6 @@ skill_data = {
             },
             "TP Up": {
                 "description": "Increases the users maximum TP.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
                 "requirements": {},
                 "table": [
                     {
@@ -16842,17 +16771,8 @@ skill_data = {
             },
             "Mana Oracle": {
                 "description": "Cancels Blaze Prayer, Hail Prayer, or Bolt Prayer (presumably whichever is the oldest on the first party member) on all party members. Deals 5 instances of ranged INT-based damage of the element of the Prayer canceled to random enemies. Can hit the same target multiple times.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "damage": "fire ice volt",
+                "damage target": "multi",
                 "requirements": {
                     "Dance Oracle": 3
                 },
@@ -16911,17 +16831,8 @@ skill_data = {
             },
             "Aureole Oracle": {
                 "description": "Cancels Blaze Prayer, Hail Prayer, or Bolt Prayer (presumably whichever is the oldest on the first party member) on all party members. For one turn, all party members will absorb any damage of the element of whichever skill was canceled.",
-                "damage": "",
-                "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "healing": "conditional",
+                "healing target": "party",
                 "requirements": {
                     "Dance Oracle": 3
                 },
@@ -16957,15 +16868,8 @@ skill_data = {
                 "description": "Requires three buffs on the user to use. Cancels all buffs on the user. The user will then attack one enemy with their equipped weapon (with a damage increase). Reduces the targets damage for one turn.",
                 "damage": "",
                 "damage target": "",
-                "buff": "",
-                "buff target": "",
-                "debuff": "",
-                "debuff target": "",
-                "bind": "",
-                "ailment": "",
-                "ailment target": "",
-                "healing": "",
-                "healing target": "",
+                "debuff": "atk",
+                "debuff target": "enemy",
                 "requirements": {
                     "Mana Oracle": 5,
                     "Aureole Oracle": 3
