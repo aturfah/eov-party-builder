@@ -9906,7 +9906,7 @@ skill_data = {
                     {
                         "level": 4,
                         "TP Cost": "12",
-                        "Healing Power": "1445%"
+                        "Healing Power": "145%"
                     },
                     {
                         "level": 5,
